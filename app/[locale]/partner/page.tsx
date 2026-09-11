@@ -77,7 +77,7 @@ export default async function PartnerPage({
 
         <div data-reveal className="mt-12 flex flex-wrap items-center gap-4">
           <MagneticButton href={`mailto:${site.email}`}>{dict.partnerPage.cta}</MagneticButton>
-          <a href={`mailto:${site.email}`} className="text-[15px] text-accent hover:underline">
+          <a href={`mailto:${site.email}`} className="text-[15px] text-accent-ink hover:underline">
             {site.email}
           </a>
         </div>

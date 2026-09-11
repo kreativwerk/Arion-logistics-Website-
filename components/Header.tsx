@@ -61,19 +61,9 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1320px] items-center justify-between px-5 md:h-[72px] md:px-8">
-        <Link
-          href={`/${locale}`}
-          className="flex items-center gap-2.5 text-[17px] font-semibold tracking-tight"
-          aria-label="Arion Logistics"
-        >
-          <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
-            <rect width="26" height="26" rx="7" fill="var(--accent)" />
-            <path
-              d="M7.2 18.5 13 7.5l5.8 11h-2.9l-1.2-2.4h-3.4l-1.2 2.4H7.2Zm5.1-4.6h1.4L13 12.5l-.7 1.4Z"
-              fill="#fff"
-            />
-          </svg>
-          Arion Logistics
+        <Link href={`/${locale}`} aria-label="Arion Logistics GmbH" className="shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="Arion Logistics GmbH" className="h-9 w-auto md:h-10" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
@@ -120,7 +110,7 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
 
           <Link
             href={`/${locale}/jobs`}
-            className="hidden h-9 items-center rounded-full bg-accent px-4.5 text-[13px] font-medium text-white transition-colors hover:bg-accent-ink md:inline-flex"
+            className="hidden h-9 items-center rounded-full bg-accent px-4.5 text-[13px] font-semibold text-foreground transition-colors hover:bg-[#e07f00] md:inline-flex"
           >
             {ctaLabel}
           </Link>
@@ -163,7 +153,7 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
         <Link
           href={`/${locale}/jobs`}
           onClick={() => setOpen(false)}
-          className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-full bg-accent text-[15px] font-medium text-white"
+          className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-full bg-accent text-[15px] font-semibold text-foreground"
         >
           {ctaLabel}
         </Link>

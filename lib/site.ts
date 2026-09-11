@@ -1,8 +1,11 @@
 export const site = {
   name: "Arion Logistics",
-  legalName: "Arion Logistics",
+  legalName: "Arion Logistics GmbH",
   url: "https://arion-logistics.de",
   email: "info@arion-logistics.de",
+  phone: "+49 911 13065352",
+  phoneHref: "tel:+4991113065352",
+  whatsapp: "https://wa.me/message/ENNQM7HQAM2GA1",
   appName: "CoDriver",
   appUrl: "https://dsp-codriver.de/start",
 } as const;

@@ -71,7 +71,7 @@ export default async function JobDetailPage({
       />
       <div className="mx-auto max-w-[880px] px-5 pb-20 md:px-8">
         <nav aria-label="Breadcrumb" className="text-[13px] text-muted">
-          <Link href={`/${locale}/jobs`} className="hover:text-accent">
+          <Link href={`/${locale}/jobs`} className="hover:text-accent-ink">
             {dict.nav.jobs}
           </Link>
           <span aria-hidden="true"> / </span>
@@ -88,7 +88,7 @@ export default async function JobDetailPage({
         </p>
 
         <div data-hero-fade className="mt-8 flex flex-wrap items-center gap-4 rounded-2xl bg-surface p-6">
-          <p className="text-4xl font-semibold tracking-tighter text-accent">16,20&nbsp;€</p>
+          <p className="text-4xl font-semibold tracking-tighter text-accent-strong">16,20&nbsp;€</p>
           <div className="text-[14px] text-muted">
             <p>{dict.jobsTeaser.perHour}</p>
             <p>{dict.jobsTeaser.netHint}</p>

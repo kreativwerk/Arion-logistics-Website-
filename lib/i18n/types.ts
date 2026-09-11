@@ -114,6 +114,8 @@ export interface Dict {
     title: string;
     lead: string;
     emailLabel: string;
+    phoneLabel: string;
+    whatsappCta: string;
     locationsLabel: string;
     jobsHint: string;
     jobsHintCta: string;

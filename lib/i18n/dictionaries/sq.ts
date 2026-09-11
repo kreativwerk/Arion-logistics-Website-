@@ -42,8 +42,8 @@ const sq: Dict = {
   },
   hero: {
     eyebrow: "Amazon Delivery Service Partner",
-    title1: "Logjistikë që",
-    title2: "thjesht mbërrin.",
+    title1: "Cilësi dhe fleksibilitet?",
+    title2: "Ne dorëzojmë.",
     subtitle:
       "Shpërndarje pakosh dhe dërgesa ekspres në Bavari. Menaxhim digjital, pagë e drejtë, besueshmëri çdo ditë.",
     ctaJobs: "Bëhu shofer",
@@ -211,6 +211,8 @@ const sq: Dict = {
     title: "Le të flasim.",
     lead: "Shpërndarje, partneritet ose punë: përgjigjemi shpejt dhe pa burokraci.",
     emailLabel: "Email",
+    phoneLabel: "Telefon",
+    whatsappCta: "Kontakt në WhatsApp",
     locationsLabel: "Qendrat",
     jobsHint: "Dëshiron të aplikosh si shofer?",
     jobsHintCta: "Direkt te punët",

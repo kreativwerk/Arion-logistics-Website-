@@ -9,7 +9,7 @@ Moderne, Apple-inspirierte Website für Arion Logistics: Paketzustellung (Amazon
 - **GSAP + ScrollTrigger** (Scroll-Animationen, gepinnte Horizontal-Sektion, Parallax, Counter) + **Lenis** Smooth Scrolling
 - Mouse-Animationen: Magnetic Buttons via `gsap.quickTo`
 - Alle Animationen respektieren `prefers-reduced-motion`
-- Bilder: KI-generiert mit Higgsfield (Nano Banana Pro), als WebP optimiert in `public/images/`
+- Bilder: KI-generiert mit Higgsfield (Nano Banana Pro), Markenfarbe Orange #f19100, als WebP optimiert in `public/images/`
 
 ## Sprachen (i18n)
 

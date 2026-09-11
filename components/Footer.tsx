@@ -14,12 +14,22 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Dict })
             <p className="mt-3 max-w-[36ch] text-[14px] leading-relaxed text-muted">
               {dict.footer.tagline}
             </p>
-            <a
-              href={`mailto:${site.email}`}
-              className="mt-4 inline-block text-[14px] text-accent hover:underline"
-            >
-              {site.email}
-            </a>
+            <div className="mt-4 flex flex-col items-start gap-2 text-[14px]">
+              <a href={`mailto:${site.email}`} className="text-accent-ink hover:underline">
+                {site.email}
+              </a>
+              <a href={site.phoneHref} className="text-accent-ink hover:underline">
+                {site.phone}
+              </a>
+              <a
+                href={site.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-ink hover:underline"
+              >
+                WhatsApp
+              </a>
+            </div>
           </div>
           <nav aria-label={dict.footer.company}>
             <p className="text-[13px] font-medium uppercase tracking-wide text-muted">
@@ -27,17 +37,17 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Dict })
             </p>
             <ul className="mt-4 space-y-3 text-[14px]">
               <li>
-                <Link href={`/${locale}/jobs`} className="hover:text-accent">
+                <Link href={`/${locale}/jobs`} className="hover:text-accent-ink">
                   {dict.nav.jobs}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/partner`} className="hover:text-accent">
+                <Link href={`/${locale}/partner`} className="hover:text-accent-ink">
                   {dict.nav.partner}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/kontakt`} className="hover:text-accent">
+                <Link href={`/${locale}/kontakt`} className="hover:text-accent-ink">
                   {dict.nav.contact}
                 </Link>
               </li>
@@ -46,7 +56,7 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Dict })
                   href={site.appUrl}
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="hover:text-accent"
+                  className="hover:text-accent-ink"
                 >
                   {site.appName}
                 </a>
@@ -59,12 +69,12 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Dict })
             </p>
             <ul className="mt-4 space-y-3 text-[14px]">
               <li>
-                <Link href={`/${locale}/impressum`} className="hover:text-accent">
+                <Link href={`/${locale}/impressum`} className="hover:text-accent-ink">
                   {dict.footer.imprint}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/datenschutz`} className="hover:text-accent">
+                <Link href={`/${locale}/datenschutz`} className="hover:text-accent-ink">
                   {dict.footer.privacy}
                 </Link>
               </li>
@@ -72,7 +82,7 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Dict })
           </nav>
         </div>
         <p className="mt-14 border-t border-line pt-6 text-[13px] text-muted">
-          © {year} {site.name}. {dict.footer.rights}
+          © {year} {site.legalName}. {dict.footer.rights}
         </p>
       </div>
     </footer>

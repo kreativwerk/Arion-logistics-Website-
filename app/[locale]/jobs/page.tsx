@@ -69,7 +69,7 @@ export default async function JobsPage({
                 </div>
                 <span
                   aria-hidden="true"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-foreground/[0.06] transition-colors group-hover:bg-accent group-hover:text-white"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-foreground/[0.06] transition-colors group-hover:bg-accent group-hover:text-foreground"
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />

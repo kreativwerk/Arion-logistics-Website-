@@ -6,8 +6,12 @@
   --foreground: #131316;
   --muted: #55555e;
   --line: #e4e4e7;
-  --accent: #0a5cff;
-  --accent-ink: #0447c4;
+  /* Arion brand orange. #f19100 passes contrast only against dark text or as
+     decoration; -ink is for text links on light bg (4.8:1), -strong for large
+     display numbers (3:1+). */
+  --accent: #f19100;
+  --accent-ink: #b45309;
+  --accent-strong: #d97706;
 }
 
 @theme inline {
@@ -18,6 +22,7 @@
   --color-line: var(--line);
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
+  --color-accent-strong: var(--accent-strong);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -50,7 +55,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: #131316;
 }
 
 /* Elements animated in by GSAP start hidden only when JS has taken over.

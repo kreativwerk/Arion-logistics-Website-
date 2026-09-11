@@ -42,8 +42,8 @@ const hu: Dict = {
   },
   hero: {
     eyebrow: "Amazon Delivery Service Partner",
-    title1: "Logisztika, ami",
-    title2: "egyszerűen megérkezik.",
+    title1: "Minőség és rugalmasság?",
+    title2: "Mi szállítunk.",
     subtitle:
       "Csomagkézbesítés és expressz Bajorországban. Digitális irányítás, tisztességes bérezés, megbízhatóság minden nap.",
     ctaJobs: "Legyél sofőr",
@@ -211,6 +211,8 @@ const hu: Dict = {
     title: "Beszéljünk.",
     lead: "Kézbesítés, partnerség vagy állás: gyorsan és bürokrácia nélkül válaszolunk.",
     emailLabel: "E-mail",
+    phoneLabel: "Telefon",
+    whatsappCta: "WhatsApp kapcsolat",
     locationsLabel: "Telephelyek",
     jobsHint: "Sofőrként jelentkeznél?",
     jobsHintCta: "Irány az állások",

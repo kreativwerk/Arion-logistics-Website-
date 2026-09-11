@@ -23,7 +23,7 @@ export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dic
             {dict.jobsTeaser.lead}
           </p>
           <div data-reveal className="mt-8 rounded-2xl bg-background p-6">
-            <p className="text-5xl font-semibold tracking-tighter text-accent md:text-6xl">
+            <p className="text-5xl font-semibold tracking-tighter text-accent-strong md:text-6xl">
               16,20&nbsp;€
             </p>
             <p className="mt-1 text-[14px] text-muted">{dict.jobsTeaser.perHour}</p>
@@ -67,7 +67,7 @@ export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dic
               </div>
               <span
                 aria-hidden="true"
-                className="ml-4 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-foreground/[0.06] transition-all duration-300 group-hover:bg-accent group-hover:text-white"
+                className="ml-4 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-foreground/[0.06] transition-all duration-300 group-hover:bg-accent group-hover:text-foreground"
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />

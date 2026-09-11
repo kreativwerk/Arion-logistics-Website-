@@ -4,6 +4,12 @@ import type { Dict } from "@/lib/i18n/types";
 import MagneticButton from "@/components/MagneticButton";
 
 export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
+  // The last word of the second line carries the brand emphasis
+  // ("Wir liefern." -> "liefern." in italic orange), in every locale.
+  const words = dict.hero.title2.trim().split(" ");
+  const accentWord = words.pop();
+  const title2Rest = words.join(" ");
+
   return (
     <section className="relative flex min-h-[100dvh] flex-col justify-end overflow-hidden pt-28 md:pt-36">
       <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
@@ -20,9 +26,10 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
               {dict.hero.title1}
             </span>
           </span>
-          <span className="block overflow-hidden pb-2">
-            <span data-hero-line className="block will-change-transform">
-              {dict.hero.title2}
+          <span className="block overflow-hidden pb-[0.14em]">
+            <span data-hero-line className="block leading-[1.1] will-change-transform">
+              {title2Rest ? `${title2Rest} ` : ""}
+              <em className="italic text-accent-strong">{accentWord}</em>
             </span>
           </span>
         </h1>

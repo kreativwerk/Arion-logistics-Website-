@@ -22,7 +22,7 @@ export default function Steps({ dict }: { dict: Dict }) {
             data-reveal
             className="mx-5 mt-8 flex shrink-0 flex-col justify-between rounded-3xl bg-surface p-8 shadow-[0_1px_2px_rgba(19,19,22,0.05)] last:mb-20 md:mx-0 md:mb-0 md:mr-10 md:mt-0 md:h-[60vh] md:w-[420px] md:p-10 md:last:mb-0 md:last:mr-[20vw]"
           >
-            <span className="font-mono text-[13px] text-accent">
+            <span className="font-mono text-[13px] text-accent-ink">
               {String(i + 1).padStart(2, "0")}
             </span>
             <div>

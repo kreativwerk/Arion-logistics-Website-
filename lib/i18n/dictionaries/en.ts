@@ -42,8 +42,8 @@ const en: Dict = {
   },
   hero: {
     eyebrow: "Amazon Delivery Service Partner",
-    title1: "Logistics that",
-    title2: "simply delivers.",
+    title1: "Quality and flexibility?",
+    title2: "We deliver.",
     subtitle:
       "Parcel delivery and express in Bavaria. Digitally managed, fairly paid, reliable every day.",
     ctaJobs: "Become a driver",
@@ -208,6 +208,8 @@ const en: Dict = {
     title: "Let's talk.",
     lead: "Delivery, partnership or a job: we reply fast and without red tape.",
     emailLabel: "Email",
+    phoneLabel: "Phone",
+    whatsappCta: "WhatsApp contact",
     locationsLabel: "Locations",
     jobsHint: "Want to apply as a driver?",
     jobsHintCta: "Straight to the jobs",

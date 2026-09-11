@@ -45,10 +45,19 @@ export function organizationJsonLd() {
     "@type": "Organization",
     "@id": `${site.url}/#organization`,
     name: site.name,
+    legalName: site.legalName,
     url: site.url,
     email: site.email,
-    logo: `${site.url}/icon.svg`,
-    sameAs: [site.appUrl],
+    telephone: site.phone,
+    logo: `${site.url}/logo.svg`,
+    sameAs: [site.appUrl, site.whatsapp],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: site.phone,
+      email: site.email,
+      contactType: "customer service",
+      availableLanguage: ["de", "en", "sq", "es", "bg", "ro", "hu"],
+    },
     address: [
       { "@type": "PostalAddress", addressLocality: "Pommersfelden", addressRegion: "Bayern", addressCountry: "DE" },
       { "@type": "PostalAddress", addressLocality: "Kitzingen", addressRegion: "Bayern", addressCountry: "DE" },
@@ -104,9 +113,9 @@ export function jobPostingJsonLd(slug: JobSlug, locale: Locale, dict: Dict) {
     },
     hiringOrganization: {
       "@type": "Organization",
-      name: site.name,
+      name: site.legalName,
       sameAs: site.url,
-      logo: `${site.url}/icon.svg`,
+      logo: `${site.url}/logo.svg`,
     },
     jobLocation: {
       "@type": "Place",

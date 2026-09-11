@@ -42,8 +42,8 @@ const ro: Dict = {
   },
   hero: {
     eyebrow: "Amazon Delivery Service Partner",
-    title1: "Logistică ce",
-    title2: "pur și simplu ajunge.",
+    title1: "Calitate și flexibilitate?",
+    title2: "Noi livrăm.",
     subtitle:
       "Livrare de colete și expres în Bavaria. Gestionare digitală, plată corectă, fiabilitate în fiecare zi.",
     ctaJobs: "Devino șofer",
@@ -211,6 +211,8 @@ const ro: Dict = {
     title: "Să vorbim.",
     lead: "Livrări, parteneriat sau job: răspundem rapid și fără birocrație.",
     emailLabel: "E-mail",
+    phoneLabel: "Telefon",
+    whatsappCta: "Contact WhatsApp",
     locationsLabel: "Baze",
     jobsHint: "Vrei să aplici ca șofer?",
     jobsHintCta: "Direct la joburi",

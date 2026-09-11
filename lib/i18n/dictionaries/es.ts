@@ -42,8 +42,8 @@ const es: Dict = {
   },
   hero: {
     eyebrow: "Amazon Delivery Service Partner",
-    title1: "Logística que",
-    title2: "simplemente llega.",
+    title1: "¿Calidad y flexibilidad?",
+    title2: "Nosotros entregamos.",
     subtitle:
       "Reparto de paquetes y envíos exprés en Baviera. Gestión digital, salario justo, fiabilidad diaria.",
     ctaJobs: "Trabaja de repartidor",
@@ -211,6 +211,8 @@ const es: Dict = {
     title: "Hablemos.",
     lead: "Reparto, colaboración o empleo: respondemos rápido y sin complicaciones.",
     emailLabel: "Correo",
+    phoneLabel: "Teléfono",
+    whatsappCta: "Contacto por WhatsApp",
     locationsLabel: "Centros",
     jobsHint: "¿Quieres trabajar de repartidor?",
     jobsHintCta: "Directo al empleo",
