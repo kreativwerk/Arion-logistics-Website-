@@ -13,10 +13,10 @@ export default function Steps({ dict }: { dict: Dict }) {
       >
         <div className="flex shrink-0 items-center px-5 pt-20 md:h-full md:w-[45vw] md:px-24 md:pt-0">
           <h2 className="max-w-[12ch] text-4xl font-semibold leading-[1.05] tracking-tighter md:text-6xl">
-            {dict.steps.title}
+            {dict.process.title}
           </h2>
         </div>
-        {dict.steps.items.map((step, i) => (
+        {dict.process.items.map((step, i) => (
           <article
             key={step.title}
             data-reveal

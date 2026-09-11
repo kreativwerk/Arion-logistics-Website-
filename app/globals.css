@@ -9,7 +9,7 @@
   /* Arion brand orange. #f19100 passes contrast only against dark text or as
      decoration; -ink is for text links on light bg (4.8:1), -strong for large
      display numbers (3:1+). */
-  --accent: #f19100;
+  --accent: #f19104;
   --accent-ink: #b45309;
   --accent-strong: #d97706;
 }
@@ -55,7 +55,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #131316;
+  color: #fff;
 }
 
 /* Elements animated in by GSAP start hidden only when JS has taken over.

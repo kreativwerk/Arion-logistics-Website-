@@ -3,6 +3,12 @@ import type { Locale } from "@/lib/i18n/config";
 import type { Dict } from "@/lib/i18n/types";
 import MagneticButton from "@/components/MagneticButton";
 
+/**
+ * Diagonally split hero: copy on the left, photo on the right behind a
+ * slanted edge that echoes the diagonal cut of the Arion logo mark. The
+ * orange layer sits slightly wider than the photo layer, leaving a brand
+ * stripe along the diagonal.
+ */
 export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
   // The last word of the second line carries the brand emphasis
   // ("Wir liefern." -> "liefern." in italic orange), in every locale.
@@ -11,50 +17,62 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
   const title2Rest = words.join(" ");
 
   return (
-    <section className="relative flex min-h-[100dvh] flex-col justify-end overflow-hidden pt-28 md:pt-36">
-      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
-        <p
-          data-hero-fade
-          className="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-1.5 text-[12px] font-medium uppercase tracking-[0.14em] text-muted"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-          {dict.hero.eyebrow}
-        </p>
-        <h1 className="max-w-[14ch] text-[13vw] font-semibold leading-[1.02] tracking-tighter text-balance sm:text-6xl md:text-7xl lg:text-8xl">
-          <span className="block overflow-hidden pb-1">
-            <span data-hero-line className="block will-change-transform">
-              {dict.hero.title1}
+    <section className="relative overflow-hidden md:min-h-[100dvh]">
+      <div className="mx-auto grid max-w-[1600px] md:min-h-[100dvh] md:grid-cols-[1.05fr_1fr]">
+        {/* Copy */}
+        <div className="flex flex-col justify-center px-5 pb-14 pt-32 md:py-40 md:pl-[max(2rem,calc((100vw-1600px)/2+2rem))] md:pr-12">
+          <p
+            data-hero-fade
+            className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-1.5 text-[12px] font-medium uppercase tracking-[0.14em] text-muted"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+            {dict.hero.eyebrow}
+          </p>
+          <h1 className="max-w-[14ch] text-5xl font-semibold leading-[1.02] tracking-tighter text-balance md:text-6xl lg:text-7xl xl:text-8xl">
+            <span className="block overflow-hidden pb-1">
+              <span data-hero-line className="block will-change-transform">
+                {dict.hero.title1}
+              </span>
             </span>
-          </span>
-          <span className="block overflow-hidden pb-[0.14em]">
-            <span data-hero-line className="block leading-[1.1] will-change-transform">
-              {title2Rest ? `${title2Rest} ` : ""}
-              <em className="italic text-accent-strong">{accentWord}</em>
+            <span className="block overflow-hidden pb-[0.14em]">
+              <span data-hero-line className="block leading-[1.1] will-change-transform">
+                {title2Rest ? `${title2Rest} ` : ""}
+                <em className="italic text-accent-strong">{accentWord}</em>
+              </span>
             </span>
-          </span>
-        </h1>
-        <div className="mt-6 flex flex-col gap-6 md:mt-8 md:flex-row md:items-end md:justify-between">
-          <p data-hero-fade className="max-w-[44ch] text-[17px] leading-relaxed text-muted md:text-lg">
+          </h1>
+          <p
+            data-hero-fade
+            className="mt-6 max-w-[44ch] text-[17px] leading-relaxed text-muted md:text-lg"
+          >
             {dict.hero.subtitle}
           </p>
-          <div data-hero-fade className="flex flex-wrap items-center gap-3">
+          <div data-hero-fade className="mt-9 flex flex-wrap items-center gap-3">
             <MagneticButton href={`/${locale}/jobs`}>{dict.hero.ctaJobs}</MagneticButton>
             <MagneticButton href={`/${locale}/partner`} variant="secondary">
               {dict.hero.ctaPartner}
             </MagneticButton>
           </div>
         </div>
-      </div>
-      <div data-hero-img className="mt-10 will-change-transform md:mt-14">
-        <Image
-          src="/images/hero.webp"
-          alt={dict.hero.imageAlt}
-          width={2560}
-          height={1086}
-          priority
-          sizes="100vw"
-          className="h-auto w-full"
-        />
+
+        {/* Diagonal photo */}
+        <div data-hero-img className="relative h-[58vh] will-change-transform md:h-auto">
+          {/* Brand stripe along the diagonal */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-accent [clip-path:polygon(0_10%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(14%_0,100%_0,100%_100%,0_100%)]"
+          />
+          <div className="absolute inset-0 [clip-path:polygon(0_12%,100%_2.5%,100%_100%,0_100%)] md:[clip-path:polygon(17%_0,100%_0,100%_100%,3%_100%)]">
+            <Image
+              src="/images/courier.webp"
+              alt={dict.hero.imageAlt}
+              fill
+              priority
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover object-[center_30%]"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

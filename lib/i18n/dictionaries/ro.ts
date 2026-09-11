@@ -53,12 +53,36 @@ const ro: Dict = {
   },
   stats: {
     items: [
-      { value: 16.2, decimals: 2, suffix: " €", label: "pe oră din prima zi" },
-      { value: 2250, suffix: " €", label: "net pe lună posibil" },
-      { value: 20, label: "zile de concediu plătit pe an" },
       { value: 2, label: "baze în Bavaria" },
+      { value: 9, label: "limbi în echipă" },
+      { value: 3, label: "zile până la prima rută" },
+      { value: 100, suffix: " %", label: "procese digitale" },
     ],
-    note: "Suma netă este orientativă pentru clasa fiscală 1 din Germania, inclusiv bonusul de performanță.",
+    note: "Amazon Delivery Service Partner cu servicii de curierat și expres în toată Bavaria.",
+  },
+  about: {
+    title: "Logistică din Franconia. Construită ca o companie tech.",
+    body: [
+      "Arion Logistics este o companie de logistică din Bavaria. Ca Amazon Delivery Service Partner livrăm zilnic colete pe ultimul kilometru, la timp și documentat.",
+      "În plus, executăm curse de curierat și expres în toată Bavaria. Echipa noastră lucrează în mai multe limbi, iar procesele noastre sunt complet digitale.",
+    ],
+  },
+  process: {
+    title: "Așa lucrăm.",
+    items: [
+      {
+        title: "Planificare",
+        text: "Fiecare rută este planificată digital și la minut, înainte să pornească primul motor.",
+      },
+      {
+        title: "Livrare",
+        text: "Rute fixe, status live și predare documentată la ușă.",
+      },
+      {
+        title: "Raportare",
+        text: "Clienții văd calitatea și punctualitatea în timp real, nu într-un raport lunar.",
+      },
+    ],
   },
   services: {
     eyebrow: "Servicii",

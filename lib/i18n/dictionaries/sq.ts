@@ -53,12 +53,36 @@ const sq: Dict = {
   },
   stats: {
     items: [
-      { value: 16.2, decimals: 2, suffix: " €", label: "në orë që nga dita e parë" },
-      { value: 2250, suffix: " €", label: "neto në muaj të mundshme" },
-      { value: 20, label: "ditë pushimi të paguara në vit" },
       { value: 2, label: "qendra në Bavari" },
+      { value: 9, label: "gjuhë në ekip" },
+      { value: 3, label: "ditë deri te itinerari i parë" },
+      { value: 100, suffix: " %", label: "procese digjitale" },
     ],
-    note: "Shuma neto është shembull për klasën tatimore 1 në Gjermani, përfshirë bonusin e performancës.",
+    note: "Amazon Delivery Service Partner me shërbim korrieri dhe ekspres në gjithë Bavarinë.",
+  },
+  about: {
+    title: "Logjistikë nga Frankonia. E ndërtuar si kompani teknologjike.",
+    body: [
+      "Arion Logistics është një kompani logjistike nga Bavaria. Si Amazon Delivery Service Partner dorëzojmë çdo ditë pako në miljen e fundit, në kohë dhe të dokumentuara.",
+      "Përveç kësaj kryejmë porosi korrieri dhe ekspres në gjithë Bavarinë. Ekipi ynë punon në disa gjuhë dhe proceset tona janë plotësisht digjitale.",
+    ],
+  },
+  process: {
+    title: "Si punojmë.",
+    items: [
+      {
+        title: "Planifikimi",
+        text: "Çdo itinerar planifikohet digjitalisht dhe me minutë para se të ndizet motori i parë.",
+      },
+      {
+        title: "Dorëzimi",
+        text: "Itinerare fikse, status live dhe dorëzim i dokumentuar te dera.",
+      },
+      {
+        title: "Raportimi",
+        text: "Klientët shohin cilësinë dhe përpikërinë në kohë reale, jo në raportin mujor.",
+      },
+    ],
   },
   services: {
     eyebrow: "Shërbimet",

@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 import Hero from "@/components/home/Hero";
 import Stats from "@/components/home/Stats";
+import About from "@/components/home/About";
 import Services from "@/components/home/Services";
 import Digital from "@/components/home/Digital";
 import Steps from "@/components/home/Steps";
@@ -39,12 +40,13 @@ export default async function HomePage({
     <>
       <Hero locale={locale} dict={dict} />
       <Stats dict={dict} />
+      <About dict={dict} />
       <Services dict={dict} />
       <Digital dict={dict} />
       <Steps dict={dict} />
-      <JobsTeaser locale={locale} dict={dict} />
       <Region dict={dict} />
       <PartnerTeaser locale={locale} dict={dict} />
+      <JobsTeaser locale={locale} dict={dict} />
     </>
   );
 }

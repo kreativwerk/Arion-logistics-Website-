@@ -53,12 +53,36 @@ const es: Dict = {
   },
   stats: {
     items: [
-      { value: 16.2, decimals: 2, suffix: " €", label: "por hora desde el primer día" },
-      { value: 2250, suffix: " €", label: "netos al mes posibles" },
-      { value: 20, label: "días de vacaciones pagadas al año" },
       { value: 2, label: "centros en Baviera" },
+      { value: 9, label: "idiomas en el equipo" },
+      { value: 3, label: "días hasta tu primera ruta" },
+      { value: 100, suffix: " %", label: "procesos digitales" },
     ],
-    note: "Importe neto orientativo para la clase fiscal 1 alemana, incluido el bono por rendimiento.",
+    note: "Amazon Delivery Service Partner con servicio de mensajería y exprés en toda Baviera.",
+  },
+  about: {
+    title: "Logística de Franconia. Construida como una tech.",
+    body: [
+      "Arion Logistics es una empresa logística de Baviera. Como Amazon Delivery Service Partner entregamos paquetes en la última milla cada día, puntuales y documentados.",
+      "Además realizamos servicios de mensajería y exprés por toda Baviera. Nuestro equipo trabaja en varios idiomas y nuestros procesos son totalmente digitales.",
+    ],
+  },
+  process: {
+    title: "Así trabajamos.",
+    items: [
+      {
+        title: "Planificación",
+        text: "Cada ruta se planifica digitalmente y al minuto antes de arrancar el primer motor.",
+      },
+      {
+        title: "Entrega",
+        text: "Rutas fijas, estado en vivo y entrega documentada en la puerta.",
+      },
+      {
+        title: "Informes",
+        text: "Los clientes ven calidad y puntualidad en tiempo real, no en un informe mensual.",
+      },
+    ],
   },
   services: {
     eyebrow: "Servicios",

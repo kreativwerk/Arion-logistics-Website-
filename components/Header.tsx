@@ -60,10 +60,10 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-[1320px] items-center justify-between px-5 md:h-[72px] md:px-8">
+      <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between px-5 md:h-24 md:px-8">
         <Link href={`/${locale}`} aria-label="Arion Logistics GmbH" className="shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="Arion Logistics GmbH" className="h-9 w-auto md:h-10" />
+          <img src="/logo.svg" alt="Arion Logistics GmbH" className="h-12 w-auto md:h-16" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
@@ -110,7 +110,7 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
 
           <Link
             href={`/${locale}/jobs`}
-            className="hidden h-9 items-center rounded-full bg-accent px-4.5 text-[13px] font-semibold text-foreground transition-colors hover:bg-[#e07f00] md:inline-flex"
+            className="hidden h-9 items-center rounded-full bg-accent px-4.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#e07f00] md:inline-flex"
           >
             {ctaLabel}
           </Link>
@@ -136,7 +136,7 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden ${open ? "block" : "hidden"} h-[calc(100dvh-4rem)] overflow-y-auto bg-background px-5 pb-10 pt-4`}
+        className={`md:hidden ${open ? "block" : "hidden"} h-[calc(100dvh-5rem)] overflow-y-auto bg-background px-5 pb-10 pt-4`}
       >
         <nav className="flex flex-col" aria-label="Mobile">
           {links.map((link) => (
@@ -153,7 +153,7 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
         <Link
           href={`/${locale}/jobs`}
           onClick={() => setOpen(false)}
-          className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-full bg-accent text-[15px] font-semibold text-foreground"
+          className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-full bg-accent text-[15px] font-semibold text-white"
         >
           {ctaLabel}
         </Link>

@@ -47,6 +47,27 @@ export default async function JobsPage({
           {dict.jobsPage.lead}
         </p>
 
+        {/* Onboarding in three steps */}
+        <h2 className="mt-14 text-2xl font-semibold tracking-tight md:text-3xl">
+          {dict.steps.title}
+        </h2>
+        <div className="mt-5 grid gap-5 md:grid-cols-3">
+          {dict.steps.items.map((step, i) => (
+            <div
+              key={step.title}
+              data-reveal
+              data-reveal-delay={String(i * 0.08)}
+              className="rounded-3xl bg-surface p-6 md:p-7"
+            >
+              <span className="font-mono text-[13px] text-accent-ink">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="mt-2 text-lg font-semibold tracking-tight">{step.title}</h3>
+              <p className="mt-2 text-[14px] leading-relaxed text-muted">{step.text}</p>
+            </div>
+          ))}
+        </div>
+
         {/* Open positions */}
         <h2 className="mt-16 text-[13px] font-medium uppercase tracking-[0.16em] text-muted">
           {dict.jobsPage.openPositions}
@@ -69,7 +90,7 @@ export default async function JobsPage({
                 </div>
                 <span
                   aria-hidden="true"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-foreground/[0.06] transition-colors group-hover:bg-accent group-hover:text-foreground"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-foreground/[0.06] transition-colors group-hover:bg-accent group-hover:text-white"
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />

@@ -56,7 +56,7 @@ export default function MagneticButton({
     "inline-flex items-center justify-center rounded-full px-7 h-12 text-[15px] font-medium transition-colors duration-200 active:scale-[0.98] whitespace-nowrap";
   const styles =
     variant === "primary"
-      ? "bg-accent font-semibold text-foreground hover:bg-[#e07f00]"
+      ? "bg-accent font-semibold text-white hover:bg-[#e07f00]"
       : "bg-foreground/[0.06] text-foreground hover:bg-foreground/[0.12]";
 
   return (

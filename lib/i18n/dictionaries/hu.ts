@@ -53,12 +53,36 @@ const hu: Dict = {
   },
   stats: {
     items: [
-      { value: 16.2, decimals: 2, suffix: " €", label: "óránként az első naptól" },
-      { value: 2250, suffix: " €", label: "nettó havonta elérhető" },
-      { value: 20, label: "fizetett szabadnap évente" },
       { value: 2, label: "telephely Bajorországban" },
+      { value: 9, label: "nyelv a csapatban" },
+      { value: 3, label: "nap az első túráig" },
+      { value: 100, suffix: " %", label: "digitális folyamatok" },
     ],
-    note: "A nettó összeg példa a németországi 1-es adóosztályra, a teljesítménybónusszal együtt.",
+    note: "Amazon Delivery Service Partner futár- és expressz szolgáltatással egész Bajorországban.",
+  },
+  about: {
+    title: "Logisztika Frankföldről. Tech cégként felépítve.",
+    body: [
+      "Az Arion Logistics egy bajorországi logisztikai vállalat. Amazon Delivery Service Partnerként minden nap csomagokat kézbesítünk az utolsó mérföldön, pontosan és dokumentáltan.",
+      "Emellett futár- és expressz fuvarokat teljesítünk egész Bajorországban. Csapatunk több nyelven dolgozik, folyamataink teljesen digitálisak.",
+    ],
+  },
+  process: {
+    title: "Így dolgozunk.",
+    items: [
+      {
+        title: "Tervezés",
+        text: "Minden túrát digitálisan és percre pontosan tervezünk meg, mielőtt az első motor beindul.",
+      },
+      {
+        title: "Kézbesítés",
+        text: "Fix útvonalak, élő státusz és dokumentált átadás az ajtónál.",
+      },
+      {
+        title: "Riporting",
+        text: "A megbízók valós időben látják a minőséget és a pontosságot, nem havi riportban.",
+      },
+    ],
   },
   services: {
     eyebrow: "Szolgáltatások",

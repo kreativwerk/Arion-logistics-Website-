@@ -53,12 +53,36 @@ const en: Dict = {
   },
   stats: {
     items: [
-      { value: 16.2, decimals: 2, suffix: " €", label: "per hour from day one" },
-      { value: 2250, suffix: " €", label: "net per month possible" },
-      { value: 20, label: "paid vacation days per year" },
       { value: 2, label: "locations in Bavaria" },
+      { value: 9, label: "languages on the team" },
+      { value: 3, label: "days to your first route" },
+      { value: 100, suffix: " %", label: "digital processes" },
     ],
-    note: "Net figure is an example for German tax class 1 including performance bonus.",
+    note: "Amazon Delivery Service Partner with courier and express service across Bavaria.",
+  },
+  about: {
+    title: "Logistics from Franconia. Built like a tech company.",
+    body: [
+      "Arion Logistics is a logistics company from Bavaria. As an Amazon Delivery Service Partner we deliver parcels on the last mile every day, on time and documented.",
+      "Beyond parcel delivery we run courier and express jobs across Bavaria. Our team works in several languages and our processes run fully digital.",
+    ],
+  },
+  process: {
+    title: "How we work.",
+    items: [
+      {
+        title: "Planning",
+        text: "Every route is planned digitally and timed to the minute before the first engine starts.",
+      },
+      {
+        title: "Delivery",
+        text: "Fixed routes, live status and a documented handover at the door.",
+      },
+      {
+        title: "Reporting",
+        text: "Clients see quality and punctuality in real time instead of a monthly report.",
+      },
+    ],
   },
   services: {
     eyebrow: "Services",

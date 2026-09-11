@@ -53,12 +53,36 @@ const de: Dict = {
   },
   stats: {
     items: [
-      { value: 16.2, decimals: 2, suffix: " €", label: "pro Stunde ab Tag eins" },
-      { value: 2250, suffix: " €", label: "netto monatlich möglich" },
-      { value: 20, label: "Urlaubstage im Jahr" },
       { value: 2, label: "Standorte in Bayern" },
+      { value: 9, label: "Sprachen im Team" },
+      { value: 3, label: "Tage bis zur ersten Tour" },
+      { value: 100, suffix: " %", label: "digitale Prozesse" },
     ],
-    note: "Nettowert beispielhaft bei Steuerklasse 1 inklusive Leistungsbonus.",
+    note: "Amazon Delivery Service Partner mit Kurier- und Expressdienst in ganz Bayern.",
+  },
+  about: {
+    title: "Logistik aus Franken. Gebaut wie ein Tech-Unternehmen.",
+    body: [
+      "Arion Logistics ist ein Logistikunternehmen aus Bayern. Als Amazon Delivery Service Partner stellen wir jeden Tag Pakete auf der letzten Meile zu, pünktlich und dokumentiert.",
+      "Daneben fahren wir Kurier- und Expressaufträge in ganz Bayern. Unser Team arbeitet in mehreren Sprachen, unsere Prozesse laufen komplett digital.",
+    ],
+  },
+  process: {
+    title: "So arbeiten wir.",
+    items: [
+      {
+        title: "Planung",
+        text: "Jede Tour wird digital geplant und minutengenau getaktet, bevor der erste Motor startet.",
+      },
+      {
+        title: "Zustellung",
+        text: "Feste Routen, Live-Status und dokumentierte Übergabe an der Tür.",
+      },
+      {
+        title: "Reporting",
+        text: "Auftraggeber sehen Qualität und Pünktlichkeit in Echtzeit statt im Monatsbericht.",
+      },
+    ],
   },
   services: {
     eyebrow: "Leistungen",

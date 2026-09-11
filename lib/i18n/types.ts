@@ -46,6 +46,8 @@ export interface Dict {
     imageAlt: string;
   };
   stats: { items: StatItem[]; note: string };
+  about: { title: string; body: string[] };
+  process: { title: string; items: { title: string; text: string }[] };
   services: {
     eyebrow: string;
     title: string;
