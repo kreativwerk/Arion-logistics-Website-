@@ -4,7 +4,8 @@ import AmbientVideo from "@/components/AmbientVideo";
 
 export default function Services({ dict }: { dict: Dict }) {
   return (
-    <section id="services" className="mx-auto max-w-[1320px] scroll-mt-24 px-6 py-20 md:px-12 md:py-32">
+    <section id="services" className="scroll-mt-24 bg-surface2">
+      <div className="mx-auto max-w-[1320px] px-6 py-20 md:px-12 md:py-32">
       <p
         data-reveal
         className="text-[12px] font-medium uppercase tracking-[0.16em] text-muted"
@@ -71,6 +72,7 @@ export default function Services({ dict }: { dict: Dict }) {
             </p>
           </div>
         </article>
+      </div>
       </div>
     </section>
   );

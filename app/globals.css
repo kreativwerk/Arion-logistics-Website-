@@ -3,6 +3,8 @@
 :root {
   --background: #fafaf9;
   --surface: #ffffff;
+  --surface2: #f0f0ee;
+  --ink: #0c0c0f;
   --foreground: #131316;
   --muted: #55555e;
   --line: #e4e4e7;
@@ -17,6 +19,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);
+  --color-surface2: var(--surface2);
+  --color-ink: var(--ink);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-line: var(--line);

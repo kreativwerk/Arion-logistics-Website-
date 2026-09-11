@@ -20,7 +20,7 @@ const sq: Dict = {
     partner: {
       title: "Bëhu partner | Arion Logistics",
       description:
-        "Kapacitet i besueshëm shpërndarjeje për rrjete dhe dërgues: përvojë si partner shërbimi i UPS, procese digjitale dhe ekipe të shkallëzueshme. Na kontakto tani.",
+        "Kapacitet i besueshëm shpërndarjeje për rrjete dhe dërgues: përvojë shumëvjeçare në pako, procese digjitale dhe ekipe të shkallëzueshme. Na kontakto tani.",
     },
     contact: {
       title: "Kontakt | Arion Logistics",
@@ -41,7 +41,7 @@ const sq: Dict = {
     languageLabel: "Gjuha",
   },
   hero: {
-    eyebrow: "Partner shërbimi i UPS",
+    eyebrow: "Pako · Korrier · Ekspres",
     title1: "Cilësi dhe fleksibilitet?",
     title2: "Ne dorëzojmë.",
     subtitle:
@@ -58,12 +58,12 @@ const sq: Dict = {
       { value: 75, suffix: "+", label: "automjete të veta" },
       { value: 2, label: "qendra në Bavari" },
     ],
-    note: "Partner shërbimi i UPS me shërbim korrieri dhe ekspres në gjithë Bavarinë.",
+    note: "Shpërndarje pakosh, shërbim korrieri dhe ekspres në gjithë Bavarinë.",
   },
   about: {
     title: "Logjistikë nga Frankonia. E ndërtuar si kompani teknologjike.",
     body: [
-      "Arion Logistics është një kompani logjistike nga Bavaria. Si partner shërbimi i UPS dorëzojmë çdo ditë rreth 6.500 pako në miljen e fundit, në kohë dhe të dokumentuara.",
+      "Arion Logistics është një kompani logjistike nga Bavaria. Dorëzojmë çdo ditë rreth 6.500 pako në miljen e fundit, në kohë dhe të dokumentuara.",
       "100 punonjës nga shumë vende, mbi 75 automjete dhe një ekip i yni për rekrutim dhe marketing: rritemi me forcat tona, plotësisht të drejtuar digjitalisht.",
     ],
   },
@@ -225,7 +225,7 @@ const sq: Dict = {
     title: "Kapacitet shpërndarjeje për rrjetin tuaj.",
     lead: "Arion Logistics sot drejton për një nga rrjetet më të mëdha të shpërndarjes në botë. Të njëjtën cilësi jua ofrojmë edhe juve.",
     body: [
-      "Si partner shërbimi i UPS kalojmë çdo ditë standarde të rrepta cilësie dhe sigurie: scorecard-et, auditimet dhe regjistrimet me minutë janë pjesë e rutinës sonë.",
+      "Kalojmë çdo ditë standarde të rrepta cilësie dhe sigurie: scorecard-et, auditimet dhe regjistrimet me minutë janë pjesë e rutinës sonë.",
       "Ekipet tona punojnë plotësisht në mënyrë digjitale. Planifikimi i itinerareve, onboarding-u, regjistrimi i orarit dhe raportimi funksionojnë me CoDriver, platformën që e ndërtuam vetë.",
       "Ju nevojitet kapacitet shtesë në miljen e fundit, itinerare fikse ose dërgesa ekspres direkte në Bavari? Atëherë flisni me ne.",
     ],

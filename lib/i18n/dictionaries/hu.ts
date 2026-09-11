@@ -20,7 +20,7 @@ const hu: Dict = {
     partner: {
       title: "Legyen partnerünk | Arion Logistics",
       description:
-        "Megbízható kézbesítési kapacitás hálózatoknak és feladóknak: UPS szervizpartneri tapasztalat, digitális folyamatok, skálázható csapatok. Vegye fel velünk a kapcsolatot.",
+        "Megbízható kézbesítési kapacitás hálózatoknak és feladóknak: sokéves csomaghálózati tapasztalat, digitális folyamatok, skálázható csapatok. Vegye fel velünk a kapcsolatot.",
     },
     contact: {
       title: "Kapcsolat | Arion Logistics",
@@ -41,7 +41,7 @@ const hu: Dict = {
     languageLabel: "Nyelv",
   },
   hero: {
-    eyebrow: "UPS szervizpartner",
+    eyebrow: "Csomag · Futár · Expressz",
     title1: "Minőség és rugalmasság?",
     title2: "Mi szállítunk.",
     subtitle:
@@ -58,12 +58,12 @@ const hu: Dict = {
       { value: 75, suffix: "+", label: "saját jármű" },
       { value: 2, label: "telephely Bajorországban" },
     ],
-    note: "UPS szervizpartner futár- és expressz szolgáltatással egész Bajorországban.",
+    note: "Csomagkézbesítés, futár- és expressz szolgáltatás egész Bajorországban.",
   },
   about: {
     title: "Logisztika Frankföldről. Tech cégként felépítve.",
     body: [
-      "Az Arion Logistics egy bajorországi logisztikai vállalat. UPS szervizpartnerként naponta mintegy 6 500 csomagot kézbesítünk az utolsó mérföldön, pontosan és dokumentáltan.",
+      "Az Arion Logistics egy bajorországi logisztikai vállalat. Naponta mintegy 6 500 csomagot kézbesítünk az utolsó mérföldön, pontosan és dokumentáltan.",
       "100 munkatárs sok országból, több mint 75 jármű és saját házon belüli toborzó- és marketingcsapat: saját erőből növekszünk, teljesen digitálisan irányítva.",
     ],
   },
@@ -225,7 +225,7 @@ const hu: Dict = {
     title: "Kézbesítési kapacitás az Ön hálózatának.",
     lead: "Az Arion Logistics ma a világ egyik legnagyobb kézbesítési hálózatának dolgozik. Ugyanezt a minőséget kínáljuk Önnek is.",
     body: [
-      "UPS szervizpartnerként nap mint nap szigorú minőségi és biztonsági előírásoknak felelünk meg: a scorecardok, auditok és percre pontos kimutatások a mindennapjaink részei.",
+      "Nap mint nap szigorú minőségi és biztonsági előírásoknak felelünk meg: a scorecardok, auditok és percre pontos kimutatások a mindennapjaink részei.",
       "Csapataink teljesen digitálisan dolgoznak. A túratervezés, a betanulás, a munkaidő-nyilvántartás és a riporting a CoDriveren fut, a saját fejlesztésű platformunkon.",
       "További utolsó mérföldes kapacitásra, fix túrákra vagy expressz közvetlen fuvarokra van szüksége Bajorországban? Beszéljünk.",
     ],

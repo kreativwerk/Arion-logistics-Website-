@@ -9,6 +9,7 @@ import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import AnimationProvider from "@/components/AnimationProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileDock from "@/components/MobileDock";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -87,6 +88,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer locale={locale} dict={dict} />
+          <MobileDock locale={locale} nav={dict.nav} ctaLabel={dict.hero.ctaJobs} />
         </AnimationProvider>
       </body>
     </html>

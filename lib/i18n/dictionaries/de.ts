@@ -20,7 +20,7 @@ const de: Dict = {
     partner: {
       title: "Partner werden | Arion Logistics",
       description:
-        "Zuverlässige Zustellkapazität für Netzwerke und Versender: UPS-Servicepartner-Erfahrung, digitale Prozesse und skalierbare Teams. Jetzt Kontakt aufnehmen.",
+        "Zuverlässige Zustellkapazität für Netzwerke und Versender: langjährige KEP-Erfahrung, digitale Prozesse und skalierbare Teams. Jetzt Kontakt aufnehmen.",
     },
     contact: {
       title: "Kontakt | Arion Logistics",
@@ -41,7 +41,7 @@ const de: Dict = {
     languageLabel: "Sprache",
   },
   hero: {
-    eyebrow: "UPS Servicepartner",
+    eyebrow: "Paketzustellung · Kurier · Express",
     title1: "Qualität und Flexibilität?",
     title2: "Wir liefern.",
     subtitle:
@@ -58,12 +58,12 @@ const de: Dict = {
       { value: 75, suffix: "+", label: "eigene Fahrzeuge" },
       { value: 2, label: "Standorte in Bayern" },
     ],
-    note: "UPS Servicepartner mit Kurier- und Expressdienst in ganz Bayern.",
+    note: "Paketzustellung, Kurier- und Expressdienst in ganz Bayern.",
   },
   about: {
     title: "Logistik aus Franken. Gebaut wie ein Tech-Unternehmen.",
     body: [
-      "Arion Logistics ist ein Logistikunternehmen aus Bayern. Als Servicepartner von UPS stellen wir jeden Tag rund 6.500 Pakete auf der letzten Meile zu, pünktlich und dokumentiert.",
+      "Arion Logistics ist ein Logistikunternehmen aus Bayern. Wir stellen jeden Tag rund 6.500 Pakete auf der letzten Meile zu, pünktlich und dokumentiert.",
       "100 Mitarbeitende aus vielen Ländern, über 75 Fahrzeuge und ein eigenes In-house-Team für Recruiting und Marketing: Wir wachsen aus eigener Kraft, komplett digital gesteuert.",
     ],
   },
@@ -227,7 +227,7 @@ const de: Dict = {
     title: "Zustellkapazität für Ihr Netzwerk.",
     lead: "Arion Logistics fährt heute für eines der größten Zustellnetzwerke der Welt. Diese Qualität bieten wir auch Ihnen.",
     body: [
-      "Als UPS Servicepartner bestehen wir täglich strenge Qualitäts- und Sicherheitsstandards: Scorecards, Audits und minutengenaue Nachweise gehören bei uns zum Alltag.",
+      "Wir bestehen täglich strenge Qualitäts- und Sicherheitsstandards: Scorecards, Audits und minutengenaue Nachweise gehören bei uns zum Alltag.",
       "Unsere Teams arbeiten komplett digital. Tourenplanung, Onboarding, Zeiterfassung und Reporting laufen über CoDriver, die Plattform, die wir selbst entwickelt haben.",
       "Sie brauchen zusätzliche Kapazität auf der letzten Meile, feste Touren oder Express-Direktfahrten in Bayern? Dann sprechen Sie mit uns.",
     ],

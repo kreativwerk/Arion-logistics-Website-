@@ -20,7 +20,7 @@ const es: Dict = {
     partner: {
       title: "Hazte socio | Arion Logistics",
       description:
-        "Capacidad de reparto fiable para redes y remitentes: experiencia como partner de servicio de UPS, procesos digitales y equipos escalables. Contacta ahora.",
+        "Capacidad de reparto fiable para redes y remitentes: años de experiencia en paquetería, procesos digitales y equipos escalables. Contacta ahora.",
     },
     contact: {
       title: "Contacto | Arion Logistics",
@@ -41,7 +41,7 @@ const es: Dict = {
     languageLabel: "Idioma",
   },
   hero: {
-    eyebrow: "Partner de servicio de UPS",
+    eyebrow: "Paquetería · Mensajería · Exprés",
     title1: "¿Calidad y flexibilidad?",
     title2: "Nosotros entregamos.",
     subtitle:
@@ -58,12 +58,12 @@ const es: Dict = {
       { value: 75, suffix: "+", label: "vehículos propios" },
       { value: 2, label: "centros en Baviera" },
     ],
-    note: "Partner de servicio de UPS con mensajería y exprés en toda Baviera.",
+    note: "Reparto de paquetes, mensajería y exprés en toda Baviera.",
   },
   about: {
     title: "Logística de Franconia. Construida como una tech.",
     body: [
-      "Arion Logistics es una empresa logística de Baviera. Como partner de servicio de UPS entregamos cada día unos 6.500 paquetes en la última milla, puntuales y documentados.",
+      "Arion Logistics es una empresa logística de Baviera. Entregamos cada día unos 6.500 paquetes en la última milla, puntuales y documentados.",
       "100 personas de muchos países, más de 75 vehículos y un equipo propio de reclutamiento y marketing in-house: crecemos con fuerza propia, con gestión totalmente digital.",
     ],
   },
@@ -225,7 +225,7 @@ const es: Dict = {
     title: "Capacidad de reparto para tu red.",
     lead: "Arion Logistics conduce hoy para una de las mayores redes de reparto del mundo. Esa misma calidad te la ofrecemos a ti.",
     body: [
-      "Como partner de servicio de UPS superamos cada día estrictos estándares de calidad y seguridad: scorecards, auditorías y registros al minuto forman parte de nuestra rutina.",
+      "Superamos cada día estrictos estándares de calidad y seguridad: scorecards, auditorías y registros al minuto forman parte de nuestra rutina.",
       "Nuestros equipos trabajan de forma totalmente digital. La planificación de rutas, el onboarding, el registro horario y los informes funcionan con CoDriver, la plataforma que desarrollamos nosotros mismos.",
       "¿Necesitas capacidad adicional de última milla, rutas fijas o envíos exprés directos en Baviera? Hablemos.",
     ],

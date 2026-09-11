@@ -7,7 +7,7 @@ import MagneticButton from "@/components/MagneticButton";
 
 export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
-    <section className="border-y border-line bg-surface">
+    <section className="bg-surface">
       <div className="mx-auto grid max-w-[1320px] gap-12 px-6 py-20 md:grid-cols-[1fr_1.2fr] md:gap-16 md:px-12 md:py-32">
         <div>
           <p data-reveal className="text-[12px] font-medium uppercase tracking-[0.16em] text-muted">
@@ -22,7 +22,7 @@ export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dic
           <p data-reveal className="mt-5 max-w-[44ch] text-[16px] leading-relaxed text-muted md:text-lg">
             {dict.jobsTeaser.lead}
           </p>
-          <div data-reveal className="mt-8 rounded-2xl bg-background p-6">
+          <div data-reveal className="mt-8 rounded-2xl bg-surface2 p-6">
             <p className="text-5xl font-semibold tracking-tighter text-accent-strong md:text-6xl">
               16,20&nbsp;€
             </p>
@@ -41,7 +41,7 @@ export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dic
         <div className="flex flex-col gap-5">
           <div data-reveal className="relative overflow-hidden rounded-3xl">
             <Image
-              src="/images/courier.webp"
+              src="/images/courier-f.webp"
               alt={dict.jobsPage.title}
               width={1200}
               height={1490}
@@ -55,7 +55,7 @@ export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dic
               data-reveal
               data-reveal-delay={String(0.08 + i * 0.08)}
               href={`/${locale}/jobs/${slug}`}
-              className="group flex items-center justify-between rounded-3xl border border-line bg-background p-6 transition-colors hover:border-accent md:p-7"
+              className="group flex items-center justify-between rounded-3xl bg-surface2 p-6 transition-colors hover:bg-accent/10 md:p-7"
             >
               <div>
                 <h3 className="text-xl font-semibold tracking-tight md:text-2xl">

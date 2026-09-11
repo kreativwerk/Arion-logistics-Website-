@@ -20,7 +20,7 @@ const ro: Dict = {
     partner: {
       title: "Deveniți partener | Arion Logistics",
       description:
-        "Capacitate de livrare de încredere pentru rețele și expeditori: experiență de partener de servicii UPS, procese digitale și echipe scalabile. Contactați-ne acum.",
+        "Capacitate de livrare de încredere pentru rețele și expeditori: experiență de ani în curierat, procese digitale și echipe scalabile. Contactați-ne acum.",
     },
     contact: {
       title: "Contact | Arion Logistics",
@@ -41,7 +41,7 @@ const ro: Dict = {
     languageLabel: "Limba",
   },
   hero: {
-    eyebrow: "Partener de servicii UPS",
+    eyebrow: "Colete · Curierat · Expres",
     title1: "Calitate și flexibilitate?",
     title2: "Noi livrăm.",
     subtitle:
@@ -58,12 +58,12 @@ const ro: Dict = {
       { value: 75, suffix: "+", label: "vehicule proprii" },
       { value: 2, label: "baze în Bavaria" },
     ],
-    note: "Partener de servicii UPS cu curierat și expres în toată Bavaria.",
+    note: "Livrare de colete, curierat și expres în toată Bavaria.",
   },
   about: {
     title: "Logistică din Franconia. Construită ca o companie tech.",
     body: [
-      "Arion Logistics este o companie de logistică din Bavaria. Ca partener de servicii UPS livrăm zilnic circa 6.500 de colete pe ultimul kilometru, la timp și documentat.",
+      "Arion Logistics este o companie de logistică din Bavaria. Livrăm zilnic circa 6.500 de colete pe ultimul kilometru, la timp și documentat.",
       "100 de oameni din multe țări, peste 75 de vehicule și o echipă proprie de recrutare și marketing in-house: creștem prin forțe proprii, gestionați complet digital.",
     ],
   },
@@ -225,7 +225,7 @@ const ro: Dict = {
     title: "Capacitate de livrare pentru rețeaua dumneavoastră.",
     lead: "Arion Logistics conduce astăzi pentru una dintre cele mai mari rețele de livrare din lume. Aceeași calitate v-o oferim și dumneavoastră.",
     body: [
-      "Ca partener de servicii UPS trecem zilnic standarde stricte de calitate și siguranță: scorecard-urile, auditurile și evidențele la minut fac parte din rutina noastră.",
+      "Trecem zilnic standarde stricte de calitate și siguranță: scorecard-urile, auditurile și evidențele la minut fac parte din rutina noastră.",
       "Echipele noastre lucrează complet digital. Planificarea rutelor, onboarding-ul, pontajul și raportarea rulează pe CoDriver, platforma construită de noi.",
       "Aveți nevoie de capacitate suplimentară pe ultimul kilometru, rute fixe sau curse expres directe în Bavaria? Atunci vorbiți cu noi.",
     ],

@@ -20,7 +20,7 @@ const en: Dict = {
     partner: {
       title: "Become a Partner | Arion Logistics",
       description:
-        "Reliable delivery capacity for networks and shippers: UPS service partner experience, digital processes and scalable teams. Get in touch now.",
+        "Reliable delivery capacity for networks and shippers: years of parcel network experience, digital processes and scalable teams. Get in touch now.",
     },
     contact: {
       title: "Contact | Arion Logistics",
@@ -41,7 +41,7 @@ const en: Dict = {
     languageLabel: "Language",
   },
   hero: {
-    eyebrow: "UPS Service Partner",
+    eyebrow: "Parcels · Courier · Express",
     title1: "Quality and flexibility?",
     title2: "We deliver.",
     subtitle:
@@ -58,12 +58,12 @@ const en: Dict = {
       { value: 75, suffix: "+", label: "own vehicles" },
       { value: 2, label: "locations in Bavaria" },
     ],
-    note: "UPS service partner with courier and express service across Bavaria.",
+    note: "Parcel delivery, courier and express service across Bavaria.",
   },
   about: {
     title: "Logistics from Franconia. Built like a tech company.",
     body: [
-      "Arion Logistics is a logistics company from Bavaria. As a UPS service partner we deliver around 6,500 parcels on the last mile every day, on time and documented.",
+      "Arion Logistics is a logistics company from Bavaria. We deliver around 6,500 parcels on the last mile every day, on time and documented.",
       "100 team members from many countries, over 75 vehicles and our own in-house recruiting and marketing team: we grow on our own strength, fully digitally managed.",
     ],
   },
@@ -222,7 +222,7 @@ const en: Dict = {
     title: "Delivery capacity for your network.",
     lead: "Arion Logistics drives today for one of the largest delivery networks in the world. We offer that same quality to you.",
     body: [
-      "As a UPS service partner we pass strict quality and safety standards every day: scorecards, audits and to-the-minute records are part of our routine.",
+      "We pass strict quality and safety standards every day: scorecards, audits and to-the-minute records are part of our routine.",
       "Our teams work fully digital. Route planning, onboarding, time tracking and reporting run on CoDriver, the platform we built ourselves.",
       "Need additional last-mile capacity, fixed routes or express direct runs in Bavaria? Then talk to us.",
     ],

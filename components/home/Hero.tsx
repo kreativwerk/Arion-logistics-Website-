@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AmbientVideo from "@/components/AmbientVideo";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dict } from "@/lib/i18n/types";
 import MagneticButton from "@/components/MagneticButton";
@@ -63,13 +63,14 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
             className="absolute inset-0 bg-accent [clip-path:polygon(0_10%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(14%_0,100%_0,100%_100%,0_100%)]"
           />
           <div className="absolute inset-0 [clip-path:polygon(0_12%,100%_2.5%,100%_100%,0_100%)] md:[clip-path:polygon(17%_0,100%_0,100%_100%,3%_100%)]">
-            <Image
-              src="/images/courier.webp"
+            <AmbientVideo
+              src="/videos/hero.mp4"
+              poster="/images/courier.webp"
               alt={dict.hero.imageAlt}
-              fill
-              priority
+              width={720}
+              height={1280}
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-[center_30%]"
+              className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
             />
           </div>
         </div>

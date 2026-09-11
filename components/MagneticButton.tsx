@@ -17,7 +17,7 @@ export default function MagneticButton({
 }: {
   href: string;
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "inverse";
   className?: string;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
@@ -57,7 +57,9 @@ export default function MagneticButton({
   const styles =
     variant === "primary"
       ? "bg-accent font-semibold text-white hover:bg-[#e07f00]"
-      : "bg-foreground/[0.06] text-foreground hover:bg-foreground/[0.12]";
+      : variant === "inverse"
+        ? "bg-white font-semibold text-foreground hover:bg-white/90"
+        : "bg-foreground/[0.06] text-foreground hover:bg-foreground/[0.12]";
 
   return (
     <Link

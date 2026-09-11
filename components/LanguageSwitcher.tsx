@@ -9,10 +9,13 @@ export default function LanguageSwitcher({
   locale,
   pathWithout,
   label,
+  compact = false,
 }: {
   locale: Locale;
   pathWithout: string;
   label: string;
+  /** Flag-only round button (mobile header). */
+  compact?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -40,20 +43,30 @@ export default function LanguageSwitcher({
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         aria-label={label}
-        className="flex h-9 cursor-pointer items-center gap-2 rounded-full border border-line bg-surface pl-2 pr-3 text-[13px] text-foreground transition-colors hover:border-foreground/30"
+        className={
+          compact
+            ? "flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line bg-surface shadow-sm"
+            : "flex h-9 cursor-pointer items-center gap-2 rounded-full border border-line bg-surface pl-2 pr-3 text-[13px] text-foreground transition-colors hover:border-foreground/30"
+        }
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`/flags/${locale}.svg`} alt="" className="h-5 w-5 rounded-full" />
-        {localeNames[locale]}
-        <svg
-          width="10"
-          height="6"
-          viewBox="0 0 10 6"
-          aria-hidden="true"
-          className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-        >
-          <path d="m1 1 4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        </svg>
+        <img
+          src={`/flags/${locale}.svg`}
+          alt=""
+          className={compact ? "h-7 w-7 rounded-full" : "h-5 w-5 rounded-full"}
+        />
+        {!compact && localeNames[locale]}
+        {!compact && (
+          <svg
+            width="10"
+            height="6"
+            viewBox="0 0 10 6"
+            aria-hidden="true"
+            className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          >
+            <path d="m1 1 4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          </svg>
+        )}
       </button>
       {open && (
         <ul
@@ -70,7 +83,7 @@ export default function LanguageSwitcher({
                 }`}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`/flags/${l}.svg`} alt="" className="h-5 w-5 rounded-full" />
+                <img src={`/flags/${l}.svg`} alt="" className="h-6 w-6 rounded-full" />
                 {localeNames[l]}
                 {l === locale && (
                   <svg
