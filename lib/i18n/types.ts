@@ -110,6 +110,10 @@ export interface Dict {
     title: string;
     lead: string;
     body: string[];
+    offeringsTitle: string;
+    offerings: { title: string; text: string }[];
+    stepsTitle: string;
+    steps: { title: string; text: string }[];
     cta: string;
   };
   contact: {
@@ -118,6 +122,7 @@ export interface Dict {
     emailLabel: string;
     phoneLabel: string;
     whatsappCta: string;
+    addressLabel: string;
     locationsLabel: string;
     jobsHint: string;
     jobsHintCta: string;

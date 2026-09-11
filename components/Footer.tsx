@@ -7,12 +7,17 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Dict })
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-line bg-surface">
-      <div className="mx-auto max-w-[1320px] px-5 py-14 md:px-8 md:py-20">
+      <div className="mx-auto max-w-[1320px] px-6 py-14 md:px-12 md:py-20">
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
             <p className="text-[17px] font-semibold tracking-tight">Arion Logistics</p>
             <p className="mt-3 max-w-[36ch] text-[14px] leading-relaxed text-muted">
               {dict.footer.tagline}
+            </p>
+            <p className="mt-4 text-[14px] leading-relaxed text-muted">
+              {site.street}
+              <br />
+              {site.zip} {site.city}
             </p>
             <div className="mt-4 flex flex-col items-start gap-2 text-[14px]">
               <a href={`mailto:${site.email}`} className="text-accent-ink hover:underline">

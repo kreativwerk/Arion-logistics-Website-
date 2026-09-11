@@ -8,7 +8,7 @@ import MagneticButton from "@/components/MagneticButton";
 export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
     <section className="border-y border-line bg-surface">
-      <div className="mx-auto grid max-w-[1320px] gap-12 px-5 py-20 md:grid-cols-[1fr_1.2fr] md:gap-16 md:px-8 md:py-32">
+      <div className="mx-auto grid max-w-[1320px] gap-12 px-6 py-20 md:grid-cols-[1fr_1.2fr] md:gap-16 md:px-12 md:py-32">
         <div>
           <p data-reveal className="text-[12px] font-medium uppercase tracking-[0.16em] text-muted">
             {dict.jobsTeaser.eyebrow}

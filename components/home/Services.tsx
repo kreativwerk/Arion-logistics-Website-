@@ -1,9 +1,10 @@
 import Image from "next/image";
 import type { Dict } from "@/lib/i18n/types";
+import AmbientVideo from "@/components/AmbientVideo";
 
 export default function Services({ dict }: { dict: Dict }) {
   return (
-    <section id="services" className="mx-auto max-w-[1320px] scroll-mt-24 px-5 py-20 md:px-8 md:py-32">
+    <section id="services" className="mx-auto max-w-[1320px] scroll-mt-24 px-6 py-20 md:px-12 md:py-32">
       <p
         data-reveal
         className="text-[12px] font-medium uppercase tracking-[0.16em] text-muted"
@@ -26,11 +27,12 @@ export default function Services({ dict }: { dict: Dict }) {
           className="group relative overflow-hidden rounded-3xl bg-surface shadow-[0_1px_2px_rgba(19,19,22,0.05)] md:col-span-7"
         >
           <div className="overflow-hidden">
-            <Image
-              src="/images/depot.webp"
+            <AmbientVideo
+              src="/videos/depot.mp4"
+              poster="/images/depot.webp"
               alt={dict.services.kepImageAlt}
               width={1800}
-              height={1005}
+              height={1013}
               sizes="(min-width: 768px) 58vw, 100vw"
               className="h-64 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] md:h-[380px]"
             />
@@ -52,7 +54,7 @@ export default function Services({ dict }: { dict: Dict }) {
         >
           <div className="overflow-hidden">
             <Image
-              src="/images/parcel.webp"
+              src="/images/express.webp"
               alt={dict.services.expressImageAlt}
               width={1200}
               height={1200}

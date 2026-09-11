@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export default function Digital({ dict }: { dict: Dict }) {
   return (
     <section className="bg-[#0c0c0f] text-white">
-      <div className="mx-auto grid max-w-[1320px] items-center gap-12 px-5 py-20 md:grid-cols-2 md:gap-16 md:px-8 md:py-32">
+      <div className="mx-auto grid max-w-[1320px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:gap-16 md:px-12 md:py-32">
         <div className="relative order-2 overflow-hidden rounded-3xl md:order-1">
           <div data-parallax="6" className="will-change-transform">
             <Image

@@ -69,7 +69,7 @@ export default async function JobDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="mx-auto max-w-[880px] px-5 pb-20 md:px-8">
+      <div className="mx-auto max-w-[880px] px-6 pb-20 md:px-12">
         <nav aria-label="Breadcrumb" className="text-[13px] text-muted">
           <Link href={`/${locale}/jobs`} className="hover:text-accent-ink">
             {dict.nav.jobs}

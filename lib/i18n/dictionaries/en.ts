@@ -20,7 +20,7 @@ const en: Dict = {
     partner: {
       title: "Become a Partner | Arion Logistics",
       description:
-        "Reliable delivery capacity for networks and shippers: Amazon DSP experience, digital processes and scalable teams. Get in touch now.",
+        "Reliable delivery capacity for networks and shippers: UPS service partner experience, digital processes and scalable teams. Get in touch now.",
     },
     contact: {
       title: "Contact | Arion Logistics",
@@ -41,7 +41,7 @@ const en: Dict = {
     languageLabel: "Language",
   },
   hero: {
-    eyebrow: "Amazon Delivery Service Partner",
+    eyebrow: "UPS Service Partner",
     title1: "Quality and flexibility?",
     title2: "We deliver.",
     subtitle:
@@ -53,18 +53,18 @@ const en: Dict = {
   },
   stats: {
     items: [
+      { value: 6500, label: "parcels delivered per day" },
+      { value: 100, label: "people on the team" },
+      { value: 75, suffix: "+", label: "own vehicles" },
       { value: 2, label: "locations in Bavaria" },
-      { value: 9, label: "languages on the team" },
-      { value: 3, label: "days to your first route" },
-      { value: 100, suffix: " %", label: "digital processes" },
     ],
-    note: "Amazon Delivery Service Partner with courier and express service across Bavaria.",
+    note: "UPS service partner with courier and express service across Bavaria.",
   },
   about: {
     title: "Logistics from Franconia. Built like a tech company.",
     body: [
-      "Arion Logistics is a logistics company from Bavaria. As an Amazon Delivery Service Partner we deliver parcels on the last mile every day, on time and documented.",
-      "Beyond parcel delivery we run courier and express jobs across Bavaria. Our team works in several languages and our processes run fully digital.",
+      "Arion Logistics is a logistics company from Bavaria. As a UPS service partner we deliver around 6,500 parcels on the last mile every day, on time and documented.",
+      "100 team members from many countries, over 75 vehicles and our own in-house recruiting and marketing team: we grow on our own strength, fully digitally managed.",
     ],
   },
   process: {
@@ -155,12 +155,12 @@ const en: Dict = {
     lead: "Networks and shippers work with us because we deliver: on time, documented and scalable.",
     points: [
       {
-        title: "DSP experience",
+        title: "Parcel network experience",
         text: "We prove ourselves daily in one of the most demanding delivery networks in the world.",
       },
       {
         title: "Scalable fleet",
-        text: "Additional vehicles and drivers in weeks, not months. Recruiting in six countries.",
+        text: "Over 75 vehicles and our own in-house recruiting in six countries: we scale in weeks, not months.",
       },
       {
         title: "Full transparency",
@@ -222,9 +222,39 @@ const en: Dict = {
     title: "Delivery capacity for your network.",
     lead: "Arion Logistics drives today for one of the largest delivery networks in the world. We offer that same quality to you.",
     body: [
-      "As an Amazon Delivery Service Partner we pass strict quality and safety standards every day: scorecards, audits and to-the-minute records are part of our routine.",
+      "As a UPS service partner we pass strict quality and safety standards every day: scorecards, audits and to-the-minute records are part of our routine.",
       "Our teams work fully digital. Route planning, onboarding, time tracking and reporting run on CoDriver, the platform we built ourselves.",
       "Need additional last-mile capacity, fixed routes or express direct runs in Bavaria? Then talk to us.",
+    ],
+    offeringsTitle: "What you can book",
+    offerings: [
+      {
+        title: "Last-mile capacity",
+        text: "Additional vehicles and drivers for your delivery network, also short-term and seasonal.",
+      },
+      {
+        title: "Fixed routes",
+        text: "Recurring routes with a fixed team, fixed quality and a fixed price.",
+      },
+      {
+        title: "Express & direct runs",
+        text: "Time-critical shipments as direct runs across Bavaria, same-day on request.",
+      },
+    ],
+    stepsTitle: "How we start",
+    steps: [
+      {
+        title: "Call",
+        text: "We clarify volume, area and requirements in a short first conversation.",
+      },
+      {
+        title: "Pilot phase",
+        text: "We drive a defined trial period with full reporting.",
+      },
+      {
+        title: "Scale-up",
+        text: "Once the pilot works, we add vehicles, routes and areas step by step.",
+      },
     ],
     cta: "Schedule a call",
   },
@@ -234,6 +264,7 @@ const en: Dict = {
     emailLabel: "Email",
     phoneLabel: "Phone",
     whatsappCta: "WhatsApp contact",
+    addressLabel: "Address",
     locationsLabel: "Locations",
     jobsHint: "Want to apply as a driver?",
     jobsHintCta: "Straight to the jobs",
@@ -249,15 +280,22 @@ const en: Dict = {
   legal: {
     imprintTitle: "Legal notice",
     imprintBody: [
-      "Arion Logistics",
-      "Address: to be added.",
-      "Email: info@arion-logistics.de",
-      "Information according to § 5 DDG. Authorised representative, register number and VAT ID will be added before publication.",
+      "Information according to § 5 DDG (German Digital Services Act):",
+      "Arion Logistics GmbH",
+      "Industriestraße 12a, 91325 Adelsdorf, Germany",
+      "Phone: +49 911 13065352 · Email: info@arion-logistics.de",
+      "Represented by the managing directors. Register court, commercial register number and VAT ID will be added.",
+      "The legally binding version of this legal notice is the German version.",
     ],
     privacyTitle: "Privacy policy",
     privacyBody: [
-      "This website processes personal data only where technically required. No tracking cookies are set.",
-      "If you contact us by email, your details are stored to handle the request. The full privacy policy will be added before publication.",
+      "Controller within the meaning of the GDPR: Arion Logistics GmbH, Industriestraße 12a, 91325 Adelsdorf, Germany, phone +49 911 13065352, email info@arion-logistics.de.",
+      "Hosting: This website is hosted by Vercel Inc. (340 S Lemon Ave #4133, Walnut, CA 91789, USA). When you visit the site, technically necessary data (IP address, date and time of access, requested page, browser type) is processed in server log files to provide the website securely (Art. 6(1)(f) GDPR). A data processing agreement is in place with Vercel; transfers to the USA are based on the EU Standard Contractual Clauses.",
+      "Cookies and tracking: This website sets no cookies and uses no analytics or tracking services.",
+      "Contact: If you contact us by email, phone or WhatsApp, we process your details to handle the request (Art. 6(1)(b) and (f) GDPR) and delete them once no longer needed. With WhatsApp, data is also processed by Meta Platforms Ireland Ltd.; their privacy policy applies in addition.",
+      "Applications: Our job ads link to an external application form at dsp-codriver.de; the provider's privacy policy applies there.",
+      "Your rights: You have the right of access, rectification, erasure, restriction of processing, data portability and objection (Art. 15-21 GDPR), and the right to lodge a complaint with a supervisory authority, e.g. the Bavarian Data Protection Authority (BayLDA), Promenade 18, 91522 Ansbach, Germany.",
+      "The legally binding version of this privacy policy is the German version. Last updated: September 2026.",
     ],
   },
   notFound: {

@@ -20,7 +20,7 @@ const es: Dict = {
     partner: {
       title: "Hazte socio | Arion Logistics",
       description:
-        "Capacidad de reparto fiable para redes y remitentes: experiencia como Amazon DSP, procesos digitales y equipos escalables. Contacta ahora.",
+        "Capacidad de reparto fiable para redes y remitentes: experiencia como partner de servicio de UPS, procesos digitales y equipos escalables. Contacta ahora.",
     },
     contact: {
       title: "Contacto | Arion Logistics",
@@ -41,7 +41,7 @@ const es: Dict = {
     languageLabel: "Idioma",
   },
   hero: {
-    eyebrow: "Amazon Delivery Service Partner",
+    eyebrow: "Partner de servicio de UPS",
     title1: "¿Calidad y flexibilidad?",
     title2: "Nosotros entregamos.",
     subtitle:
@@ -53,18 +53,18 @@ const es: Dict = {
   },
   stats: {
     items: [
+      { value: 6500, label: "paquetes entregados al día" },
+      { value: 100, label: "personas en el equipo" },
+      { value: 75, suffix: "+", label: "vehículos propios" },
       { value: 2, label: "centros en Baviera" },
-      { value: 9, label: "idiomas en el equipo" },
-      { value: 3, label: "días hasta tu primera ruta" },
-      { value: 100, suffix: " %", label: "procesos digitales" },
     ],
-    note: "Amazon Delivery Service Partner con servicio de mensajería y exprés en toda Baviera.",
+    note: "Partner de servicio de UPS con mensajería y exprés en toda Baviera.",
   },
   about: {
     title: "Logística de Franconia. Construida como una tech.",
     body: [
-      "Arion Logistics es una empresa logística de Baviera. Como Amazon Delivery Service Partner entregamos paquetes en la última milla cada día, puntuales y documentados.",
-      "Además realizamos servicios de mensajería y exprés por toda Baviera. Nuestro equipo trabaja en varios idiomas y nuestros procesos son totalmente digitales.",
+      "Arion Logistics es una empresa logística de Baviera. Como partner de servicio de UPS entregamos cada día unos 6.500 paquetes en la última milla, puntuales y documentados.",
+      "100 personas de muchos países, más de 75 vehículos y un equipo propio de reclutamiento y marketing in-house: crecemos con fuerza propia, con gestión totalmente digital.",
     ],
   },
   process: {
@@ -155,12 +155,12 @@ const es: Dict = {
     lead: "Redes y remitentes trabajan con nosotros porque cumplimos: puntuales, documentados y escalables.",
     points: [
       {
-        title: "Experiencia DSP",
+        title: "Experiencia en paquetería",
         text: "Superamos cada día una de las redes de reparto más exigentes del mundo.",
       },
       {
         title: "Flota escalable",
-        text: "Vehículos y conductores adicionales en semanas, no en meses. Reclutamos en seis países.",
+        text: "Más de 75 vehículos y reclutamiento in-house propio en seis países: escalamos en semanas, no en meses.",
       },
       {
         title: "Transparencia total",
@@ -225,9 +225,21 @@ const es: Dict = {
     title: "Capacidad de reparto para tu red.",
     lead: "Arion Logistics conduce hoy para una de las mayores redes de reparto del mundo. Esa misma calidad te la ofrecemos a ti.",
     body: [
-      "Como Amazon Delivery Service Partner superamos cada día estrictos estándares de calidad y seguridad: scorecards, auditorías y registros al minuto forman parte de nuestra rutina.",
+      "Como partner de servicio de UPS superamos cada día estrictos estándares de calidad y seguridad: scorecards, auditorías y registros al minuto forman parte de nuestra rutina.",
       "Nuestros equipos trabajan de forma totalmente digital. La planificación de rutas, el onboarding, el registro horario y los informes funcionan con CoDriver, la plataforma que desarrollamos nosotros mismos.",
       "¿Necesitas capacidad adicional de última milla, rutas fijas o envíos exprés directos en Baviera? Hablemos.",
+    ],
+    offeringsTitle: "Qué puedes contratar",
+    offerings: [
+      { title: "Capacidad de última milla", text: "Vehículos y conductores adicionales para tu red de reparto, también a corto plazo y por temporada." },
+      { title: "Rutas fijas", text: "Rutas recurrentes con equipo fijo, calidad fija y precio fijo." },
+      { title: "Exprés y rutas directas", text: "Envíos urgentes como ruta directa por toda Baviera, si lo deseas el mismo día." },
+    ],
+    stepsTitle: "Así empezamos",
+    steps: [
+      { title: "Conversación", text: "Aclaramos volumen, zona y requisitos en una breve primera llamada." },
+      { title: "Fase piloto", text: "Conducimos un periodo de prueba definido, con informes completos." },
+      { title: "Escalado", text: "Si el piloto funciona, ampliamos vehículos, rutas y zonas paso a paso." },
     ],
     cta: "Agendar una llamada",
   },
@@ -237,6 +249,7 @@ const es: Dict = {
     emailLabel: "Correo",
     phoneLabel: "Teléfono",
     whatsappCta: "Contacto por WhatsApp",
+    addressLabel: "Dirección",
     locationsLabel: "Centros",
     jobsHint: "¿Quieres trabajar de repartidor?",
     jobsHintCta: "Directo al empleo",
@@ -252,15 +265,18 @@ const es: Dict = {
   legal: {
     imprintTitle: "Aviso legal",
     imprintBody: [
-      "Arion Logistics",
-      "Dirección: se añadirá.",
-      "Correo: info@arion-logistics.de",
-      "Información según el § 5 DDG alemán. El representante autorizado, el número de registro y el NIF-IVA se añadirán antes de la publicación.",
+      "Arion Logistics GmbH",
+      "Industriestraße 12a, 91325 Adelsdorf, Alemania",
+      "Teléfono: +49 911 13065352 · Correo: info@arion-logistics.de",
+      "Representada por la dirección. El tribunal de registro, el número de registro mercantil y el NIF-IVA se añadirán próximamente.",
+      "La versión jurídicamente vinculante de este aviso legal es la alemana.",
     ],
     privacyTitle: "Política de privacidad",
     privacyBody: [
-      "Este sitio web solo trata datos personales cuando es técnicamente necesario. No se instalan cookies de seguimiento.",
-      "Si nos contactas por correo, tus datos se guardan para gestionar la consulta. La política de privacidad completa se añadirá antes de la publicación.",
+      "Responsable según el RGPD: Arion Logistics GmbH, Industriestraße 12a, 91325 Adelsdorf, Alemania, teléfono +49 911 13065352, correo info@arion-logistics.de.",
+      "Este sitio se aloja en Vercel Inc. (EE. UU.); al visitarlo se procesan en logs del servidor solo datos técnicamente necesarios (dirección IP, fecha y hora, página solicitada, tipo de navegador) para ofrecer el sitio de forma segura. No se instalan cookies ni servicios de análisis o seguimiento.",
+      "Si nos contactas por correo, teléfono o WhatsApp, tratamos tus datos solo para gestionar la consulta y los eliminamos cuando dejan de ser necesarios. Tienes derecho de acceso, rectificación, supresión, limitación, portabilidad y oposición, así como a reclamar ante una autoridad de control.",
+      "La versión jurídicamente vinculante de esta política es la alemana (/de/datenschutz). Última actualización: septiembre de 2026.",
     ],
   },
   notFound: {

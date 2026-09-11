@@ -33,7 +33,7 @@ export function pageMetadata(
       siteName: site.name,
       type: "website",
       locale,
-      images: [{ url: `${site.url}/images/depot.webp`, width: 1800, height: 1005 }],
+      images: [{ url: `${site.url}/images/og.jpg`, width: 1200, height: 630 }],
     },
     twitter: { card: "summary_large_image", title, description },
   };
@@ -58,10 +58,14 @@ export function organizationJsonLd() {
       contactType: "customer service",
       availableLanguage: ["de", "en", "sq", "es", "bg", "ro", "hu"],
     },
-    address: [
-      { "@type": "PostalAddress", addressLocality: "Pommersfelden", addressRegion: "Bayern", addressCountry: "DE" },
-      { "@type": "PostalAddress", addressLocality: "Kitzingen", addressRegion: "Bayern", addressCountry: "DE" },
-    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: site.street,
+      postalCode: site.zip,
+      addressLocality: site.city,
+      addressRegion: "Bayern",
+      addressCountry: "DE",
+    },
   };
 }
 

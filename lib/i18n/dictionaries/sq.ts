@@ -20,7 +20,7 @@ const sq: Dict = {
     partner: {
       title: "Bëhu partner | Arion Logistics",
       description:
-        "Kapacitet i besueshëm shpërndarjeje për rrjete dhe dërgues: përvojë si Amazon DSP, procese digjitale dhe ekipe të shkallëzueshme. Na kontakto tani.",
+        "Kapacitet i besueshëm shpërndarjeje për rrjete dhe dërgues: përvojë si partner shërbimi i UPS, procese digjitale dhe ekipe të shkallëzueshme. Na kontakto tani.",
     },
     contact: {
       title: "Kontakt | Arion Logistics",
@@ -41,7 +41,7 @@ const sq: Dict = {
     languageLabel: "Gjuha",
   },
   hero: {
-    eyebrow: "Amazon Delivery Service Partner",
+    eyebrow: "Partner shërbimi i UPS",
     title1: "Cilësi dhe fleksibilitet?",
     title2: "Ne dorëzojmë.",
     subtitle:
@@ -53,18 +53,18 @@ const sq: Dict = {
   },
   stats: {
     items: [
+      { value: 6500, label: "pako të dorëzuara në ditë" },
+      { value: 100, label: "punonjës në ekip" },
+      { value: 75, suffix: "+", label: "automjete të veta" },
       { value: 2, label: "qendra në Bavari" },
-      { value: 9, label: "gjuhë në ekip" },
-      { value: 3, label: "ditë deri te itinerari i parë" },
-      { value: 100, suffix: " %", label: "procese digjitale" },
     ],
-    note: "Amazon Delivery Service Partner me shërbim korrieri dhe ekspres në gjithë Bavarinë.",
+    note: "Partner shërbimi i UPS me shërbim korrieri dhe ekspres në gjithë Bavarinë.",
   },
   about: {
     title: "Logjistikë nga Frankonia. E ndërtuar si kompani teknologjike.",
     body: [
-      "Arion Logistics është një kompani logjistike nga Bavaria. Si Amazon Delivery Service Partner dorëzojmë çdo ditë pako në miljen e fundit, në kohë dhe të dokumentuara.",
-      "Përveç kësaj kryejmë porosi korrieri dhe ekspres në gjithë Bavarinë. Ekipi ynë punon në disa gjuhë dhe proceset tona janë plotësisht digjitale.",
+      "Arion Logistics është një kompani logjistike nga Bavaria. Si partner shërbimi i UPS dorëzojmë çdo ditë rreth 6.500 pako në miljen e fundit, në kohë dhe të dokumentuara.",
+      "100 punonjës nga shumë vende, mbi 75 automjete dhe një ekip i yni për rekrutim dhe marketing: rritemi me forcat tona, plotësisht të drejtuar digjitalisht.",
     ],
   },
   process: {
@@ -155,12 +155,12 @@ const sq: Dict = {
     lead: "Rrjetet dhe dërguesit punojnë me ne sepse ne dorëzojmë: në kohë, të dokumentuar dhe të shkallëzueshëm.",
     points: [
       {
-        title: "Përvojë DSP",
+        title: "Përvojë në pako",
         text: "Çdo ditë provojmë veten në një nga rrjetet më kërkuese të shpërndarjes në botë.",
       },
       {
         title: "Flotë e shkallëzueshme",
-        text: "Automjete dhe shoferë shtesë brenda javësh, jo muajsh. Rekrutojmë në gjashtë vende.",
+        text: "Mbi 75 automjete dhe rekrutim i brendshëm në gjashtë vende: shkallëzojmë brenda javësh, jo muajsh.",
       },
       {
         title: "Transparencë e plotë",
@@ -225,9 +225,21 @@ const sq: Dict = {
     title: "Kapacitet shpërndarjeje për rrjetin tuaj.",
     lead: "Arion Logistics sot drejton për një nga rrjetet më të mëdha të shpërndarjes në botë. Të njëjtën cilësi jua ofrojmë edhe juve.",
     body: [
-      "Si Amazon Delivery Service Partner kalojmë çdo ditë standarde të rrepta cilësie dhe sigurie: scorecard-et, auditimet dhe regjistrimet me minutë janë pjesë e rutinës sonë.",
+      "Si partner shërbimi i UPS kalojmë çdo ditë standarde të rrepta cilësie dhe sigurie: scorecard-et, auditimet dhe regjistrimet me minutë janë pjesë e rutinës sonë.",
       "Ekipet tona punojnë plotësisht në mënyrë digjitale. Planifikimi i itinerareve, onboarding-u, regjistrimi i orarit dhe raportimi funksionojnë me CoDriver, platformën që e ndërtuam vetë.",
       "Ju nevojitet kapacitet shtesë në miljen e fundit, itinerare fikse ose dërgesa ekspres direkte në Bavari? Atëherë flisni me ne.",
+    ],
+    offeringsTitle: "Çfarë mund të porositni",
+    offerings: [
+      { title: "Kapacitet për miljen e fundit", text: "Automjete dhe shoferë shtesë për rrjetin tuaj, edhe afatshkurtër dhe sezonal." },
+      { title: "Itinerare fikse", text: "Rrugë të përsëritura me ekip fiks, cilësi fikse dhe çmim fiks." },
+      { title: "Ekspres dhe direkt", text: "Dërgesa urgjente si udhëtim direkt nëpër Bavari, sipas dëshirës edhe në të njëjtën ditë." },
+    ],
+    stepsTitle: "Si fillojmë",
+    steps: [
+      { title: "Bisedë", text: "Sqarojmë volumin, zonën dhe kërkesat në një bisedë të parë të shkurtër." },
+      { title: "Faza pilot", text: "Punojmë një periudhë prove të përcaktuar, me raportim të plotë." },
+      { title: "Shkallëzim", text: "Nëse piloti funksionon, shtojmë automjete, itinerare dhe zona hap pas hapi." },
     ],
     cta: "Cakto një bisedë",
   },
@@ -237,6 +249,7 @@ const sq: Dict = {
     emailLabel: "Email",
     phoneLabel: "Telefon",
     whatsappCta: "Kontakt në WhatsApp",
+    addressLabel: "Adresa",
     locationsLabel: "Qendrat",
     jobsHint: "Dëshiron të aplikosh si shofer?",
     jobsHintCta: "Direkt te punët",
@@ -252,15 +265,18 @@ const sq: Dict = {
   legal: {
     imprintTitle: "Shënim ligjor",
     imprintBody: [
-      "Arion Logistics",
-      "Adresa: do të shtohet.",
-      "Email: info@arion-logistics.de",
-      "Informacion sipas § 5 DDG (Gjermani). Përfaqësuesi i autorizuar, numri i regjistrit dhe numri i TVSH-së do të shtohen para publikimit.",
+      "Arion Logistics GmbH",
+      "Industriestraße 12a, 91325 Adelsdorf, Gjermani",
+      "Tel: +49 911 13065352 · Email: info@arion-logistics.de",
+      "E përfaqësuar nga drejtuesit. Gjykata e regjistrit, numri i regjistrit tregtar dhe numri i TVSH-së do të shtohen.",
+      "Versioni ligjërisht i detyrueshëm i këtij shënimi është ai gjermanisht.",
     ],
     privacyTitle: "Politika e privatësisë",
     privacyBody: [
-      "Kjo faqe interneti përpunon të dhëna personale vetëm kur është teknikisht e nevojshme. Nuk vendosen cookie gjurmimi.",
-      "Nëse na kontaktoni me email, të dhënat tuaja ruhen për trajtimin e kërkesës. Politika e plotë e privatësisë do të shtohet para publikimit.",
+      "Përgjegjës sipas GDPR: Arion Logistics GmbH, Industriestraße 12a, 91325 Adelsdorf, Gjermani, tel +49 911 13065352, email info@arion-logistics.de.",
+      "Faqja mbahet te Vercel Inc. (SHBA); gjatë vizitës përpunohen në log-et e serverit vetëm të dhëna teknikisht të nevojshme (adresa IP, data dhe ora, faqja e kërkuar, lloji i shfletuesit) për ta ofruar faqen në mënyrë të sigurt. Nuk vendosen cookie dhe nuk përdoren shërbime analize apo gjurmimi.",
+      "Nëse na kontaktoni me email, telefon ose WhatsApp, i përpunojmë të dhënat tuaja vetëm për trajtimin e kërkesës dhe i fshijmë kur nuk nevojiten më. Keni të drejtë për qasje, korrigjim, fshirje, kufizim, bartje dhe kundërshtim, si dhe për ankesë pranë një autoriteti mbikëqyrës.",
+      "Versioni ligjërisht i detyrueshëm i kësaj politike është ai gjermanisht (/de/datenschutz). Përditësuar: shtator 2026.",
     ],
   },
   notFound: {

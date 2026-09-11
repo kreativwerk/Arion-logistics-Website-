@@ -1,6 +1,6 @@
 # Arion Logistics Website
 
-Moderne, Apple-inspirierte Website für Arion Logistics: Paketzustellung (Amazon DSP) und Kurier & Express in Bayern. Gebaut für zwei Ziele: **Fahrer-Recruiting über Google Jobs** und **Gewinnung von Auftraggebern/Netzwerken**.
+Moderne, Apple-inspirierte Website für Arion Logistics: Paketzustellung (UPS Servicepartner) und Kurier & Express in Bayern. Gebaut für zwei Ziele: **Fahrer-Recruiting über Google Jobs** und **Gewinnung von Auftraggebern/Netzwerken**.
 
 ## Stack
 

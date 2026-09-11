@@ -4,7 +4,7 @@ import MagneticButton from "@/components/MagneticButton";
 
 export default function PartnerTeaser({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
-    <section className="mx-auto max-w-[1320px] px-5 py-20 md:px-8 md:py-32">
+    <section className="mx-auto max-w-[1320px] px-6 py-20 md:px-12 md:py-32">
       <div className="max-w-[62ch]">
         <h2 data-reveal className="text-4xl font-semibold leading-[1.05] tracking-tighter md:text-6xl">
           {dict.partner.title}

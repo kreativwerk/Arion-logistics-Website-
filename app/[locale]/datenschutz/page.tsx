@@ -29,7 +29,7 @@ export default async function PrivacyPage({
   const dict = await getDictionary(locale as Locale);
 
   return (
-    <div className="mx-auto max-w-[720px] px-5 pb-24 pt-28 md:px-8 md:pt-40">
+    <div className="mx-auto max-w-[720px] px-6 pb-24 pt-28 md:px-12 md:pt-40">
       <h1 className="text-4xl font-semibold tracking-tighter md:text-5xl">
         {dict.legal.privacyTitle}
       </h1>

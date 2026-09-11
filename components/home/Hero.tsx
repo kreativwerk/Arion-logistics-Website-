@@ -18,9 +18,9 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
 
   return (
     <section className="relative overflow-hidden md:min-h-[100dvh]">
-      <div className="mx-auto grid max-w-[1600px] md:min-h-[100dvh] md:grid-cols-[1.05fr_1fr]">
+      <div className="grid md:min-h-[100dvh] md:grid-cols-[1.1fr_1fr]">
         {/* Copy */}
-        <div className="flex flex-col justify-center px-5 pb-14 pt-32 md:py-40 md:pl-[max(2rem,calc((100vw-1600px)/2+2rem))] md:pr-12">
+        <div className="flex flex-col justify-center px-6 pb-14 pt-32 md:py-40 md:pl-[max(3rem,calc((100vw-1320px)/2))] md:pr-14">
           <p
             data-hero-fade
             className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-1.5 text-[12px] font-medium uppercase tracking-[0.14em] text-muted"

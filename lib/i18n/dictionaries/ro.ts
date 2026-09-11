@@ -20,7 +20,7 @@ const ro: Dict = {
     partner: {
       title: "Deveniți partener | Arion Logistics",
       description:
-        "Capacitate de livrare de încredere pentru rețele și expeditori: experiență Amazon DSP, procese digitale și echipe scalabile. Contactați-ne acum.",
+        "Capacitate de livrare de încredere pentru rețele și expeditori: experiență de partener de servicii UPS, procese digitale și echipe scalabile. Contactați-ne acum.",
     },
     contact: {
       title: "Contact | Arion Logistics",
@@ -41,7 +41,7 @@ const ro: Dict = {
     languageLabel: "Limba",
   },
   hero: {
-    eyebrow: "Amazon Delivery Service Partner",
+    eyebrow: "Partener de servicii UPS",
     title1: "Calitate și flexibilitate?",
     title2: "Noi livrăm.",
     subtitle:
@@ -53,18 +53,18 @@ const ro: Dict = {
   },
   stats: {
     items: [
+      { value: 6500, label: "colete livrate pe zi" },
+      { value: 100, label: "oameni în echipă" },
+      { value: 75, suffix: "+", label: "vehicule proprii" },
       { value: 2, label: "baze în Bavaria" },
-      { value: 9, label: "limbi în echipă" },
-      { value: 3, label: "zile până la prima rută" },
-      { value: 100, suffix: " %", label: "procese digitale" },
     ],
-    note: "Amazon Delivery Service Partner cu servicii de curierat și expres în toată Bavaria.",
+    note: "Partener de servicii UPS cu curierat și expres în toată Bavaria.",
   },
   about: {
     title: "Logistică din Franconia. Construită ca o companie tech.",
     body: [
-      "Arion Logistics este o companie de logistică din Bavaria. Ca Amazon Delivery Service Partner livrăm zilnic colete pe ultimul kilometru, la timp și documentat.",
-      "În plus, executăm curse de curierat și expres în toată Bavaria. Echipa noastră lucrează în mai multe limbi, iar procesele noastre sunt complet digitale.",
+      "Arion Logistics este o companie de logistică din Bavaria. Ca partener de servicii UPS livrăm zilnic circa 6.500 de colete pe ultimul kilometru, la timp și documentat.",
+      "100 de oameni din multe țări, peste 75 de vehicule și o echipă proprie de recrutare și marketing in-house: creștem prin forțe proprii, gestionați complet digital.",
     ],
   },
   process: {
@@ -155,12 +155,12 @@ const ro: Dict = {
     lead: "Rețelele și expeditorii lucrează cu noi pentru că livrăm: la timp, documentat și scalabil.",
     points: [
       {
-        title: "Experiență DSP",
+        title: "Experiență în curierat",
         text: "Ne dovedim zilnic într-una dintre cele mai exigente rețele de livrare din lume.",
       },
       {
         title: "Flotă scalabilă",
-        text: "Vehicule și șoferi suplimentari în săptămâni, nu luni. Recrutăm în șase țări.",
+        text: "Peste 75 de vehicule și recrutare in-house proprie în șase țări: scalăm în săptămâni, nu în luni.",
       },
       {
         title: "Transparență totală",
@@ -225,9 +225,21 @@ const ro: Dict = {
     title: "Capacitate de livrare pentru rețeaua dumneavoastră.",
     lead: "Arion Logistics conduce astăzi pentru una dintre cele mai mari rețele de livrare din lume. Aceeași calitate v-o oferim și dumneavoastră.",
     body: [
-      "Ca Amazon Delivery Service Partner trecem zilnic standarde stricte de calitate și siguranță: scorecard-urile, auditurile și evidențele la minut fac parte din rutina noastră.",
+      "Ca partener de servicii UPS trecem zilnic standarde stricte de calitate și siguranță: scorecard-urile, auditurile și evidențele la minut fac parte din rutina noastră.",
       "Echipele noastre lucrează complet digital. Planificarea rutelor, onboarding-ul, pontajul și raportarea rulează pe CoDriver, platforma construită de noi.",
       "Aveți nevoie de capacitate suplimentară pe ultimul kilometru, rute fixe sau curse expres directe în Bavaria? Atunci vorbiți cu noi.",
+    ],
+    offeringsTitle: "Ce puteți contracta",
+    offerings: [
+      { title: "Capacitate pentru ultimul kilometru", text: "Vehicule și șoferi suplimentari pentru rețeaua dumneavoastră, și pe termen scurt sau sezonier." },
+      { title: "Rute fixe", text: "Rute recurente cu echipă fixă, calitate fixă și preț fix." },
+      { title: "Expres și curse directe", text: "Expedieri urgente drept cursă directă prin Bavaria, la cerere chiar în aceeași zi." },
+    ],
+    stepsTitle: "Cum începem",
+    steps: [
+      { title: "Discuție", text: "Clarificăm volumul, zona și cerințele într-o primă discuție scurtă." },
+      { title: "Faza pilot", text: "Conducem o perioadă de probă definită, cu raportare completă." },
+      { title: "Scalare", text: "Dacă pilotul funcționează, adăugăm pas cu pas vehicule, rute și zone." },
     ],
     cta: "Programați o discuție",
   },
@@ -237,6 +249,7 @@ const ro: Dict = {
     emailLabel: "E-mail",
     phoneLabel: "Telefon",
     whatsappCta: "Contact WhatsApp",
+    addressLabel: "Adresă",
     locationsLabel: "Baze",
     jobsHint: "Vrei să aplici ca șofer?",
     jobsHintCta: "Direct la joburi",
@@ -252,15 +265,18 @@ const ro: Dict = {
   legal: {
     imprintTitle: "Informații legale",
     imprintBody: [
-      "Arion Logistics",
-      "Adresa: va fi adăugată.",
-      "E-mail: info@arion-logistics.de",
-      "Informații conform § 5 DDG (Germania). Reprezentantul autorizat, numărul de registru și codul de TVA vor fi adăugate înainte de publicare.",
+      "Arion Logistics GmbH",
+      "Industriestraße 12a, 91325 Adelsdorf, Germania",
+      "Tel: +49 911 13065352 · E-mail: info@arion-logistics.de",
+      "Reprezentată de administratori. Instanța de registru, numărul din registrul comerțului și codul de TVA vor fi adăugate.",
+      "Versiunea obligatorie din punct de vedere juridic este cea germană.",
     ],
     privacyTitle: "Politica de confidențialitate",
     privacyBody: [
-      "Acest site prelucrează date personale doar în măsura în care este necesar tehnic. Nu se folosesc cookie-uri de urmărire.",
-      "Dacă ne contactați prin e-mail, datele dumneavoastră sunt stocate pentru soluționarea cererii. Politica de confidențialitate completă va fi adăugată înainte de publicare.",
+      "Operator în sensul RGPD: Arion Logistics GmbH, Industriestraße 12a, 91325 Adelsdorf, Germania, tel. +49 911 13065352, e-mail info@arion-logistics.de.",
+      "Site-ul este găzduit la Vercel Inc. (SUA); la accesare se prelucrează în logurile serverului doar date necesare tehnic (adresa IP, data și ora, pagina accesată, tipul browserului) pentru a furniza site-ul în siguranță. Nu se folosesc cookie-uri, analize sau urmărire.",
+      "Dacă ne contactați prin e-mail, telefon sau WhatsApp, prelucrăm datele doar pentru soluționarea cererii și le ștergem când nu mai sunt necesare. Aveți dreptul de acces, rectificare, ștergere, restricționare, portabilitate și opoziție, precum și dreptul de a depune plângere la o autoritate de supraveghere.",
+      "Versiunea obligatorie juridic a acestei politici este cea germană (/de/datenschutz). Actualizat: septembrie 2026.",
     ],
   },
   notFound: {

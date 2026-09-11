@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Locale } from "@/lib/i18n/config";
 import { locales, localeNames } from "@/lib/i18n/config";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 interface HeaderProps {
   locale: Locale;
@@ -54,13 +55,13 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 md:bg-background/90 md:shadow-[0_1px_0_0_var(--line)] md:backdrop-blur-xl ${
         scrolled || open
-          ? "bg-background/85 backdrop-blur-xl shadow-[0_1px_0_0_var(--line)]"
+          ? "bg-background/90 shadow-[0_1px_0_0_var(--line)] backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between px-5 md:h-24 md:px-8">
+      <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between px-6 md:h-24 md:px-12">
         <Link href={`/${locale}`} aria-label="Arion Logistics GmbH" className="shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.svg" alt="Arion Logistics GmbH" className="h-12 w-auto md:h-16" />
@@ -79,33 +80,8 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="relative hidden md:block">
-            <label className="sr-only" htmlFor="lang-select">
-              {nav.languageLabel}
-            </label>
-            <select
-              id="lang-select"
-              value={locale}
-              onChange={(e) => {
-                window.location.href = `/${e.target.value}${pathWithout}`;
-              }}
-              className="h-9 cursor-pointer appearance-none rounded-full border border-line bg-surface pl-3.5 pr-8 text-[13px] text-foreground outline-none transition-colors hover:border-foreground/30"
-            >
-              {locales.map((l) => (
-                <option key={l} value={l}>
-                  {localeNames[l]}
-                </option>
-              ))}
-            </select>
-            <svg
-              className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2"
-              width="10"
-              height="6"
-              viewBox="0 0 10 6"
-              aria-hidden="true"
-            >
-              <path d="m1 1 4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
-            </svg>
+          <div className="hidden md:block">
+            <LanguageSwitcher locale={locale} pathWithout={pathWithout} label={nav.languageLabel} />
           </div>
 
           <Link
@@ -136,7 +112,7 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden ${open ? "block" : "hidden"} h-[calc(100dvh-5rem)] overflow-y-auto bg-background px-5 pb-10 pt-4`}
+        className={`md:hidden ${open ? "block" : "hidden"} h-[calc(100dvh-5rem)] overflow-y-auto bg-background px-6 pb-10 pt-4`}
       >
         <nav className="flex flex-col" aria-label="Mobile">
           {links.map((link) => (
@@ -164,12 +140,14 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
               <a
                 key={l}
                 href={`/${l}${pathWithout}`}
-                className={`rounded-full border px-3.5 py-1.5 text-[13px] ${
+                className={`flex items-center gap-2 rounded-full border py-1.5 pl-2 pr-3.5 text-[13px] ${
                   l === locale
                     ? "border-foreground bg-foreground text-background"
                     : "border-line text-muted"
                 }`}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={`/flags/${l}.svg`} alt="" className="h-4.5 w-4.5 rounded-full" />
                 {localeNames[l]}
               </a>
             ))}

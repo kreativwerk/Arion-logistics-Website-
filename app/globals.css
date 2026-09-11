@@ -58,10 +58,10 @@ body {
   color: #fff;
 }
 
-/* Elements animated in by GSAP start hidden only when JS has taken over.
-   Without JS (or with reduced motion) everything stays visible. */
-html.gsap-ready .gsap-reveal {
-  opacity: 0;
+:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .text-balance {

@@ -20,7 +20,7 @@ const hu: Dict = {
     partner: {
       title: "Legyen partnerünk | Arion Logistics",
       description:
-        "Megbízható kézbesítési kapacitás hálózatoknak és feladóknak: Amazon DSP tapasztalat, digitális folyamatok, skálázható csapatok. Vegye fel velünk a kapcsolatot.",
+        "Megbízható kézbesítési kapacitás hálózatoknak és feladóknak: UPS szervizpartneri tapasztalat, digitális folyamatok, skálázható csapatok. Vegye fel velünk a kapcsolatot.",
     },
     contact: {
       title: "Kapcsolat | Arion Logistics",
@@ -41,7 +41,7 @@ const hu: Dict = {
     languageLabel: "Nyelv",
   },
   hero: {
-    eyebrow: "Amazon Delivery Service Partner",
+    eyebrow: "UPS szervizpartner",
     title1: "Minőség és rugalmasság?",
     title2: "Mi szállítunk.",
     subtitle:
@@ -53,18 +53,18 @@ const hu: Dict = {
   },
   stats: {
     items: [
+      { value: 6500, label: "kézbesített csomag naponta" },
+      { value: 100, label: "munkatárs a csapatban" },
+      { value: 75, suffix: "+", label: "saját jármű" },
       { value: 2, label: "telephely Bajorországban" },
-      { value: 9, label: "nyelv a csapatban" },
-      { value: 3, label: "nap az első túráig" },
-      { value: 100, suffix: " %", label: "digitális folyamatok" },
     ],
-    note: "Amazon Delivery Service Partner futár- és expressz szolgáltatással egész Bajorországban.",
+    note: "UPS szervizpartner futár- és expressz szolgáltatással egész Bajorországban.",
   },
   about: {
     title: "Logisztika Frankföldről. Tech cégként felépítve.",
     body: [
-      "Az Arion Logistics egy bajorországi logisztikai vállalat. Amazon Delivery Service Partnerként minden nap csomagokat kézbesítünk az utolsó mérföldön, pontosan és dokumentáltan.",
-      "Emellett futár- és expressz fuvarokat teljesítünk egész Bajorországban. Csapatunk több nyelven dolgozik, folyamataink teljesen digitálisak.",
+      "Az Arion Logistics egy bajorországi logisztikai vállalat. UPS szervizpartnerként naponta mintegy 6 500 csomagot kézbesítünk az utolsó mérföldön, pontosan és dokumentáltan.",
+      "100 munkatárs sok országból, több mint 75 jármű és saját házon belüli toborzó- és marketingcsapat: saját erőből növekszünk, teljesen digitálisan irányítva.",
     ],
   },
   process: {
@@ -155,12 +155,12 @@ const hu: Dict = {
     lead: "Hálózatok és feladók azért dolgoznak velünk, mert szállítunk: pontosan, dokumentáltan, skálázhatóan.",
     points: [
       {
-        title: "DSP tapasztalat",
+        title: "Csomaghálózati tapasztalat",
         text: "Nap mint nap helytállunk a világ egyik legigényesebb kézbesítési hálózatában.",
       },
       {
         title: "Skálázható flotta",
-        text: "További járművek és sofőrök hetek, nem hónapok alatt. Hat országban toborzunk.",
+        text: "Több mint 75 jármű és saját házon belüli toborzás hat országban: hetek alatt skálázunk, nem hónapok alatt.",
       },
       {
         title: "Teljes átláthatóság",
@@ -225,9 +225,21 @@ const hu: Dict = {
     title: "Kézbesítési kapacitás az Ön hálózatának.",
     lead: "Az Arion Logistics ma a világ egyik legnagyobb kézbesítési hálózatának dolgozik. Ugyanezt a minőséget kínáljuk Önnek is.",
     body: [
-      "Amazon Delivery Service Partnerként nap mint nap szigorú minőségi és biztonsági előírásoknak felelünk meg: a scorecardok, auditok és percre pontos kimutatások a mindennapjaink részei.",
+      "UPS szervizpartnerként nap mint nap szigorú minőségi és biztonsági előírásoknak felelünk meg: a scorecardok, auditok és percre pontos kimutatások a mindennapjaink részei.",
       "Csapataink teljesen digitálisan dolgoznak. A túratervezés, a betanulás, a munkaidő-nyilvántartás és a riporting a CoDriveren fut, a saját fejlesztésű platformunkon.",
       "További utolsó mérföldes kapacitásra, fix túrákra vagy expressz közvetlen fuvarokra van szüksége Bajorországban? Beszéljünk.",
+    ],
+    offeringsTitle: "Mit rendelhet meg",
+    offerings: [
+      { title: "Utolsó mérföldes kapacitás", text: "További járművek és sofőrök az Ön hálózatához, rövid távra és szezonálisan is." },
+      { title: "Fix túrák", text: "Ismétlődő útvonalak fix csapattal, fix minőséggel és fix áron." },
+      { title: "Expressz és közvetlen fuvar", text: "Sürgős küldemények közvetlen fuvarként Bajorországon át, kérésre akár aznap." },
+    ],
+    stepsTitle: "Így indulunk",
+    steps: [
+      { title: "Egyeztetés", text: "Egy rövid első beszélgetésben tisztázzuk a volument, a területet és az igényeket." },
+      { title: "Pilot szakasz", text: "Meghatározott próbaidőszakot vezetünk teljes riportinggal." },
+      { title: "Skálázás", text: "Ha a pilot működik, lépésről lépésre bővítjük a járműveket, túrákat és területeket." },
     ],
     cta: "Egyeztessünk időpontot",
   },
@@ -237,6 +249,7 @@ const hu: Dict = {
     emailLabel: "E-mail",
     phoneLabel: "Telefon",
     whatsappCta: "WhatsApp kapcsolat",
+    addressLabel: "Cím",
     locationsLabel: "Telephelyek",
     jobsHint: "Sofőrként jelentkeznél?",
     jobsHintCta: "Irány az állások",
@@ -252,15 +265,18 @@ const hu: Dict = {
   legal: {
     imprintTitle: "Impresszum",
     imprintBody: [
-      "Arion Logistics",
-      "Cím: később kerül kiegészítésre.",
-      "E-mail: info@arion-logistics.de",
-      "Tájékoztatás a német DDG 5. §-a szerint. A képviseletre jogosult személy, a cégjegyzékszám és az adószám a közzététel előtt kerül kiegészítésre.",
+      "Arion Logistics GmbH",
+      "Industriestraße 12a, 91325 Adelsdorf, Németország",
+      "Tel: +49 911 13065352 · E-mail: info@arion-logistics.de",
+      "Képviselik az ügyvezetők. A cégbíróság, a cégjegyzékszám és az adószám később kerül kiegészítésre.",
+      "Jogilag kötelező érvényű a német nyelvű változat.",
     ],
     privacyTitle: "Adatvédelmi nyilatkozat",
     privacyBody: [
-      "Ez a weboldal csak a technikailag szükséges mértékben kezel személyes adatokat. Nyomkövető sütiket nem használunk.",
-      "E-mailes megkeresés esetén adatait a kérés feldolgozásához tároljuk. A teljes adatvédelmi nyilatkozat a közzététel előtt kerül kiegészítésre.",
+      "A GDPR szerinti adatkezelő: Arion Logistics GmbH, Industriestraße 12a, 91325 Adelsdorf, Németország, tel. +49 911 13065352, e-mail info@arion-logistics.de.",
+      "Az oldalt a Vercel Inc. (USA) üzemelteti; látogatáskor a szervernaplókban csak technikailag szükséges adatok (IP-cím, dátum és időpont, lekért oldal, böngészőtípus) kerülnek feldolgozásra az oldal biztonságos működtetéséhez. Sütiket, elemző- vagy követőszolgáltatásokat nem használunk.",
+      "Ha e-mailben, telefonon vagy WhatsAppon veszi fel velünk a kapcsolatot, adatait kizárólag a megkeresés kezelésére dolgozzuk fel, és töröljük, amint már nem szükségesek. Joga van a hozzáféréshez, helyesbítéshez, törléshez, korlátozáshoz, adathordozhatósághoz és tiltakozáshoz, valamint felügyeleti hatóságnál panaszt tenni.",
+      "Jogilag kötelező érvényű a nyilatkozat német változata (/de/datenschutz). Frissítve: 2026. szeptember.",
     ],
   },
   notFound: {

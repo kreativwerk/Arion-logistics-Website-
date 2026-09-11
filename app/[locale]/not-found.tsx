@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="mx-auto flex min-h-[70dvh] max-w-[720px] flex-col items-start justify-center px-5 pt-20 md:px-8">
+    <div className="mx-auto flex min-h-[70dvh] max-w-[720px] flex-col items-start justify-center px-6 pt-20 md:px-12">
       <p className="font-mono text-[13px] text-accent-ink">404</p>
       <h1 className="mt-3 text-4xl font-semibold tracking-tighter md:text-6xl">
         Seite nicht gefunden.

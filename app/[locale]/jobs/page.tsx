@@ -39,7 +39,7 @@ export default async function JobsPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="mx-auto max-w-[1320px] px-5 md:px-8">
+      <div className="mx-auto max-w-[1320px] px-6 md:px-12">
         <h1 className="max-w-[16ch] text-4xl font-semibold leading-[1.05] tracking-tighter md:text-7xl">
           {dict.jobsPage.title}
         </h1>
@@ -169,16 +169,16 @@ export default async function JobsPage({
       <div className="relative mt-20 overflow-hidden">
         <div data-parallax="8" className="will-change-transform">
           <Image
-            src="/images/courier.webp"
+            src="/images/team.webp"
             alt={dict.jobsPage.title}
-            width={1200}
-            height={1490}
+            width={1800}
+            height={1013}
             sizes="100vw"
-            className="h-[50vh] w-full scale-[1.15] object-cover object-[center_22%] md:h-[60vh]"
+            className="h-[50vh] w-full scale-[1.15] object-cover md:h-[60vh]"
           />
         </div>
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 via-black/5 to-transparent">
-          <div className="mx-auto flex w-full max-w-[1320px] flex-wrap items-end justify-between gap-6 px-5 pb-12 md:px-8 md:pb-16">
+          <div className="mx-auto flex w-full max-w-[1320px] flex-wrap items-end justify-between gap-6 px-6 pb-12 md:px-12 md:pb-16">
             <p className="max-w-[20ch] text-3xl font-semibold leading-[1.1] tracking-tighter text-white md:text-4xl">
               {dict.jobsTeaser.title}
             </p>

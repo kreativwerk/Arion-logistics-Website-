@@ -20,7 +20,7 @@ const de: Dict = {
     partner: {
       title: "Partner werden | Arion Logistics",
       description:
-        "Zuverlässige Zustellkapazität für Netzwerke und Versender: Amazon-DSP-Erfahrung, digitale Prozesse und skalierbare Teams. Jetzt Kontakt aufnehmen.",
+        "Zuverlässige Zustellkapazität für Netzwerke und Versender: UPS-Servicepartner-Erfahrung, digitale Prozesse und skalierbare Teams. Jetzt Kontakt aufnehmen.",
     },
     contact: {
       title: "Kontakt | Arion Logistics",
@@ -41,7 +41,7 @@ const de: Dict = {
     languageLabel: "Sprache",
   },
   hero: {
-    eyebrow: "Amazon Delivery Service Partner",
+    eyebrow: "UPS Servicepartner",
     title1: "Qualität und Flexibilität?",
     title2: "Wir liefern.",
     subtitle:
@@ -53,18 +53,18 @@ const de: Dict = {
   },
   stats: {
     items: [
+      { value: 6500, label: "zugestellte Pakete am Tag" },
+      { value: 100, label: "Mitarbeitende im Team" },
+      { value: 75, suffix: "+", label: "eigene Fahrzeuge" },
       { value: 2, label: "Standorte in Bayern" },
-      { value: 9, label: "Sprachen im Team" },
-      { value: 3, label: "Tage bis zur ersten Tour" },
-      { value: 100, suffix: " %", label: "digitale Prozesse" },
     ],
-    note: "Amazon Delivery Service Partner mit Kurier- und Expressdienst in ganz Bayern.",
+    note: "UPS Servicepartner mit Kurier- und Expressdienst in ganz Bayern.",
   },
   about: {
     title: "Logistik aus Franken. Gebaut wie ein Tech-Unternehmen.",
     body: [
-      "Arion Logistics ist ein Logistikunternehmen aus Bayern. Als Amazon Delivery Service Partner stellen wir jeden Tag Pakete auf der letzten Meile zu, pünktlich und dokumentiert.",
-      "Daneben fahren wir Kurier- und Expressaufträge in ganz Bayern. Unser Team arbeitet in mehreren Sprachen, unsere Prozesse laufen komplett digital.",
+      "Arion Logistics ist ein Logistikunternehmen aus Bayern. Als Servicepartner von UPS stellen wir jeden Tag rund 6.500 Pakete auf der letzten Meile zu, pünktlich und dokumentiert.",
+      "100 Mitarbeitende aus vielen Ländern, über 75 Fahrzeuge und ein eigenes In-house-Team für Recruiting und Marketing: Wir wachsen aus eigener Kraft, komplett digital gesteuert.",
     ],
   },
   process: {
@@ -157,12 +157,12 @@ const de: Dict = {
     lead: "Netzwerke und Versender arbeiten mit uns, weil wir liefern: pünktlich, dokumentiert und skalierbar.",
     points: [
       {
-        title: "DSP-Erfahrung",
+        title: "KEP-Erfahrung",
         text: "Wir bestehen jeden Tag in einem der anspruchsvollsten Zustellnetzwerke der Welt.",
       },
       {
         title: "Skalierbare Flotte",
-        text: "Zusätzliche Fahrzeuge und Fahrer in Wochen, nicht Monaten. Recruiting in sechs Ländern.",
+        text: "Über 75 Fahrzeuge und eigenes In-house-Recruiting in sechs Ländern: Wir skalieren in Wochen, nicht Monaten.",
       },
       {
         title: "Volle Transparenz",
@@ -227,9 +227,39 @@ const de: Dict = {
     title: "Zustellkapazität für Ihr Netzwerk.",
     lead: "Arion Logistics fährt heute für eines der größten Zustellnetzwerke der Welt. Diese Qualität bieten wir auch Ihnen.",
     body: [
-      "Als Amazon Delivery Service Partner bestehen wir täglich strenge Qualitäts- und Sicherheitsstandards: Scorecards, Audits und minutengenaue Nachweise gehören bei uns zum Alltag.",
+      "Als UPS Servicepartner bestehen wir täglich strenge Qualitäts- und Sicherheitsstandards: Scorecards, Audits und minutengenaue Nachweise gehören bei uns zum Alltag.",
       "Unsere Teams arbeiten komplett digital. Tourenplanung, Onboarding, Zeiterfassung und Reporting laufen über CoDriver, die Plattform, die wir selbst entwickelt haben.",
       "Sie brauchen zusätzliche Kapazität auf der letzten Meile, feste Touren oder Express-Direktfahrten in Bayern? Dann sprechen Sie mit uns.",
+    ],
+    offeringsTitle: "Das können Sie buchen",
+    offerings: [
+      {
+        title: "Letzte-Meile-Kapazität",
+        text: "Zusätzliche Fahrzeuge und Fahrer für Ihr Zustellnetz, auch kurzfristig und saisonal.",
+      },
+      {
+        title: "Feste Touren",
+        text: "Wiederkehrende Routen mit festem Team, fester Qualität und festem Preis.",
+      },
+      {
+        title: "Express & Direktfahrt",
+        text: "Zeitkritische Sendungen als Direktfahrt durch Bayern, auf Wunsch noch am selben Tag.",
+      },
+    ],
+    stepsTitle: "So starten wir",
+    steps: [
+      {
+        title: "Gespräch",
+        text: "Wir klären Volumen, Gebiet und Anforderungen in einem kurzen Erstgespräch.",
+      },
+      {
+        title: "Pilotphase",
+        text: "Wir fahren einen definierten Zeitraum zur Probe, mit vollem Reporting.",
+      },
+      {
+        title: "Skalierung",
+        text: "Läuft der Pilot, erweitern wir Fahrzeuge, Touren und Gebiete Schritt für Schritt.",
+      },
     ],
     cta: "Gespräch vereinbaren",
   },
@@ -239,6 +269,7 @@ const de: Dict = {
     emailLabel: "E-Mail",
     phoneLabel: "Telefon",
     whatsappCta: "WhatsApp Kontakt",
+    addressLabel: "Anschrift",
     locationsLabel: "Standorte",
     jobsHint: "Du willst dich als Fahrer bewerben?",
     jobsHintCta: "Direkt zu den Jobs",
@@ -254,15 +285,23 @@ const de: Dict = {
   legal: {
     imprintTitle: "Impressum",
     imprintBody: [
-      "Arion Logistics",
-      "Anschrift: wird ergänzt.",
-      "E-Mail: info@arion-logistics.de",
-      "Angaben gemäß § 5 DDG. Vertretungsberechtigte Person, Registernummer und Umsatzsteuer-ID werden vor Veröffentlichung ergänzt.",
+      "Angaben gemäß § 5 DDG:",
+      "Arion Logistics GmbH",
+      "Industriestraße 12a, 91325 Adelsdorf, Deutschland",
+      "Telefon: +49 911 13065352 · E-Mail: info@arion-logistics.de",
+      "Vertreten durch die Geschäftsführung. Registergericht, Handelsregisternummer und Umsatzsteuer-Identifikationsnummer werden nachgetragen.",
+      "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Arion Logistics GmbH, Industriestraße 12a, 91325 Adelsdorf.",
+      "Plattform der EU-Kommission zur Online-Streitbeilegung: https://ec.europa.eu/consumers/odr. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
     ],
     privacyTitle: "Datenschutzerklärung",
     privacyBody: [
-      "Diese Website verarbeitet personenbezogene Daten nur, soweit dies technisch erforderlich ist. Es werden keine Tracking-Cookies gesetzt.",
-      "Bei Kontaktaufnahme per E-Mail werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert. Vollständige Datenschutzerklärung wird vor Veröffentlichung ergänzt.",
+      "Verantwortlicher im Sinne der DSGVO: Arion Logistics GmbH, Industriestraße 12a, 91325 Adelsdorf, Telefon +49 911 13065352, E-Mail info@arion-logistics.de.",
+      "Hosting: Diese Website wird bei Vercel Inc. (340 S Lemon Ave #4133, Walnut, CA 91789, USA) gehostet. Beim Aufruf werden technisch notwendige Daten (IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp) in Server-Logfiles verarbeitet, um die Website sicher und stabil bereitzustellen (Art. 6 Abs. 1 lit. f DSGVO). Mit Vercel besteht ein Auftragsverarbeitungsvertrag; eine Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln.",
+      "Cookies und Tracking: Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Dienste.",
+      "Kontaktaufnahme: Wenn Sie uns per E-Mail, Telefon oder WhatsApp kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage (Art. 6 Abs. 1 lit. b und f DSGVO) und löschen sie, sobald sie nicht mehr erforderlich sind. Bei WhatsApp werden Daten auch durch Meta Platforms Ireland Ltd. verarbeitet; es gilt ergänzend deren Datenschutzerklärung.",
+      "Bewerbungen: Unsere Stellenanzeigen verlinken auf ein externes Bewerbungsformular unter dsp-codriver.de. Für die dortige Verarbeitung gilt die Datenschutzerklärung des Anbieters.",
+      "Ihre Rechte: Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO) sowie das Recht auf Beschwerde bei einer Aufsichtsbehörde, z. B. beim Bayerischen Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.",
+      "Stand: September 2026.",
     ],
   },
   notFound: {
