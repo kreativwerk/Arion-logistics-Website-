@@ -5,15 +5,7 @@
       .cls-1 {
         fill: #f19104;
       }
-
-      .cls-2 {
-        filter: url(#drop-shadow-1);
-        stroke: #d8d8d8;
-        stroke-miterlimit: 10;
-        stroke-width: .25px;
-      }
-
-      .cls-2, .cls-3 {
+       .cls-3 {
         fill: #fff;
       }
 
@@ -25,15 +17,7 @@
         fill: #626261;
       }
     </style>
-    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
-      <feOffset dx="3.16" dy="3.16"/>
-      <feGaussianBlur result="blur" stdDeviation="9.49"/>
-      <feFlood flood-color="#1d1d1b" flood-opacity=".15"/>
-      <feComposite in2="blur" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
   </defs>
-  <rect class="cls-2" x=".13" y=".13" width="87.49" height="23.04" rx="4.32" ry="4.32"/>
   <g>
     <path class="cls-5" d="M36.05,10.39h-6.32l-1.51,1.17h-2.23l.03-.08,8.09-6.28h1.31l3.54,6.28-.03.08h-2.23l-.66-1.17ZM31.22,9.24h4.19l-.56-1.01c-.34-.6-.68-1.31-.68-1.31h-.04s-.83.71-1.61,1.31l-1.31,1.01Z"/>
     <path class="cls-5" d="M48.38,9.56v.03c.15.13.35.29.53.47l1.47,1.44-.02.07h-2.49l-1.99-1.95h-3.98l-.71,1.95h-1.82l2.31-6.36h7.32c2.75,0,3.15.91,2.65,2.28-.42,1.16-1.39,1.88-3.27,2.08ZM42.38,8.3h5.56c1.29,0,1.68-.29,1.87-.82.19-.51,0-.83-1.32-.83h-5.51l-.6,1.65Z"/>
