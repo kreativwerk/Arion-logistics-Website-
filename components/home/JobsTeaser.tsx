@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dict } from "@/lib/i18n/types";
-import { jobFacts, jobSlugs } from "@/lib/site";
+import { jobFacts, jobSlugs, netMonthlyMax } from "@/lib/site";
 import MagneticButton from "@/components/MagneticButton";
 
 export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dict }) {
@@ -23,12 +23,15 @@ export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dic
             {dict.jobsTeaser.lead}
           </p>
           <div data-reveal className="mt-8 rounded-2xl bg-surface2 p-6">
-            <p className="text-5xl font-semibold tracking-tighter text-accent-strong md:text-6xl">
-              16,20&nbsp;€
+            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-muted">
+              {dict.jobsTeaser.upTo}
             </p>
-            <p className="mt-1 text-[14px] text-muted">{dict.jobsTeaser.perHour}</p>
+            <p className="mt-1 text-5xl font-semibold tracking-tighter text-accent-strong md:text-6xl">
+              {netMonthlyMax.toLocaleString(locale)}&nbsp;€
+            </p>
+            <p className="mt-2 text-[14px] text-muted">{dict.jobsTeaser.netIncl}</p>
             <p className="mt-3 border-t border-line pt-3 text-[14px] text-muted">
-              {dict.jobsTeaser.netHint}
+              {jobFacts[jobSlugs[0]].hourlyGross.toLocaleString(locale, { minimumFractionDigits: 2 })} € {dict.jobsTeaser.perHour} · {dict.jobsTeaser.netHint}
             </p>
           </div>
           <div data-reveal className="mt-8 hidden md:block">
@@ -44,9 +47,9 @@ export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dic
               src="/images/courier-f.webp"
               alt={dict.jobsPage.title}
               width={1200}
-              height={1490}
+              height={1600}
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="h-72 w-full object-cover object-top md:h-96"
+              className="h-72 w-full object-cover object-[center_30%] md:h-96"
             />
           </div>
           {jobSlugs.map((slug, i) => (

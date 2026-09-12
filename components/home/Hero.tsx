@@ -48,11 +48,23 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
             {dict.hero.subtitle}
           </p>
           <div data-hero-fade className="mt-9 flex flex-wrap items-center gap-3">
-            <MagneticButton href={`/${locale}/jobs`}>{dict.hero.ctaJobs}</MagneticButton>
-            <MagneticButton href={`/${locale}/partner`} variant="secondary">
+            <MagneticButton href={`/${locale}/jobs`} icon>
+              {dict.hero.ctaJobs}
+            </MagneticButton>
+            <MagneticButton href={`/${locale}/partner`} variant="secondary" icon>
               {dict.hero.ctaPartner}
             </MagneticButton>
           </div>
+          <ul data-hero-fade className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[13px] text-muted">
+            {dict.hero.trust.map((item) => (
+              <li key={item} className="inline-flex items-center gap-1.5">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" className="text-accent">
+                  <path d="m2 6.2 2.6 2.6L10 3.4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Diagonal photo */}

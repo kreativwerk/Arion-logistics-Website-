@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
 import { pageMetadata, jobPostingJsonLd } from "@/lib/seo";
-import { jobFacts, jobSlugs } from "@/lib/site";
+import { applyUrlFor, jobFacts, jobSlugs, netMonthlyMax } from "@/lib/site";
 import MagneticButton from "@/components/MagneticButton";
 
 export async function generateMetadata({
@@ -109,7 +109,7 @@ export default async function JobsPage({
                 ))}
               </ul>
               <p className="mt-6 inline-flex items-center rounded-full bg-accent/10 px-3.5 py-1.5 text-[13px] font-medium text-accent-ink">
-                16,20 €/h · {dict.jobsTeaser.netHint}
+                {dict.jobsTeaser.upTo} {netMonthlyMax.toLocaleString(locale)} € {dict.jobsTeaser.netIncl}
               </p>
             </Link>
           ))}
@@ -182,7 +182,7 @@ export default async function JobsPage({
             <p className="max-w-[20ch] text-3xl font-semibold leading-[1.1] tracking-tighter text-white md:text-4xl">
               {dict.jobsTeaser.title}
             </p>
-            <MagneticButton href={jobFacts.pommersfelden.applyUrl}>
+            <MagneticButton href={applyUrlFor("pommersfelden", locale)} icon external>
               {dict.jobsPage.apply}
             </MagneticButton>
           </div>

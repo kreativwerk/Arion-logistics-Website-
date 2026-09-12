@@ -55,3 +55,18 @@ export const jobFacts: Record<
 };
 
 export const jobSlugs = Object.keys(jobFacts) as JobSlug[];
+
+/** Realistic monthly net with daily allowance and bonuses, shown as "up to". */
+export const netMonthlyMax = 2600;
+
+/** Languages the external application form speaks; others fall back to English. */
+const applyFormLangs = ["de", "en", "sq", "bg", "ro", "hu"] as const;
+
+/** Application form in the visitor's language, pre-set to the location. */
+export function applyUrlFor(slug: JobSlug, locale: string): string {
+  const lang = (applyFormLangs as readonly string[]).includes(locale) ? locale : "en";
+  return `https://dsp-codriver.de/apply.html?slug=arion&lang=${lang}&loc=${slug}`;
+}
+
+/** Countries whose residents we actively recruit (EU citizens with EU licence). */
+export const applicantCountries = ["DE", "AT", "ES", "BG", "RO", "HU", "HR", "PL", "IT", "PT", "GR", "SK", "CZ", "LT", "LV", "EE", "SI"] as const;

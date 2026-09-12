@@ -15,8 +15,8 @@ export default function Digital({ dict }: { dict: Dict }) {
             <Image
               src="/images/app.webp"
               alt={dict.digital.imageAlt}
-              width={1400}
-              height={1045}
+              width={1600}
+              height={1200}
               sizes="(min-width: 768px) 50vw, 100vw"
               className="h-auto w-full scale-[1.12] object-cover"
             />

@@ -25,10 +25,10 @@ export default function About({ dict }: { dict: Dict }) {
       <div data-reveal className="mt-14 overflow-hidden rounded-3xl md:mt-20">
         <div data-parallax="5" className="will-change-transform">
           <Image
-            src="/images/hero.webp"
+            src="/images/fleet.webp"
             alt={dict.hero.imageAlt}
-            width={2560}
-            height={1086}
+            width={1920}
+            height={823}
             sizes="(min-width: 1320px) 1256px, 100vw"
             className="h-auto w-full scale-[1.08]"
           />

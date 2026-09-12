@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { locales, type Locale } from "@/lib/i18n/config";
-import { site, jobFacts, type JobSlug } from "@/lib/site";
+import { site, jobFacts, applicantCountries, applyUrlFor, type JobSlug } from "@/lib/site";
 import type { Dict } from "@/lib/i18n/types";
 
 /** hreflang alternates for a path (e.g. "/jobs"), plus canonical. */
@@ -82,30 +82,70 @@ export function websiteJsonLd(locale: Locale) {
 }
 
 /**
- * Google-Jobs-ready JobPosting structured data.
+ * Google-Jobs-ready JobPosting structured data. The description mirrors
+ * the full job ad so foreign applicants see pay, shifts, housing and
+ * commute details in their language; applicantLocationRequirements lists
+ * the EU countries we recruit from.
  * https://developers.google.com/search/docs/appearance/structured-data/job-posting
  */
 export function jobPostingJsonLd(slug: JobSlug, locale: Locale, dict: Dict) {
   const facts = jobFacts[slug];
   const loc = dict.jobsPage.locations[slug];
+  const job = dict.jobDetail;
+  const esc = (t: string) =>
+    t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const h = (t: string) => `<p><strong>${esc(t)}</strong></p>`;
+  const p = (items: string[]) => items.map((t) => `<p>${esc(t)}</p>`).join("");
+  const ul = (items: string[]) => `<ul>${items.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`;
+
   const description = [
-    `<p>${loc.intro}</p>`,
-    `<p><strong>${dict.jobsPage.payTitle}</strong></p>`,
-    `<ul>${dict.jobsPage.pay.map((p) => `<li>${p}</li>`).join("")}</ul>`,
-    `<p><strong>${dict.jobsPage.hoursTitle}</strong></p>`,
-    `<ul>${loc.shifts.map((s) => `<li>${s}</li>`).join("")}</ul>`,
-    `<p><strong>${dict.jobsPage.requirementsTitle}</strong></p>`,
-    `<ul>${dict.jobsPage.requirements.map((r) => `<li>${r}</li>`).join("")}</ul>`,
-    `<p><strong>${dict.jobsPage.benefitsTitle}</strong></p>`,
-    `<ul>${dict.jobsPage.benefits.map((b) => `<li>${b}</li>`).join("")}</ul>`,
-    `<p>${dict.jobsPage.contractNote}</p>`,
+    p([job.intro]),
+    h(job.workplaceLabel),
+    p([`${facts.city}, ${facts.region}`]),
+    ul(loc.distances),
+    h(job.requirementsTitle),
+    ul(job.requirements),
+    p([dict.jobsPage.recruitNote]),
+    h(job.payTitle),
+    p([job.payLead]),
+    ul(job.payBullets),
+    p([job.payNote]),
+    h(job.dailyTitle),
+    p([job.dailyIntro]),
+    ul(job.dailyBullets),
+    p([job.dailyNote, job.dailyGuarantee]),
+    h(job.topTitle),
+    p(job.topText),
+    h(job.referralTitle),
+    p(job.referralText),
+    h(job.trainingTitle),
+    p([job.trainingIntro]),
+    ul(job.trainingBullets),
+    p([job.trainingNote]),
+    h(job.shiftsTitle),
+    ul(loc.shifts),
+    h(job.hoursTitle),
+    p(job.hoursText),
+    h(job.contractTitle),
+    ul(job.contractBullets),
+    h(job.housingTitle),
+    p(job.housingIntro),
+    p([job.housingCondTitle]),
+    ul(job.housingBullets),
+    p(job.housingNote),
+    h(job.commuteTitle),
+    p(job.commuteIntro),
+    ul(job.commuteBullets),
+    h(job.benefitsTitle),
+    ul(job.benefits),
   ].join("");
 
   return {
     "@context": "https://schema.org",
     "@type": "JobPosting",
-    title: dict.jobsPage.title,
+    title: job.title,
     description,
+    inLanguage: locale,
     datePosted: facts.datePosted,
     validThrough: `${facts.validThrough}T23:59:59+01:00`,
     employmentType: "FULL_TIME",
@@ -130,6 +170,10 @@ export function jobPostingJsonLd(slug: JobSlug, locale: Locale, dict: Dict) {
         addressCountry: facts.country,
       },
     },
+    applicantLocationRequirements: applicantCountries.map((code) => ({
+      "@type": "Country",
+      name: code,
+    })),
     baseSalary: {
       "@type": "MonetaryAmount",
       currency: facts.currency,
@@ -139,8 +183,18 @@ export function jobPostingJsonLd(slug: JobSlug, locale: Locale, dict: Dict) {
         unitText: "HOUR",
       },
     },
-    jobBenefits: dict.jobsPage.benefits.join("; "),
+    workHours: loc.shifts.join("; "),
+    jobBenefits: job.benefits.join("; "),
+    qualifications: job.requirements.join("; "),
+    industry: "Logistics",
+    occupationalCategory: "53-3033.00",
     url: `${site.url}/${locale}/jobs/${slug}`,
+    applicationContact: {
+      "@type": "ContactPoint",
+      url: applyUrlFor(slug, locale),
+      telephone: site.phone,
+      email: site.email,
+    },
   };
 }
 

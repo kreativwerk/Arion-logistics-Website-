@@ -11,8 +11,56 @@ export interface StatItem {
 export interface JobLocationText {
   /** Short intro line used on cards and the job detail page. */
   intro: string;
+  /** Distances to nearby cities, e.g. "ca. 20 Min. von Erlangen". */
+  distances: string[];
   /** Human-readable shift description lines. */
   shifts: string[];
+}
+
+/** Full job ad content following the Arion landing page template. */
+export interface JobDetailText {
+  title: string;
+  grossPerHour: string;
+  workplaceLabel: string;
+  intro: string;
+  requirementsTitle: string;
+  requirements: string[];
+  payTitle: string;
+  payLead: string;
+  payBullets: string[];
+  payNote: string;
+  dailyTitle: string;
+  dailyIntro: string;
+  dailyBullets: string[];
+  dailyNote: string;
+  dailyGuarantee: string;
+  topTitle: string;
+  topText: string[];
+  referralTitle: string;
+  referralText: string[];
+  trainingTitle: string;
+  trainingIntro: string;
+  trainingBullets: string[];
+  trainingNote: string;
+  shiftsTitle: string;
+  hoursTitle: string;
+  hoursText: string[];
+  contractTitle: string;
+  contractBullets: string[];
+  housingTitle: string;
+  housingIntro: string[];
+  housingCondTitle: string;
+  housingBullets: string[];
+  housingNote: string[];
+  commuteTitle: string;
+  commuteIntro: string[];
+  commuteBullets: string[];
+  benefitsTitle: string;
+  benefits: string[];
+  questionsTitle: string;
+  questionsText: string;
+  whatsappCta: string;
+  apply: string;
 }
 
 export interface Dict {
@@ -43,6 +91,8 @@ export interface Dict {
     subtitle: string;
     ctaJobs: string;
     ctaPartner: string;
+    /** Trust line under the CTAs, e.g. "Jetzt online bewerben · unverbindlich und kostenfrei". */
+    trust: string[];
     imageAlt: string;
   };
   stats: { items: StatItem[]; note: string };
@@ -77,6 +127,10 @@ export interface Dict {
     lead: string;
     perHour: string;
     netHint: string;
+    /** "bis zu" prefix in front of the net amount. */
+    upTo: string;
+    /** "netto im Monat, inklusive Spesen und Boni". */
+    netIncl: string;
     cardCta: string;
     allCta: string;
   };
@@ -106,6 +160,7 @@ export interface Dict {
     /** Countries we actively recruit from. */
     recruitNote: string;
   };
+  jobDetail: JobDetailText;
   partnerPage: {
     title: string;
     lead: string;
