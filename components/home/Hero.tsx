@@ -65,12 +65,12 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
           <div className="absolute inset-0 [clip-path:polygon(0_12%,100%_2.5%,100%_100%,0_100%)] md:[clip-path:polygon(17%_0,100%_0,100%_100%,3%_100%)]">
             <AmbientVideo
               src="/videos/hero.mp4"
-              poster="/images/courier.webp"
-              alt={dict.hero.imageAlt}
-              width={720}
+              poster="/images/region.webp"
+              alt={dict.region.imageAlt}
+              width={960}
               height={1280}
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>
