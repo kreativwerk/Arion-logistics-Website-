@@ -9,6 +9,14 @@ import MagneticButton from "@/components/MagneticButton";
  * orange layer sits slightly wider than the photo layer, leaving a brand
  * stripe along the diagonal.
  */
+function Check() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" className="text-accent">
+      <path d="m2 6.2 2.6 2.6L10 3.4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
   // The last word of the second line carries the brand emphasis
   // ("Wir liefern." -> "liefern." in italic orange), in every locale.
@@ -20,7 +28,7 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
     <section className="relative overflow-hidden md:min-h-[100dvh]">
       <div className="grid md:min-h-[100dvh] md:grid-cols-[1.1fr_1fr]">
         {/* Copy */}
-        <div className="flex flex-col justify-center px-6 pb-14 pt-32 md:py-40 md:pl-[max(3rem,calc((100vw-1320px)/2))] md:pr-14">
+        <div className="flex flex-col items-center justify-center px-6 pb-14 pt-32 text-center md:items-start md:py-40 md:pl-[max(3rem,calc((100vw-1320px)/2))] md:pr-14 md:text-left">
           <p
             data-hero-fade
             className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-1.5 text-[12px] font-medium uppercase tracking-[0.14em] text-muted"
@@ -28,7 +36,7 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
             <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
             {dict.hero.eyebrow}
           </p>
-          <h1 className="max-w-[14ch] text-5xl font-semibold leading-[1.02] tracking-tighter text-balance md:text-6xl lg:text-7xl xl:text-8xl">
+          <h1 className="max-w-[14ch] text-balance text-5xl font-semibold leading-[1.02] tracking-tighter md:text-6xl lg:text-7xl xl:text-8xl">
             <span className="block overflow-hidden pb-1">
               <span data-hero-line className="block will-change-transform">
                 {dict.hero.title1}
@@ -47,24 +55,26 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
           >
             {dict.hero.subtitle}
           </p>
-          <div data-hero-fade className="mt-9 flex flex-wrap items-center gap-3">
-            <MagneticButton href={`/${locale}/jobs`} icon>
-              {dict.hero.ctaJobs}
-            </MagneticButton>
-            <MagneticButton href={`/${locale}/partner`} variant="secondary" icon>
-              {dict.hero.ctaPartner}
-            </MagneticButton>
+          <div data-hero-fade className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:gap-3 md:items-start">
+            <div className="flex flex-col items-center gap-2 md:items-start">
+              <MagneticButton href={`/${locale}/jobs`} icon>
+                {dict.hero.ctaJobs}
+              </MagneticButton>
+              <span className="inline-flex items-center gap-1.5 text-[13px] text-muted">
+                <Check />
+                {dict.hero.ctaJobsNote}
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-2 md:items-start">
+              <MagneticButton href={`/${locale}/partner`} variant="secondary" icon>
+                {dict.hero.ctaPartner}
+              </MagneticButton>
+              <span className="inline-flex items-center gap-1.5 text-[13px] text-muted">
+                <Check />
+                {dict.hero.ctaPartnerNote}
+              </span>
+            </div>
           </div>
-          <ul data-hero-fade className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[13px] text-muted">
-            {dict.hero.trust.map((item) => (
-              <li key={item} className="inline-flex items-center gap-1.5">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" className="text-accent">
-                  <path d="m2 6.2 2.6 2.6L10 3.4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {item}
-              </li>
-            ))}
-          </ul>
         </div>
 
         {/* Diagonal photo */}

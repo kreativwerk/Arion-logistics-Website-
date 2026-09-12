@@ -48,7 +48,8 @@ const en: Dict = {
       "Parcel delivery and express in Bavaria. Digitally managed, fairly paid, reliable every day.",
     ctaJobs: "Become a driver",
     ctaPartner: "Become a partner",
-    trust: ["Apply online now", "Become a partner", "No obligation, free of charge"],
+    ctaJobsNote: "Apply online now",
+    ctaPartnerNote: "Enquire without obligation",
     imageAlt:
       "White Mercedes Sprinter vans of the Arion Logistics fleet lined up in front of the depot",
   },

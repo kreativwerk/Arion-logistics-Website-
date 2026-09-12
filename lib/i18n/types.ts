@@ -91,8 +91,9 @@ export interface Dict {
     subtitle: string;
     ctaJobs: string;
     ctaPartner: string;
-    /** Trust line under the CTAs, e.g. "Jetzt online bewerben · unverbindlich und kostenfrei". */
-    trust: string[];
+    /** Small caption under each CTA, e.g. "Jetzt online bewerben" / "Unverbindlich anfragen". */
+    ctaJobsNote: string;
+    ctaPartnerNote: string;
     imageAlt: string;
   };
   stats: { items: StatItem[]; note: string };

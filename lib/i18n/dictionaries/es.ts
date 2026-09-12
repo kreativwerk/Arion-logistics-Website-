@@ -48,7 +48,8 @@ const es: Dict = {
       "Reparto de paquetes y envíos exprés en Baviera. Gestión digital, salario justo, fiabilidad diaria.",
     ctaJobs: "Trabaja de repartidor",
     ctaPartner: "Hazte socio",
-    trust: ["Solicita ahora online", "Hazte socio", "Sin compromiso y gratis"],
+    ctaJobsNote: "Solicita ahora online",
+    ctaPartnerNote: "Consulta sin compromiso",
     imageAlt:
       "Furgonetas Mercedes Sprinter blancas de la flota de Arion Logistics alineadas frente al depósito",
   },

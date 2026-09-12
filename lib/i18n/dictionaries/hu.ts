@@ -48,7 +48,8 @@ const hu: Dict = {
       "Csomagkézbesítés és expressz Bajorországban. Digitális irányítás, tisztességes bérezés, megbízhatóság minden nap.",
     ctaJobs: "Legyél sofőr",
     ctaPartner: "Legyen partnerünk",
-    trust: ["Jelentkezz most online", "Legyen partnerünk", "Kötelezettség nélkül és ingyenesen"],
+    ctaJobsNote: "Jelentkezz most online",
+    ctaPartnerNote: "Kötelezettség nélküli ajánlatkérés",
     imageAlt:
       "Az Arion Logistics flottájának fehér Mercedes Sprinter furgonjai a depó előtt egymás mellett",
   },

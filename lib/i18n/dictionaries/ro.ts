@@ -48,7 +48,8 @@ const ro: Dict = {
       "Livrare de colete și expres în Bavaria. Gestionare digitală, plată corectă, fiabilitate în fiecare zi.",
     ctaJobs: "Devino șofer",
     ctaPartner: "Deveniți partener",
-    trust: ["Aplică online acum", "Deveniți partener", "Fără obligații și gratuit"],
+    ctaJobsNote: "Aplică online acum",
+    ctaPartnerNote: "Solicitare fără obligații",
     imageAlt:
       "Dube albe Mercedes Sprinter din flota Arion Logistics aliniate în fața depoului",
   },

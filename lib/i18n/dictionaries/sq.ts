@@ -48,7 +48,8 @@ const sq: Dict = {
       "Shpërndarje pakosh dhe dërgesa ekspres në Bavari. Menaxhim digjital, pagë e drejtë, besueshmëri çdo ditë.",
     ctaJobs: "Bëhu shofer",
     ctaPartner: "Bëhu partner",
-    trust: ["Apliko tani online", "Bëhu partner", "Pa detyrim dhe falas"],
+    ctaJobsNote: "Apliko tani online",
+    ctaPartnerNote: "Kërkesë pa detyrim",
     imageAlt:
       "Furgonë të bardhë Mercedes Sprinter të flotës Arion Logistics të rreshtuar para depos",
   },

@@ -48,7 +48,8 @@ const de: Dict = {
       "Paketzustellung und Express in Bayern. Digital gesteuert, fair bezahlt, jeden Tag zuverlässig.",
     ctaJobs: "Fahrer werden",
     ctaPartner: "Partner werden",
-    trust: ["Jetzt online bewerben", "Partner werden", "Unverbindlich und kostenfrei"],
+    ctaJobsNote: "Jetzt online bewerben",
+    ctaPartnerNote: "Unverbindlich anfragen",
     imageAlt:
       "Weiße Mercedes Sprinter der Arion Logistics Flotte nebeneinander vor dem Depot",
   },
