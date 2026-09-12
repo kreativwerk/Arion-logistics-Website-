@@ -73,6 +73,12 @@ export default function Header({ locale, nav, ctaLabel }: HeaderProps) {
           <div className="hidden md:block">
             <LanguageSwitcher locale={locale} pathWithout={pathWithout} label={nav.languageLabel} />
           </div>
+          <Link
+            href={`/${locale}/kontakt`}
+            className="inline-flex h-10 items-center rounded-full bg-accent px-4 text-[13px] font-semibold text-white md:hidden"
+          >
+            {nav.contact}
+          </Link>
           <div className="md:hidden">
             <LanguageSwitcher
               locale={locale}

@@ -29,6 +29,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function AnimationProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const reduce = useRef(false);
+  const lenisRef = useRef<Lenis | null>(null);
 
   // Smooth scrolling: one Lenis instance for the whole session.
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function AnimationProvider({ children }: { children: React.ReactN
     if (reduce.current) return;
 
     const lenis = new Lenis({ lerp: 0.12, wheelMultiplier: 1 });
+    lenisRef.current = lenis;
     lenis.on("scroll", ScrollTrigger.update);
     const raf = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(raf);
@@ -44,8 +46,23 @@ export default function AnimationProvider({ children }: { children: React.ReactN
     return () => {
       gsap.ticker.remove(raf);
       lenis.destroy();
+      lenisRef.current = null;
     };
   }, []);
+
+  // Next resets window scroll on navigation, but Lenis keeps its own
+  // position and would glide back. Sync both: top of page, or the hash
+  // target for in-page links.
+  useEffect(() => {
+    const hash = window.location.hash;
+    const target = hash ? document.querySelector(hash) : null;
+    if (target) {
+      lenisRef.current?.scrollTo(target as HTMLElement, { immediate: true, offset: -96 });
+    } else {
+      lenisRef.current?.scrollTo(0, { immediate: true });
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
 
   // Per-page animations, rebuilt on every navigation.
   useEffect(() => {
