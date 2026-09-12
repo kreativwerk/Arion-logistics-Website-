@@ -55,7 +55,7 @@ const ro: Dict = {
     items: [
       { value: 6500, label: "colete livrate pe zi" },
       { value: 100, label: "oameni în echipă" },
-      { value: 75, suffix: "+", label: "vehicule proprii" },
+      { value: 75, suffix: "+", label: "dube" },
       { value: 2, label: "baze în Bavaria" },
     ],
     note: "Livrare de colete, curierat și expres în toată Bavaria.",
@@ -64,7 +64,7 @@ const ro: Dict = {
     title: "Logistică din Franconia. Construită ca o companie tech.",
     body: [
       "Arion Logistics este o companie de logistică din Bavaria. Livrăm zilnic circa 6.500 de colete pe ultimul kilometru, la timp și documentat.",
-      "100 de oameni din multe țări, peste 75 de vehicule și o echipă proprie de recrutare și marketing in-house: creștem prin forțe proprii, gestionați complet digital.",
+      "100 de oameni din multe țări, peste 75 de dube și o echipă proprie de recrutare și marketing in-house: creștem prin forțe proprii, gestionați complet digital.",
     ],
   },
   process: {
@@ -160,7 +160,7 @@ const ro: Dict = {
       },
       {
         title: "Flotă scalabilă",
-        text: "Peste 75 de vehicule și recrutare in-house proprie în șase țări: scalăm în săptămâni, nu în luni.",
+        text: "Peste 75 de dube și recrutare in-house proprie în șase țări: scalăm în săptămâni, nu în luni.",
       },
       {
         title: "Transparență totală",

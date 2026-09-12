@@ -55,7 +55,7 @@ const sq: Dict = {
     items: [
       { value: 6500, label: "pako të dorëzuara në ditë" },
       { value: 100, label: "punonjës në ekip" },
-      { value: 75, suffix: "+", label: "automjete të veta" },
+      { value: 75, suffix: "+", label: "furgonë" },
       { value: 2, label: "qendra në Bavari" },
     ],
     note: "Shpërndarje pakosh, shërbim korrieri dhe ekspres në gjithë Bavarinë.",
@@ -64,7 +64,7 @@ const sq: Dict = {
     title: "Logjistikë nga Frankonia. E ndërtuar si kompani teknologjike.",
     body: [
       "Arion Logistics është një kompani logjistike nga Bavaria. Dorëzojmë çdo ditë rreth 6.500 pako në miljen e fundit, në kohë dhe të dokumentuara.",
-      "100 punonjës nga shumë vende, mbi 75 automjete dhe një ekip i yni për rekrutim dhe marketing: rritemi me forcat tona, plotësisht të drejtuar digjitalisht.",
+      "100 punonjës nga shumë vende, mbi 75 furgonë dhe një ekip i yni për rekrutim dhe marketing: rritemi me forcat tona, plotësisht të drejtuar digjitalisht.",
     ],
   },
   process: {
@@ -160,7 +160,7 @@ const sq: Dict = {
       },
       {
         title: "Flotë e shkallëzueshme",
-        text: "Mbi 75 automjete dhe rekrutim i brendshëm në gjashtë vende: shkallëzojmë brenda javësh, jo muajsh.",
+        text: "Mbi 75 furgonë dhe rekrutim i brendshëm në gjashtë vende: shkallëzojmë brenda javësh, jo muajsh.",
       },
       {
         title: "Transparencë e plotë",

@@ -33,11 +33,17 @@ export default async function PrivacyPage({
       <h1 className="text-4xl font-semibold tracking-tighter md:text-5xl">
         {dict.legal.privacyTitle}
       </h1>
-      {dict.legal.privacyBody.map((paragraph) => (
-        <p key={paragraph.slice(0, 24)} className="mt-5 text-[15px] leading-relaxed text-foreground/85">
-          {paragraph}
-        </p>
-      ))}
+      {dict.legal.privacyBody.map((paragraph) =>
+        paragraph.startsWith("## ") ? (
+          <h2 key={paragraph} className="mt-10 text-xl font-semibold tracking-tight">
+            {paragraph.slice(3)}
+          </h2>
+        ) : (
+          <p key={paragraph.slice(0, 40)} className="mt-4 text-[15px] leading-relaxed text-foreground/85">
+            {paragraph}
+          </p>
+        ),
+      )}
     </div>
   );
 }

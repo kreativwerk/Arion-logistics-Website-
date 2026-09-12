@@ -55,7 +55,7 @@ const es: Dict = {
     items: [
       { value: 6500, label: "paquetes entregados al día" },
       { value: 100, label: "personas en el equipo" },
-      { value: 75, suffix: "+", label: "vehículos propios" },
+      { value: 75, suffix: "+", label: "furgonetas" },
       { value: 2, label: "centros en Baviera" },
     ],
     note: "Reparto de paquetes, mensajería y exprés en toda Baviera.",
@@ -64,7 +64,7 @@ const es: Dict = {
     title: "Logística de Franconia. Construida como una tech.",
     body: [
       "Arion Logistics es una empresa logística de Baviera. Entregamos cada día unos 6.500 paquetes en la última milla, puntuales y documentados.",
-      "100 personas de muchos países, más de 75 vehículos y un equipo propio de reclutamiento y marketing in-house: crecemos con fuerza propia, con gestión totalmente digital.",
+      "100 personas de muchos países, más de 75 furgonetas y un equipo propio de reclutamiento y marketing in-house: crecemos con fuerza propia, con gestión totalmente digital.",
     ],
   },
   process: {
@@ -160,7 +160,7 @@ const es: Dict = {
       },
       {
         title: "Flota escalable",
-        text: "Más de 75 vehículos y reclutamiento in-house propio en seis países: escalamos en semanas, no en meses.",
+        text: "Más de 75 furgonetas y reclutamiento in-house propio en seis países: escalamos en semanas, no en meses.",
       },
       {
         title: "Transparencia total",

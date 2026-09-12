@@ -55,7 +55,7 @@ const hu: Dict = {
     items: [
       { value: 6500, label: "kézbesített csomag naponta" },
       { value: 100, label: "munkatárs a csapatban" },
-      { value: 75, suffix: "+", label: "saját jármű" },
+      { value: 75, suffix: "+", label: "furgon" },
       { value: 2, label: "telephely Bajorországban" },
     ],
     note: "Csomagkézbesítés, futár- és expressz szolgáltatás egész Bajorországban.",
@@ -64,7 +64,7 @@ const hu: Dict = {
     title: "Logisztika Frankföldről. Tech cégként felépítve.",
     body: [
       "Az Arion Logistics egy bajorországi logisztikai vállalat. Naponta mintegy 6 500 csomagot kézbesítünk az utolsó mérföldön, pontosan és dokumentáltan.",
-      "100 munkatárs sok országból, több mint 75 jármű és saját házon belüli toborzó- és marketingcsapat: saját erőből növekszünk, teljesen digitálisan irányítva.",
+      "100 munkatárs sok országból, több mint 75 furgon és saját házon belüli toborzó- és marketingcsapat: saját erőből növekszünk, teljesen digitálisan irányítva.",
     ],
   },
   process: {
@@ -160,7 +160,7 @@ const hu: Dict = {
       },
       {
         title: "Skálázható flotta",
-        text: "Több mint 75 jármű és saját házon belüli toborzás hat országban: hetek alatt skálázunk, nem hónapok alatt.",
+        text: "Több mint 75 furgon és saját házon belüli toborzás hat országban: hetek alatt skálázunk, nem hónapok alatt.",
       },
       {
         title: "Teljes átláthatóság",
