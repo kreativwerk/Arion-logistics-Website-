@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="128" fill="#f19100"/>
-  <path d="M142 366 256 148l114 218h-57l-24-47h-66l-24 47h-57Zm100-90h28l-14-27-14 27Z" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" width="460" height="460">
+  <defs>
+    <clipPath id="c"><circle cx="230" cy="230" r="215"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="460" height="460" fill="#f19104"/>
+    <polygon points="-100,391 560,-53 560,38 -100,489" fill="#fff"/>
+    <polygon points="242,255 500,255 500,318 150,318" fill="#fff"/>
+  </g>
 </svg>

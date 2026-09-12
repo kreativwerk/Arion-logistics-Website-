@@ -67,6 +67,3 @@ export function applyUrlFor(slug: JobSlug, locale: string): string {
   const lang = (applyFormLangs as readonly string[]).includes(locale) ? locale : "en";
   return `https://dsp-codriver.de/apply.html?slug=arion&lang=${lang}&loc=${slug}`;
 }
-
-/** Countries whose residents we actively recruit (EU citizens with EU licence). */
-export const applicantCountries = ["DE", "AT", "ES", "BG", "RO", "HU", "HR", "PL", "IT", "PT", "GR", "SK", "CZ", "LT", "LV", "EE", "SI"] as const;

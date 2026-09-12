@@ -4,8 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
-import { pageMetadata, jobPostingJsonLd } from "@/lib/seo";
-import { applyUrlFor, jobFacts, jobSlugs, netMonthlyMax } from "@/lib/site";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { applyUrlFor, jobFacts, jobSlugs, netMonthlyMax, site } from "@/lib/site";
 import MagneticButton from "@/components/MagneticButton";
 
 export async function generateMetadata({
@@ -31,7 +31,24 @@ export default async function JobsPage({
   if (!isLocale(locale)) notFound();
   const dict = await getDictionary(locale as Locale);
 
-  const jsonLd = jobSlugs.map((slug) => jobPostingJsonLd(slug, locale, dict));
+  // Google allows JobPosting markup only on single-job pages; the list page
+  // gets an ItemList pointing at them plus breadcrumbs.
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      itemListElement: jobSlugs.map((slug, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${dict.jobDetail.title} – ${jobFacts[slug].city}`,
+        url: `${site.url}/${locale}/jobs/${slug}`,
+      })),
+    },
+    breadcrumbJsonLd([
+      { name: "Arion Logistics", url: `${site.url}/${locale}` },
+      { name: dict.nav.jobs, url: `${site.url}/${locale}/jobs` },
+    ]),
+  ];
 
   return (
     <div className="pt-28 md:pt-40">

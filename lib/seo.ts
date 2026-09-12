@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { locales, type Locale } from "@/lib/i18n/config";
-import { site, jobFacts, applicantCountries, applyUrlFor, type JobSlug } from "@/lib/site";
+import { site, jobFacts, applyUrlFor, type JobSlug } from "@/lib/site";
 import type { Dict } from "@/lib/i18n/types";
 
 /** hreflang alternates for a path (e.g. "/jobs"), plus canonical. */
@@ -84,8 +84,10 @@ export function websiteJsonLd(locale: Locale) {
 /**
  * Google-Jobs-ready JobPosting structured data. The description mirrors
  * the full job ad so foreign applicants see pay, shifts, housing and
- * commute details in their language; applicantLocationRequirements lists
- * the EU countries we recruit from.
+ * commute details in their language. applicantLocationRequirements is
+ * deliberately absent: Google reserves it for remote jobs, and these are
+ * on-site positions in Bavaria that we advertise to EU applicants via the
+ * translated pages and hreflang.
  * https://developers.google.com/search/docs/appearance/structured-data/job-posting
  */
 export function jobPostingJsonLd(slug: JobSlug, locale: Locale, dict: Dict) {
@@ -170,10 +172,6 @@ export function jobPostingJsonLd(slug: JobSlug, locale: Locale, dict: Dict) {
         addressCountry: facts.country,
       },
     },
-    applicantLocationRequirements: applicantCountries.map((code) => ({
-      "@type": "Country",
-      name: code,
-    })),
     baseSalary: {
       "@type": "MonetaryAmount",
       currency: facts.currency,
