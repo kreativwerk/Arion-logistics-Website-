@@ -1,7 +1,7 @@
 export const site = {
   name: "Arion Logistics",
   legalName: "Arion Logistics GmbH",
-  url: "https://arion-logistics.de",
+  url: "https://www.arion-logistics.de",
   email: "info@arion-logistics.de",
   street: "Industriestraße 12a",
   zip: "91325",
