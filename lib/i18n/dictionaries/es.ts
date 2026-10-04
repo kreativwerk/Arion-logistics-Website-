@@ -15,7 +15,7 @@ const es: Dict = {
     jobDetail: {
       title: "Repartidor/a de paquetes en {city} | Arion Logistics",
       description:
-        "Empleo de repartidor en {city}, Alemania: 16,20 €/h más hasta 14 € de bono al día, formación pagada, alojamiento disponible. Solicita online ahora.",
+        "Empleo de repartidor en {city}, Alemania: 16,20 €/h más dietas y bono según rendimiento, formación pagada, alojamiento disponible. Solicita online ahora.",
     },
     partner: {
       title: "Hazte socio | Arion Logistics",
@@ -143,7 +143,7 @@ const es: Dict = {
     title: "Conduce para Arion.",
     lead: "Salario justo, nómina honesta y un equipo que te acompaña desde el primer día.",
     perHour: "brutos por hora",
-    netHint: "más hasta 14 € netos de bono por día trabajado",
+    netHint: "más dietas y bono según rendimiento",
     upTo: "hasta",
     netIncl: "netos al mes, incluidas dietas y bonos",
     cardCta: "Solicitar ahora",
@@ -182,8 +182,7 @@ const es: Dict = {
     pay: [
       "16,20 € brutos por hora, de media 173 horas al mes",
       "Unos 2.803 € brutos al mes, aproximadamente 1.950 € netos en la clase fiscal 1 alemana",
-      "14 € netos de bono por día trabajado a partir de rendimiento medio, de media 295 € al mes",
-      "Bono semanal de 50 € por máximo rendimiento",
+      "Dietas y bono según rendimiento: 14 € netos por día trabajado a partir de rendimiento medio, más un bono semanal de 50 € por máximo rendimiento",
       "Prima de 100 € por cada persona recomendada que se quede al menos un mes",
       "Anticipo de salario posible en los dos primeros meses",
     ],
@@ -199,8 +198,7 @@ const es: Dict = {
       "20 días de vacaciones pagadas al año",
       "Registro horario transparente al minuto",
       "Alojamiento disponible por 470 € al mes con gastos incluidos",
-      "Transporte al trabajo por 100 € al mes si lo necesitas",
-      "Equipo y onboarding en varios idiomas",
+      "Equipo, formación inicial y apoyo durante la ruta en varios idiomas",
     ],
     contractNote:
       "Contrato inicial de un año con seis meses de prueba; nuestro objetivo es que te quedes.",
@@ -255,7 +253,7 @@ const es: Dict = {
       "En la clase fiscal 1 de Alemania son unos 1.950 € netos",
     ],
     payNote: "El número real de horas puede variar. En algunos meses hay más horas, en otros menos.",
-    dailyTitle: "Dieta diaria adicional",
+    dailyTitle: "Dietas y bono según rendimiento",
     dailyIntro: "Con un rendimiento al menos medio recibes además:",
     dailyBullets: [
       "14 € netos por día de trabajo",
@@ -263,7 +261,6 @@ const es: Dict = {
     ],
     dailyNote: "Así, con un rendimiento al menos medio y sin accidentes, puedes alcanzar unos 2.250 € netos al mes en la clase fiscal 1 de Alemania. El rendimiento se evalúa cada semana mediante un sistema de 5 categorías. Si estás en una de las dos categorías más bajas, esa semana no se paga la dieta diaria.",
     dailyGuarantee: "Tu salario acordado por contrato se paga siempre.",
-    topTitle: "Bono por rendimiento excelente",
     topText: [
       "Con un rendimiento muy bueno hay bonos adicionales.",
       "En la categoría «Fantastic Plus» (categoría 1) la empresa recibe un bono. Si tú también estás en la categoría más alta, recibes además un bono de 50 € por semana.",
@@ -280,6 +277,7 @@ const es: Dict = {
       "Días 2 y 3: formación práctica con un conductor experimentado",
     ],
     trainingNote: "Así te formas paso a paso y conoces el trabajo directamente en la práctica.",
+    supportNote: "Durante la ruta nunca estás solo: nuestro equipo te ayuda por teléfono y por la app en varios idiomas, entre ellos alemán, inglés, albanés, español, búlgaro, rumano y húngaro.",
     shiftsTitle: "Turnos",
     hoursTitle: "Jornada laboral",
     hoursText: [
@@ -313,21 +311,15 @@ const es: Dict = {
     commuteTitle: "Cómo llegar al trabajo",
     commuteIntro: [
       "Lo ideal es que tengas coche propio.",
-      "Si al principio no tienes coche propio, hay varias opciones:",
-    ],
-    commuteBullets: [
-      "Los compañeros pueden llevarte. Cómo repartís los gastos lo decidís vosotros.",
-      "Como ayuda inicial podemos poner a disposición una furgoneta solo para ir al trabajo y volver.",
-      "El coste es de 100 € por persona y mes.",
+      "Si al principio no tienes coche propio, los compañeros pueden llevarte. Cómo repartís los gastos lo decidís vosotros.",
     ],
     benefitsTitle: "Tus ventajas de un vistazo",
     benefits: [
       "16,20 € brutos por hora",
       "unos 2.802,60 € brutos con 173 horas",
       "unos 1.950 € netos de salario base en la clase fiscal 1 de Alemania",
-      "unos 295 € de dieta diaria adicional con un rendimiento al menos medio",
+      "Dietas y bono según rendimiento: unos 295 € de dietas al mes más un bono semanal de 50 € por máximo rendimiento",
       "unos 2.250 € netos con un rendimiento al menos medio y sin accidentes",
-      "50 € de bono semanal por rendimiento excelente y la categoría de empresa correspondiente",
       "100 € de bono por cada persona recomendada que trabaje al menos 1 mes con nosotros",
       "Formación pagada y formación práctica inicial",
       "Registro de la jornada al minuto",
@@ -337,7 +329,7 @@ const es: Dict = {
       "Solo 1 mes de preaviso para el alojamiento",
       "200 € de fianza, que se devuelve al entregar el alojamiento en buen estado",
       "Anticipo de salario en los dos primeros meses",
-      "Apoyo para organizar el desplazamiento al trabajo",
+      "Apoyo en tu idioma, también durante la ruta",
     ],
     questionsTitle: "¿Preguntas?",
     questionsText: "Escríbenos directamente por WhatsApp. Respondemos rápido.",

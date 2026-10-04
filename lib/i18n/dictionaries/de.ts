@@ -15,7 +15,7 @@ const de: Dict = {
     jobDetail: {
       title: "Paketzusteller (m/w/d) in {city} | Arion Logistics",
       description:
-        "Paketzusteller-Job in {city}: 16,20 €/h plus bis zu 14 € Bonus pro Tag, bezahlte Einarbeitung, Unterkunft möglich. Jetzt direkt online bewerben.",
+        "Paketzusteller-Job in {city}: 16,20 €/h plus Spesen und Bonus nach Leistung, bezahlte Einarbeitung, Unterkunft möglich. Jetzt direkt online bewerben.",
     },
     partner: {
       title: "Partner werden | Arion Logistics",
@@ -143,7 +143,7 @@ const de: Dict = {
     title: "Fahre für Arion.",
     lead: "Fairer Lohn, ehrliche Abrechnung und ein Team, das dich vom ersten Tag an mitnimmt.",
     perHour: "pro Stunde brutto",
-    netHint: "plus bis zu 14 € Bonus netto pro Arbeitstag",
+    netHint: "plus Spesen und Bonus nach Leistung",
     upTo: "bis zu",
     netIncl: "netto im Monat, inklusive Spesen und Boni",
     cardCta: "Jetzt bewerben",
@@ -184,8 +184,7 @@ const de: Dict = {
     pay: [
       "16,20 € brutto pro Stunde, im Schnitt 173 Stunden pro Monat",
       "Rund 2.803 € brutto monatlich, etwa 1.950 € netto in Steuerklasse 1",
-      "14 € Bonus netto pro Arbeitstag ab durchschnittlicher Leistung, im Schnitt 295 € pro Monat",
-      "50 € Wochenbonus für Top-Leistung",
+      "Spesen und Bonus nach Leistung: 14 € netto pro Arbeitstag ab durchschnittlicher Leistung, dazu 50 € Wochenbonus bei Top-Leistung",
       "100 € Prämie für jede geworbene Person, die mindestens einen Monat bleibt",
       "Gehaltsvorschuss in den ersten zwei Monaten möglich",
     ],
@@ -201,8 +200,7 @@ const de: Dict = {
       "20 bezahlte Urlaubstage pro Jahr",
       "Minutengenaue, transparente Zeiterfassung",
       "Unterkunft für 470 € pro Monat inklusive Nebenkosten möglich",
-      "Fahrdienst zur Arbeit für 100 € pro Monat, falls nötig",
-      "Team und Onboarding in mehreren Sprachen",
+      "Team, Einarbeitung und Unterstützung während der Tour in mehreren Sprachen",
     ],
     contractNote:
       "Zunächst auf ein Jahr befristet mit sechs Monaten Probezeit, Übernahme angestrebt.",
@@ -257,7 +255,7 @@ const de: Dict = {
       "In Steuerklasse 1 sind das ca. 1.950 € netto",
     ],
     payNote: "Die tatsächliche Stundenzahl kann variieren. In manchen Monaten sind es mehr Stunden, in anderen weniger.",
-    dailyTitle: "Zusätzliches Tagesgeld",
+    dailyTitle: "Spesen und Bonus nach Leistung",
     dailyIntro: "Bei mindestens durchschnittlicher Leistung bekommst du zusätzlich:",
     dailyBullets: [
       "14 € netto pro Arbeitstag",
@@ -265,7 +263,6 @@ const de: Dict = {
     ],
     dailyNote: "So kannst du bei mindestens durchschnittlicher Leistung und ohne Unfall ca. 2.250 € netto monatlich in Steuerklasse 1 erreichen. Die Leistungsbewertung erfolgt jede Woche über ein System mit 5 Kategorien. Bist du in einer der beiden niedrigsten Kategorien, wird für diese Woche kein Tagesgeld gezahlt.",
     dailyGuarantee: "Dein vertraglich vereinbarter Lohn wird immer gezahlt.",
-    topTitle: "Bonus für Top-Leistung",
     topText: [
       "Bei sehr guter Leistung gibt es zusätzliche Boni.",
       "In der Kategorie „Fantastic Plus“ (Kategorie 1) erhält die Firma einen Bonus. Bist auch du in der höchsten Kategorie, bekommst du zusätzlich 50 € Bonus pro Woche.",
@@ -282,6 +279,7 @@ const de: Dict = {
       "Tag 2 und 3: Praktische Einarbeitung mit einem erfahrenen Fahrer",
     ],
     trainingNote: "So wirst du Schritt für Schritt eingearbeitet und lernst die Arbeit direkt in der Praxis kennen.",
+    supportNote: "Auch während der Tour bist du nicht allein: Unser Team hilft dir per Telefon und App in mehreren Sprachen, unter anderem auf Deutsch, Englisch, Albanisch, Spanisch, Bulgarisch, Rumänisch und Ungarisch.",
     shiftsTitle: "Schichten",
     hoursTitle: "Arbeitszeit",
     hoursText: [
@@ -315,21 +313,15 @@ const de: Dict = {
     commuteTitle: "Anfahrt zur Arbeit",
     commuteIntro: [
       "Idealerweise hast du ein eigenes Auto.",
-      "Wenn du am Anfang kein eigenes Auto hast, gibt es verschiedene Möglichkeiten:",
-    ],
-    commuteBullets: [
-      "Kollegen können dich mitnehmen. Wie ihr die Kosten untereinander aufteilt, entscheidet ihr selbst.",
-      "Als Starthilfe können wir bei Bedarf einen Transporter nur für die Fahrt zur Arbeit und zurück bereitstellen.",
-      "Die Kosten betragen 100 € pro Person und Monat.",
+      "Wenn du am Anfang kein eigenes Auto hast, können dich Kollegen mitnehmen. Wie ihr die Kosten untereinander aufteilt, entscheidet ihr selbst.",
     ],
     benefitsTitle: "Deine Vorteile auf einen Blick",
     benefits: [
       "16,20 € brutto pro Stunde",
       "ca. 2.802,60 € brutto bei 173 Stunden",
       "ca. 1.950 € netto Grundgehalt in Steuerklasse 1",
-      "ca. 295 € zusätzliches Tagesgeld bei mindestens durchschnittlicher Leistung",
+      "Spesen und Bonus nach Leistung: ca. 295 € Tagesgeld im Monat plus 50 € Wochenbonus bei Top-Leistung",
       "ca. 2.250 € netto bei mindestens durchschnittlicher Leistung und ohne Unfall",
-      "50 € Wochenbonus bei Top-Leistung und entsprechender Firmen-Kategorie",
       "100 € Bonus pro empfohlener Person, die mindestens 1 Monat bei uns arbeitet",
       "Bezahlte Schulung und praktische Einarbeitung",
       "Minutengenaue Arbeitszeiterfassung",
@@ -339,7 +331,7 @@ const de: Dict = {
       "Nur 1 Monat Kündigungsfrist für die Unterkunft",
       "200 € Kaution, die bei ordnungsgemäßer Übergabe zurückgezahlt wird",
       "Gehaltsvorschuss in den ersten zwei Monaten",
-      "Unterstützung bei der Organisation der Anfahrt",
+      "Unterstützung in deiner Sprache, auch während der Tour",
     ],
     questionsTitle: "Fragen?",
     questionsText: "Schreib uns direkt auf WhatsApp. Wir antworten schnell.",

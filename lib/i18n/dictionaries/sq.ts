@@ -15,7 +15,7 @@ const sq: Dict = {
     jobDetail: {
       title: "Shofer shpërndarjeje pakosh në {city} | Arion Logistics",
       description:
-        "Punë si shofer shpërndarjeje në {city}, Gjermani: 16,20 €/orë plus deri në 14 € bonus në ditë, trajnim i paguar, mundësi strehimi. Apliko online tani.",
+        "Punë si shofer shpërndarjeje në {city}, Gjermani: 16,20 €/orë plus shpenzime ditore dhe bonus sipas performancës, trajnim i paguar, mundësi strehimi. Apliko online tani.",
     },
     partner: {
       title: "Bëhu partner | Arion Logistics",
@@ -143,7 +143,7 @@ const sq: Dict = {
     title: "Drejto për Arion.",
     lead: "Pagë e drejtë, llogari e ndershme dhe një ekip që të mbështet nga dita e parë.",
     perHour: "bruto në orë",
-    netHint: "plus deri në 14 € neto bonus për çdo ditë pune",
+    netHint: "plus shpenzime ditore dhe bonus sipas performancës",
     upTo: "deri në",
     netIncl: "neto në muaj, përfshirë shpenzimet ditore dhe bonuset",
     cardCta: "Apliko tani",
@@ -182,8 +182,7 @@ const sq: Dict = {
     pay: [
       "16,20 € bruto në orë, mesatarisht 173 orë në muaj",
       "Rreth 2.803 € bruto në muaj, afërsisht 1.950 € neto në klasën tatimore 1 në Gjermani",
-      "14 € neto bonus për çdo ditë pune nga performanca mesatare e lart, mesatarisht 295 € në muaj",
-      "50 € bonus javor për performancën më të lartë",
+      "Shpenzime ditore dhe bonus sipas performancës: 14 € neto për çdo ditë pune nga performanca mesatare e lart, plus 50 € bonus javor për performancë të lartë",
       "100 € shpërblim për çdo person të rekomanduar që qëndron të paktën një muaj",
       "Paradhënie e pagës e mundshme në dy muajt e parë",
     ],
@@ -199,8 +198,7 @@ const sq: Dict = {
       "20 ditë pushimi të paguara në vit",
       "Regjistrim orari transparent, me minutë",
       "Mundësi strehimi për 470 € në muaj me shpenzimet e përfshira",
-      "Transport për në punë për 100 € në muaj nëse të nevojitet",
-      "Ekip dhe onboarding në disa gjuhë",
+      "Ekip, trajnim dhe mbështetje gjatë turit në disa gjuhë",
     ],
     contractNote:
       "Fillimisht kontratë njëvjeçare me gjashtë muaj provë; synojmë të të mbajmë në ekip.",
@@ -255,7 +253,7 @@ const sq: Dict = {
       "Në klasën tatimore 1 në Gjermani kjo bën rreth 1.950 € neto",
     ],
     payNote: "Numri real i orëve mund të ndryshojë. Në disa muaj ka më shumë orë, në të tjerë më pak.",
-    dailyTitle: "Shtesë ditore",
+    dailyTitle: "Shpenzime ditore dhe bonus sipas performancës",
     dailyIntro: "Me performancë të paktën mesatare merr shtesë:",
     dailyBullets: [
       "14 € neto për çdo ditë pune",
@@ -263,7 +261,6 @@ const sq: Dict = {
     ],
     dailyNote: "Kështu, me performancë të paktën mesatare dhe pa aksident, mund të arrish rreth 2.250 € neto në muaj në klasën tatimore 1 në Gjermani. Performanca vlerësohet çdo javë me një sistem me 5 kategori. Nëse je në një nga dy kategoritë më të ulëta, për atë javë nuk paguhet shtesa ditore.",
     dailyGuarantee: "Paga jote e dakorduar me kontratë paguhet gjithmonë.",
-    topTitle: "Bonus për performancë të lartë",
     topText: [
       "Për performancë shumë të mirë ka bonuse shtesë.",
       "Në kategorinë „Fantastic Plus“ (kategoria 1) firma merr një bonus. Nëse edhe ti je në kategorinë më të lartë, merr shtesë 50 € bonus në javë.",
@@ -280,6 +277,7 @@ const sq: Dict = {
       "Dita 2 dhe 3: trajnim praktik me një shofer me përvojë",
     ],
     trainingNote: "Kështu futesh në punë hap pas hapi dhe e njeh punën direkt në praktikë.",
+    supportNote: "Gjatë turit nuk je kurrë vetëm: ekipi ynë të ndihmon me telefon dhe përmes aplikacionit në disa gjuhë, mes tyre gjermanisht, anglisht, shqip, spanjisht, bullgarisht, rumanisht dhe hungarisht.",
     shiftsTitle: "Turnet",
     hoursTitle: "Orari i punës",
     hoursText: [
@@ -313,21 +311,15 @@ const sq: Dict = {
     commuteTitle: "Rruga për në punë",
     commuteIntro: [
       "Ideale është të kesh makinën tënde.",
-      "Nëse në fillim nuk ke makinë, ka disa mundësi:",
-    ],
-    commuteBullets: [
-      "Kolegët mund të të marrin me vete. Si i ndani shpenzimet mes jush, e vendosni vetë.",
-      "Si ndihmë fillestare mund të vëmë në dispozicion një furgon vetëm për rrugën në punë dhe kthim.",
-      "Kostoja është 100 € për person në muaj.",
+      "Nëse në fillim nuk ke makinë, kolegët mund të të marrin me vete. Si i ndani shpenzimet mes jush, e vendosni vetë.",
     ],
     benefitsTitle: "Përfitimet e tua me një shikim",
     benefits: [
       "16,20 € bruto në orë",
       "rreth 2.802,60 € bruto me 173 orë",
       "rreth 1.950 € neto pagë bazë në klasën tatimore 1 në Gjermani",
-      "rreth 295 € shtesë ditore me performancë të paktën mesatare",
+      "Shpenzime ditore dhe bonus sipas performancës: rreth 295 € shtesë ditore në muaj plus 50 € bonus javor për performancë të lartë",
       "rreth 2.250 € neto me performancë të paktën mesatare dhe pa aksident",
-      "50 € bonus javor për performancë të lartë dhe kategorinë përkatëse të firmës",
       "100 € bonus për çdo person të rekomanduar që punon te ne të paktën 1 muaj",
       "Trajnim i paguar dhe praktikë fillestare",
       "Regjistrim i orarit me saktësi minute",
@@ -337,7 +329,7 @@ const sq: Dict = {
       "Vetëm 1 muaj afat njoftimi për banesën",
       "200 € depozitë, që kthehet me dorëzimin e rregullt",
       "Paradhënie page në dy muajt e parë",
-      "Mbështetje në organizimin e rrugës për në punë",
+      "Mbështetje në gjuhën tënde, edhe gjatë turit",
     ],
     questionsTitle: "Pyetje?",
     questionsText: "Na shkruaj direkt në WhatsApp. Përgjigjemi shpejt.",

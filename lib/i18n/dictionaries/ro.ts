@@ -15,7 +15,7 @@ const ro: Dict = {
     jobDetail: {
       title: "Șofer livrator de colete în {city} | Arion Logistics",
       description:
-        "Job de șofer livrator în {city}, Germania: 16,20 €/oră plus până la 14 € bonus pe zi, instruire plătită, cazare disponibilă. Aplică online acum.",
+        "Job de șofer livrator în {city}, Germania: 16,20 €/oră plus diurne și bonus în funcție de performanță, instruire plătită, cazare disponibilă. Aplică online acum.",
     },
     partner: {
       title: "Deveniți partener | Arion Logistics",
@@ -143,7 +143,7 @@ const ro: Dict = {
     title: "Condu pentru Arion.",
     lead: "Plată corectă, salarizare onestă și o echipă care te susține din prima zi.",
     perHour: "brut pe oră",
-    netHint: "plus până la 14 € net bonus pe zi lucrată",
+    netHint: "plus diurne și bonus în funcție de performanță",
     upTo: "până la",
     netIncl: "net pe lună, inclusiv diurne și bonusuri",
     cardCta: "Aplică acum",
@@ -182,8 +182,7 @@ const ro: Dict = {
     pay: [
       "16,20 € brut pe oră, în medie 173 de ore pe lună",
       "Circa 2.803 € brut pe lună, aproximativ 1.950 € net în clasa fiscală 1 din Germania",
-      "14 € net bonus pe zi lucrată de la performanță medie în sus, în medie 295 € pe lună",
-      "Bonus săptămânal de 50 € pentru performanță de top",
+      "Diurne și bonus în funcție de performanță: 14 € net pe zi lucrată de la performanță medie în sus, plus 50 € bonus săptămânal pentru performanță de top",
       "Primă de 100 € pentru fiecare persoană recomandată care rămâne cel puțin o lună",
       "Avans din salariu posibil în primele două luni",
     ],
@@ -199,8 +198,7 @@ const ro: Dict = {
       "20 de zile de concediu plătit pe an",
       "Pontaj transparent, la minut",
       "Cazare disponibilă pentru 470 € pe lună cu utilități incluse",
-      "Transport la muncă pentru 100 € pe lună, dacă e nevoie",
-      "Echipă și onboarding în mai multe limbi",
+      "Echipă, instruire și sprijin în timpul turei în mai multe limbi",
     ],
     contractNote:
       "Inițial contract pe un an cu șase luni de probă; ne dorim să rămâi în echipă.",
@@ -255,7 +253,7 @@ const ro: Dict = {
       "În clasa de impozitare 1 din Germania înseamnă aprox. 1.950 € net",
     ],
     payNote: "Numărul real de ore poate varia. În unele luni sunt mai multe ore, în altele mai puține.",
-    dailyTitle: "Diurnă suplimentară",
+    dailyTitle: "Diurne și bonus în funcție de performanță",
     dailyIntro: "La o performanță cel puțin medie primești în plus:",
     dailyBullets: [
       "14 € net pe zi lucrată",
@@ -263,7 +261,6 @@ const ro: Dict = {
     ],
     dailyNote: "Astfel, la o performanță cel puțin medie și fără accident, poți ajunge la aprox. 2.250 € net pe lună în clasa de impozitare 1 din Germania. Performanța se evaluează săptămânal printr-un sistem cu 5 categorii. Dacă ești în una dintre cele două categorii inferioare, pentru acea săptămână nu se plătește diurna.",
     dailyGuarantee: "Salariul tău convenit prin contract se plătește întotdeauna.",
-    topTitle: "Bonus pentru performanță de top",
     topText: [
       "La o performanță foarte bună există bonusuri suplimentare.",
       "În categoria „Fantastic Plus” (categoria 1) firma primește un bonus. Dacă și tu ești în categoria cea mai înaltă, primești în plus un bonus de 50 € pe săptămână.",
@@ -280,6 +277,7 @@ const ro: Dict = {
       "Zilele 2 și 3: instruire practică cu un șofer experimentat",
     ],
     trainingNote: "Astfel ești instruit pas cu pas și înveți munca direct în practică.",
+    supportNote: "În timpul turei nu ești niciodată singur: echipa noastră te ajută telefonic și prin aplicație în mai multe limbi, printre care germană, engleză, albaneză, spaniolă, bulgară, română și maghiară.",
     shiftsTitle: "Ture",
     hoursTitle: "Timpul de lucru",
     hoursText: [
@@ -313,21 +311,15 @@ const ro: Dict = {
     commuteTitle: "Drumul spre locul de muncă",
     commuteIntro: [
       "Ideal este să ai mașină proprie.",
-      "Dacă la început nu ai mașină proprie, există mai multe opțiuni:",
-    ],
-    commuteBullets: [
-      "Colegii te pot lua cu ei. Cum împărțiți costurile decideți voi.",
-      "Ca ajutor de start, la nevoie putem pune la dispoziție o dubă doar pentru drumul la muncă și înapoi.",
-      "Costul este de 100 € pe persoană pe lună.",
+      "Dacă la început nu ai mașină proprie, colegii te pot lua cu ei. Cum împărțiți costurile decideți voi.",
     ],
     benefitsTitle: "Avantajele tale pe scurt",
     benefits: [
       "16,20 € brut pe oră",
       "aprox. 2.802,60 € brut la 173 de ore",
       "aprox. 1.950 € net salariu de bază în clasa de impozitare 1 din Germania",
-      "aprox. 295 € diurnă suplimentară la o performanță cel puțin medie",
+      "Diurne și bonus în funcție de performanță: aprox. 295 € diurnă pe lună plus 50 € bonus săptămânal pentru performanță de top",
       "aprox. 2.250 € net la o performanță cel puțin medie și fără accident",
-      "50 € bonus săptămânal pentru performanță de top și categoria corespunzătoare a firmei",
       "100 € bonus pentru fiecare persoană recomandată care lucrează la noi cel puțin 1 lună",
       "Instruire plătită și practică inițială",
       "Înregistrarea timpului de lucru la minut",
@@ -337,7 +329,7 @@ const ro: Dict = {
       "Doar 1 lună preaviz pentru cazare",
       "200 € garanție, returnată la predarea corespunzătoare",
       "Avans din salariu în primele două luni",
-      "Sprijin în organizarea drumului spre locul de muncă",
+      "Sprijin în limba ta, și în timpul turei",
     ],
     questionsTitle: "Întrebări?",
     questionsText: "Scrie-ne direct pe WhatsApp. Răspundem rapid.",

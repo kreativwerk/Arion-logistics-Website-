@@ -15,7 +15,7 @@ const hu: Dict = {
     jobDetail: {
       title: "Csomagkézbesítő sofőr {city} városban | Arion Logistics",
       description:
-        "Csomagkézbesítő állás {city} városban, Németországban: 16,20 €/óra plusz napi akár 14 € bónusz, fizetett betanítás, szállás megoldható. Jelentkezz online most.",
+        "Csomagkézbesítő állás {city} városban, Németországban: 16,20 €/óra plusz napidíj és bónusz teljesítmény szerint, fizetett betanítás, szállás megoldható. Jelentkezz online most.",
     },
     partner: {
       title: "Legyen partnerünk | Arion Logistics",
@@ -143,7 +143,7 @@ const hu: Dict = {
     title: "Vezess az Arionnak.",
     lead: "Tisztességes bér, korrekt elszámolás és egy csapat, amely az első naptól melletted áll.",
     perHour: "bruttó óránként",
-    netHint: "plusz munkanaponta akár 14 € nettó bónusz",
+    netHint: "plusz napidíj és bónusz teljesítmény szerint",
     upTo: "akár",
     netIncl: "nettó havonta, napidíjjal és bónuszokkal együtt",
     cardCta: "Jelentkezz most",
@@ -182,8 +182,7 @@ const hu: Dict = {
     pay: [
       "16,20 € bruttó óránként, átlagosan havi 173 óra",
       "Körülbelül 2 803 € bruttó havonta, nagyjából 1 950 € nettó a németországi 1-es adóosztályban",
-      "14 € nettó bónusz munkanaponta átlagos teljesítménytől felfelé, átlagosan havi 295 €",
-      "50 € heti bónusz a legjobb teljesítményért",
+      "Napidíj és bónusz teljesítmény szerint: 14 € nettó munkanaponként átlagos teljesítménytől, plusz 50 € heti bónusz kiemelkedő teljesítménynél",
       "100 € prémium minden ajánlott személy után, aki legalább egy hónapig marad",
       "Fizetéselőleg lehetséges az első két hónapban",
     ],
@@ -199,8 +198,7 @@ const hu: Dict = {
       "Évi 20 nap fizetett szabadság",
       "Percre pontos, átlátható munkaidő-nyilvántartás",
       "Szállás havi 470 €-ért, rezsivel együtt",
-      "Munkába járás havi 100 €-ért, ha szükséges",
-      "Csapat és betanulás több nyelven",
+      "Csapat, betanítás és támogatás a túra alatt több nyelven",
     ],
     contractNote:
       "Kezdetben egy évre szóló szerződés hat hónap próbaidővel; célunk, hogy hosszú távon maradj.",
@@ -255,7 +253,7 @@ const hu: Dict = {
       "A németországi 1-es adóosztályban ez kb. 1.950 € nettó",
     ],
     payNote: "A tényleges óraszám változhat. Egyes hónapokban több, másokban kevesebb óra van.",
-    dailyTitle: "Kiegészítő napidíj",
+    dailyTitle: "Napidíj és bónusz teljesítmény szerint",
     dailyIntro: "Legalább átlagos teljesítmény esetén ezen felül kapod:",
     dailyBullets: [
       "14 € nettó munkanaponként",
@@ -263,7 +261,6 @@ const hu: Dict = {
     ],
     dailyNote: "Így legalább átlagos teljesítménnyel és baleset nélkül kb. 2.250 € nettót érhetsz el havonta a németországi 1-es adóosztályban. A teljesítményt hetente értékeljük egy 5 kategóriás rendszerrel. Ha a két legalacsonyabb kategória egyikébe kerülsz, arra a hétre nem jár napidíj.",
     dailyGuarantee: "A szerződésben rögzített béredet mindig kifizetjük.",
-    topTitle: "Bónusz kiemelkedő teljesítményért",
     topText: [
       "Nagyon jó teljesítmény esetén további bónuszok járnak.",
       "A „Fantastic Plus” kategóriában (1. kategória) a cég bónuszt kap. Ha te is a legmagasabb kategóriában vagy, hetente további 50 € bónuszt kapsz.",
@@ -280,6 +277,7 @@ const hu: Dict = {
       "2. és 3. nap: gyakorlati betanítás egy tapasztalt sofőrrel",
     ],
     trainingNote: "Így lépésről lépésre tanulod be a munkát, közvetlenül a gyakorlatban.",
+    supportNote: "A túra alatt sosem vagy egyedül: csapatunk telefonon és az appban több nyelven segít, többek között németül, angolul, albánul, spanyolul, bolgárul, románul és magyarul.",
     shiftsTitle: "Műszakok",
     hoursTitle: "Munkaidő",
     hoursText: [
@@ -313,21 +311,15 @@ const hu: Dict = {
     commuteTitle: "Bejárás a munkahelyre",
     commuteIntro: [
       "Ideális esetben saját autód van.",
-      "Ha az elején nincs saját autód, több lehetőség is van:",
-    ],
-    commuteBullets: [
-      "A kollégák elvihetnek. Hogy a költségeket hogyan osztjátok el egymás között, ti döntitek el.",
-      "Kezdeti segítségként igény esetén biztosítunk egy kisbuszt csak a munkába járáshoz és vissza.",
-      "A költség személyenként havi 100 €.",
+      "Ha az elején nincs saját autód, a kollégák elvihetnek. Hogy a költségeket hogyan osztjátok el egymás között, ti döntitek el.",
     ],
     benefitsTitle: "Előnyeid egy pillantásra",
     benefits: [
       "16,20 € bruttó óránként",
       "kb. 2.802,60 € bruttó 173 óránál",
       "kb. 1.950 € nettó alapbér a németországi 1-es adóosztályban",
-      "kb. 295 € kiegészítő napidíj legalább átlagos teljesítménynél",
+      "Napidíj és bónusz teljesítmény szerint: kb. 295 € napidíj havonta plusz 50 € heti bónusz kiemelkedő teljesítménynél",
       "kb. 2.250 € nettó legalább átlagos teljesítménynél és baleset nélkül",
-      "50 € heti bónusz kiemelkedő teljesítménynél és megfelelő céges kategóriánál",
       "100 € bónusz minden ajánlott személy után, aki legalább 1 hónapig nálunk dolgozik",
       "Fizetett oktatás és gyakorlati betanítás",
       "Percre pontos munkaidő-nyilvántartás",
@@ -337,7 +329,7 @@ const hu: Dict = {
       "Csak 1 hónap felmondási idő a szállásra",
       "200 € kaució, amelyet rendben történő átadáskor visszakapsz",
       "Bérelőleg az első két hónapban",
-      "Segítség a munkába járás megszervezésében",
+      "Támogatás a saját nyelveden, a túra alatt is",
     ],
     questionsTitle: "Kérdésed van?",
     questionsText: "Írj nekünk közvetlenül WhatsAppon. Gyorsan válaszolunk.",

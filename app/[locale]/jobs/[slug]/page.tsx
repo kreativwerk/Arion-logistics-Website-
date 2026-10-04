@@ -13,7 +13,7 @@ import {
   MapPin,
   Money,
   Timer,
-  Trophy,
+  Translate,
   UsersThree,
   WhatsappLogo,
 } from "@phosphor-icons/react/dist/ssr";
@@ -204,30 +204,22 @@ export default async function JobDetailPage({
             <p className="text-[15px] leading-relaxed text-foreground/85">{job.dailyIntro}</p>
             <Bullets items={job.dailyBullets} className="mt-3" />
             <p className="mt-4 text-[14px] leading-relaxed text-muted">{job.dailyNote}</p>
+            <div className="mt-4 space-y-3">
+              <Paragraphs items={job.topText} />
+            </div>
             <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-[14px] font-medium text-accent-ink">
               <CheckCircle size={18} weight="fill" aria-hidden="true" />
               {job.dailyGuarantee}
             </p>
           </Section>
 
-          <div data-reveal className="grid gap-5 border-t border-line pt-10 md:grid-cols-2">
-            <div className="rounded-3xl bg-surface2 p-6 md:p-7">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/12 text-accent" aria-hidden="true">
-                <Trophy size={22} weight="duotone" />
-              </span>
-              <h2 className="mt-4 text-xl font-semibold tracking-tight">{job.topTitle}</h2>
-              <div className="mt-3 space-y-3">
-                <Paragraphs items={job.topText} className="!text-[14px]" />
-              </div>
-            </div>
-            <div className="rounded-3xl bg-surface2 p-6 md:p-7">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/12 text-accent" aria-hidden="true">
-                <UsersThree size={22} weight="duotone" />
-              </span>
-              <h2 className="mt-4 text-xl font-semibold tracking-tight">{job.referralTitle}</h2>
-              <div className="mt-3 space-y-3">
-                <Paragraphs items={job.referralText} className="!text-[14px]" />
-              </div>
+          <div data-reveal className="rounded-3xl bg-surface2 p-6 md:p-7">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/12 text-accent" aria-hidden="true">
+              <UsersThree size={22} weight="duotone" />
+            </span>
+            <h2 className="mt-4 text-xl font-semibold tracking-tight">{job.referralTitle}</h2>
+            <div className="mt-3 space-y-3">
+              <Paragraphs items={job.referralText} className="!text-[14px]" />
             </div>
           </div>
 
@@ -235,6 +227,10 @@ export default async function JobDetailPage({
             <p className="text-[15px] leading-relaxed text-foreground/85">{job.trainingIntro}</p>
             <Bullets items={job.trainingBullets} className="mt-3" />
             <p className="mt-4 text-[14px] leading-relaxed text-muted">{job.trainingNote}</p>
+            <p className="mt-4 flex items-start gap-2 rounded-2xl bg-accent/10 px-4 py-3 text-[14px] font-medium leading-relaxed text-accent-ink">
+              <Translate size={20} weight="duotone" className="mt-0.5 shrink-0" aria-hidden="true" />
+              <span>{job.supportNote}</span>
+            </p>
           </Section>
 
           <Section icon={Clock} title={job.shiftsTitle} id="schichten">
@@ -268,7 +264,6 @@ export default async function JobDetailPage({
             <div className="space-y-3">
               <Paragraphs items={job.commuteIntro} />
             </div>
-            <Bullets items={job.commuteBullets} className="mt-3" />
           </Section>
 
           <Section icon={CheckCircle} title={job.benefitsTitle}>

@@ -15,7 +15,7 @@ const en: Dict = {
     jobDetail: {
       title: "Delivery Driver (m/f/d) in {city} | Arion Logistics",
       description:
-        "Delivery driver job in {city}: €16.20/h plus up to €14 bonus per day, paid training, housing available. Apply online now.",
+        "Delivery driver job in {city}: €16.20/h plus allowances and bonus based on performance, paid training, housing available. Apply online now.",
     },
     partner: {
       title: "Become a Partner | Arion Logistics",
@@ -143,7 +143,7 @@ const en: Dict = {
     title: "Drive for Arion.",
     lead: "Fair pay, honest payroll and a team that has your back from day one.",
     perHour: "gross per hour",
-    netHint: "plus up to €14 net bonus per working day",
+    netHint: "plus allowances and bonus based on performance",
     upTo: "up to",
     netIncl: "net per month, including allowances and bonuses",
     cardCta: "Apply now",
@@ -182,8 +182,7 @@ const en: Dict = {
     pay: [
       "€16.20 gross per hour, on average 173 hours per month",
       "Around €2,803 gross monthly, roughly €1,950 net in German tax class 1",
-      "€14 net bonus per working day from average performance up, on average €295 per month",
-      "€50 weekly bonus for top performance",
+      "Allowances and bonus based on performance: €14 net per working day from average performance up, plus a €50 weekly bonus for top performance",
       "€100 referral bonus for every person you refer who stays at least one month",
       "Salary advance possible in the first two months",
     ],
@@ -196,8 +195,7 @@ const en: Dict = {
       "20 paid vacation days per year",
       "To-the-minute, transparent time tracking",
       "Housing available for €470 per month including utilities",
-      "Shuttle to work for €100 per month if needed",
-      "Team and onboarding in several languages",
+      "Team, onboarding and support during your route in several languages",
     ],
     contractNote:
       "Initially limited to one year with a six-month probation period; we aim to keep you on.",
@@ -252,7 +250,7 @@ const en: Dict = {
       "In German tax class 1 that is about €1,950 net",
     ],
     payNote: "The actual number of hours can vary. Some months have more hours, others fewer.",
-    dailyTitle: "Additional daily allowance",
+    dailyTitle: "Allowances and bonus based on performance",
     dailyIntro: "With at least average performance you additionally receive:",
     dailyBullets: [
       "€14 net per working day",
@@ -260,7 +258,6 @@ const en: Dict = {
     ],
     dailyNote: "With at least average performance and no accident you can reach about €2,250 net per month in German tax class 1. Performance is rated every week using a system with 5 categories. If you are in one of the two lowest categories, no daily allowance is paid for that week.",
     dailyGuarantee: "Your contractually agreed wage is always paid.",
-    topTitle: "Bonus for top performance",
     topText: [
       "Very good performance earns additional bonuses.",
       "In the “Fantastic Plus” category (category 1) the company receives a bonus. If you are in the top category as well, you get an extra €50 bonus per week.",
@@ -277,6 +274,7 @@ const en: Dict = {
       "Days 2 and 3: practical training with an experienced driver",
     ],
     trainingNote: "This way you are trained step by step and get to know the work directly in practice.",
+    supportNote: "You are never on your own during your route: our team helps you by phone and app in several languages, including German, English, Albanian, Spanish, Bulgarian, Romanian and Hungarian.",
     shiftsTitle: "Shifts",
     hoursTitle: "Working time",
     hoursText: [
@@ -310,21 +308,15 @@ const en: Dict = {
     commuteTitle: "Getting to work",
     commuteIntro: [
       "Ideally you have your own car.",
-      "If you do not have your own car at the beginning, there are several options:",
-    ],
-    commuteBullets: [
-      "Colleagues can give you a ride. How you share the costs is up to you.",
-      "As a starting aid we can provide a van just for the trip to work and back if needed.",
-      "The cost is €100 per person per month.",
+      "If you do not have your own car at the beginning, colleagues can give you a ride. How you share the costs is up to you.",
     ],
     benefitsTitle: "Your benefits at a glance",
     benefits: [
       "€16.20 gross per hour",
       "about €2,802.60 gross at 173 hours",
       "about €1,950 net basic salary in German tax class 1",
-      "about €295 additional daily allowance with at least average performance",
+      "Allowances and bonus based on performance: about €295 daily allowance per month plus a €50 weekly bonus for top performance",
       "about €2,250 net with at least average performance and no accident",
-      "€50 weekly bonus for top performance and the matching company category",
       "€100 bonus per referred person who works with us for at least 1 month",
       "Paid training and practical onboarding",
       "To-the-minute time tracking",
@@ -334,7 +326,7 @@ const en: Dict = {
       "Only 1 month notice period for the housing",
       "€200 deposit, refunded on proper handover",
       "Salary advance in the first two months",
-      "Support in organising your commute",
+      "Support in your language, also during your route",
     ],
     questionsTitle: "Questions?",
     questionsText: "Write to us directly on WhatsApp. We reply quickly.",

@@ -34,7 +34,6 @@ export interface JobDetailText {
   dailyBullets: string[];
   dailyNote: string;
   dailyGuarantee: string;
-  topTitle: string;
   topText: string[];
   referralTitle: string;
   referralText: string[];
@@ -42,6 +41,8 @@ export interface JobDetailText {
   trainingIntro: string;
   trainingBullets: string[];
   trainingNote: string;
+  /** Support in the applicant's language, also during the route. */
+  supportNote: string;
   shiftsTitle: string;
   hoursTitle: string;
   hoursText: string[];
@@ -54,7 +55,6 @@ export interface JobDetailText {
   housingNote: string[];
   commuteTitle: string;
   commuteIntro: string[];
-  commuteBullets: string[];
   benefitsTitle: string;
   benefits: string[];
   questionsTitle: string;
