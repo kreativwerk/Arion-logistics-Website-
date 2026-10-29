@@ -1,6 +1,6 @@
-import Image from "next/image";
 import type { Dict } from "@/lib/i18n/types";
 import { site } from "@/lib/site";
+import RouteOptimizer from "@/components/home/RouteOptimizer";
 
 /**
  * The one deliberate theme switch on the page: a dark "tech" block that
@@ -10,17 +10,8 @@ export default function Digital({ dict }: { dict: Dict }) {
   return (
     <section className="bg-[#0c0c0f] text-white">
       <div className="mx-auto grid max-w-[1320px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:gap-16 md:px-12 md:py-32">
-        <div className="relative order-2 overflow-hidden rounded-3xl md:order-1">
-          <div data-parallax="6" className="will-change-transform">
-            <Image
-              src="/images/app.webp"
-              alt={dict.digital.imageAlt}
-              width={1600}
-              height={1200}
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="h-auto w-full scale-[1.12] object-cover"
-            />
-          </div>
+        <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] md:order-1">
+          <RouteOptimizer label={dict.digital.title} />
         </div>
         <div className="order-1 md:order-2">
           <h2

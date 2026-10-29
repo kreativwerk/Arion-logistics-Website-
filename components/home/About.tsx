@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Dict } from "@/lib/i18n/types";
 
 export default function About({ dict }: { dict: Dict }) {
@@ -21,18 +20,6 @@ export default function About({ dict }: { dict: Dict }) {
             {paragraph}
           </p>
         ))}
-      </div>
-      <div data-reveal className="mt-14 overflow-hidden rounded-3xl md:mt-20">
-        <div data-parallax="5" className="will-change-transform">
-          <Image
-            src="/images/fleet.webp"
-            alt={dict.hero.imageAlt}
-            width={1920}
-            height={823}
-            sizes="(min-width: 1320px) 1256px, 100vw"
-            className="h-auto w-full scale-[1.08]"
-          />
-        </div>
       </div>
     </section>
   );

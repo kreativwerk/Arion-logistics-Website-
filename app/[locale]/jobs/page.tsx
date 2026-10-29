@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
 import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import { applyUrlFor, jobFacts, jobSlugs, netMonthlyMax, site } from "@/lib/site";
+import RegionContours from "@/components/home/RegionContours";
 import MagneticButton from "@/components/MagneticButton";
 
 export async function generateMetadata({
@@ -182,21 +182,14 @@ export default async function JobsPage({
         </p>
       </div>
 
-      {/* Closing image + CTA */}
-      <div className="relative mt-20 overflow-hidden">
-        <div data-parallax="8" className="will-change-transform">
-          <Image
-            src="/images/team.webp"
-            alt={dict.jobsPage.title}
-            width={1800}
-            height={1013}
-            sizes="100vw"
-            className="h-[50vh] w-full scale-[1.15] object-cover md:h-[60vh]"
-          />
+      {/* Closing CTA over the code-drawn region map */}
+      <div className="relative mt-20 overflow-hidden bg-surface2">
+        <div className="relative h-[50vh] md:h-[60vh]">
+          <RegionContours label={dict.region.caption} />
         </div>
-        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 via-black/5 to-transparent">
+        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-surface2 via-surface2/60 to-transparent">
           <div className="mx-auto flex w-full max-w-[1320px] flex-wrap items-end justify-between gap-6 px-6 pb-12 md:px-12 md:pb-16">
-            <p className="max-w-[20ch] text-3xl font-semibold leading-[1.1] tracking-tighter text-white md:text-4xl">
+            <p className="max-w-[20ch] text-3xl font-semibold leading-[1.1] tracking-tighter md:text-4xl">
               {dict.jobsTeaser.title}
             </p>
             <MagneticButton href={applyUrlFor("pommersfelden", locale)} icon external>

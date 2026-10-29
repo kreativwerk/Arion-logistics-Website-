@@ -1,13 +1,13 @@
-import AmbientVideo from "@/components/AmbientVideo";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dict } from "@/lib/i18n/types";
 import MagneticButton from "@/components/MagneticButton";
+import HeroMap from "@/components/home/HeroMap";
 
 /**
- * Diagonally split hero: copy on the left, photo on the right behind a
- * slanted edge that echoes the diagonal cut of the Arion logo mark. The
- * orange layer sits slightly wider than the photo layer, leaving a brand
- * stripe along the diagonal.
+ * Diagonally split hero: copy on the left, a live code-drawn map of the
+ * delivery region on the right behind a slanted edge that echoes the
+ * diagonal cut of the Arion logo mark. The orange layer sits slightly wider
+ * than the map layer, leaving a brand stripe along the diagonal.
  */
 function Check() {
   return (
@@ -77,23 +77,15 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
           </div>
         </div>
 
-        {/* Diagonal photo */}
-        <div data-hero-img className="relative h-[58vh] will-change-transform md:h-auto">
+        {/* Diagonal map */}
+        <div data-hero-img className="relative h-[62vh] will-change-transform md:h-auto">
           {/* Brand stripe along the diagonal */}
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-accent [clip-path:polygon(0_10%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(14%_0,100%_0,100%_100%,0_100%)]"
           />
-          <div className="absolute inset-0 [clip-path:polygon(0_12%,100%_2.5%,100%_100%,0_100%)] md:[clip-path:polygon(17%_0,100%_0,100%_100%,3%_100%)]">
-            <AmbientVideo
-              src="/videos/hero.mp4"
-              poster="/images/region.webp"
-              alt={dict.region.imageAlt}
-              width={960}
-              height={1280}
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+          <div className="absolute inset-0 bg-surface2 [clip-path:polygon(0_12%,100%_2.5%,100%_100%,0_100%)] md:[clip-path:polygon(17%_0,100%_0,100%_100%,3%_100%)]">
+            <HeroMap label={dict.region.caption} />
           </div>
         </div>
       </div>
