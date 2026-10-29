@@ -1,6 +1,5 @@
-import Image from "next/image";
 import type { Dict } from "@/lib/i18n/types";
-import AmbientVideo from "@/components/AmbientVideo";
+import ServiceArt from "@/components/home/ServiceArt";
 
 export default function Services({ dict }: { dict: Dict }) {
   return (
@@ -27,16 +26,8 @@ export default function Services({ dict }: { dict: Dict }) {
           data-reveal
           className="group relative overflow-hidden rounded-3xl bg-surface shadow-[0_1px_2px_rgba(19,19,22,0.05)] md:col-span-7"
         >
-          <div className="overflow-hidden">
-            <AmbientVideo
-              src="/videos/depot.mp4"
-              poster="/images/depot.webp"
-              alt={dict.services.kepImageAlt}
-              width={1800}
-              height={1013}
-              sizes="(min-width: 768px) 58vw, 100vw"
-              className="h-64 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] md:h-[380px]"
-            />
+          <div className="h-64 bg-surface2/60 md:h-[380px]">
+            <ServiceArt variant="kep" label={dict.services.kepTitle} />
           </div>
           <div className="p-7 md:p-9">
             <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">
@@ -53,15 +44,8 @@ export default function Services({ dict }: { dict: Dict }) {
           data-reveal-delay="0.1"
           className="group relative flex flex-col overflow-hidden rounded-3xl bg-surface shadow-[0_1px_2px_rgba(19,19,22,0.05)] md:col-span-5"
         >
-          <div className="overflow-hidden">
-            <Image
-              src="/images/express.webp"
-              alt={dict.services.expressImageAlt}
-              width={1200}
-              height={1200}
-              sizes="(min-width: 768px) 42vw, 100vw"
-              className="h-64 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] md:h-[380px]"
-            />
+          <div className="h-64 bg-surface2/60 md:h-[380px]">
+            <ServiceArt variant="express" label={dict.services.expressTitle} />
           </div>
           <div className="p-7 md:p-9">
             <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">

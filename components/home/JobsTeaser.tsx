@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dict } from "@/lib/i18n/types";
@@ -41,17 +40,7 @@ export default function JobsTeaser({ locale, dict }: { locale: Locale; dict: Dic
           </div>
         </div>
 
-        <div className="flex flex-col gap-5">
-          <div data-reveal className="relative overflow-hidden rounded-3xl">
-            <Image
-              src="/images/courier-f.webp"
-              alt={dict.jobsPage.title}
-              width={1200}
-              height={1600}
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="h-72 w-full object-cover object-[center_30%] md:h-96"
-            />
-          </div>
+        <div className="flex flex-col gap-5 md:justify-center">
           {jobSlugs.map((slug, i) => (
             <Link
               key={slug}

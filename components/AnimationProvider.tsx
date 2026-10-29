@@ -17,9 +17,10 @@ gsap.registerPlugin(ScrollTrigger);
  *  data-counter-value     count-up number (data-counter-decimals optional)
  *  data-hero-line         hero headline line (staggered clip reveal)
  *  data-hero-fade         hero secondary elements (fade up after headline)
- *  data-hero-img          hero image (scale settle)
- *  (the pinned horizontal pan lives in components/home/Steps.tsx, a client
- *  component, so its pin-spacer is reverted before React unmounts the page)
+ *  data-hero-img          hero visual (scale settle)
+ *  (canvas motion lives in client components on components/motion/stage.ts;
+ *  the scroll-scrubbed "So arbeiten wir" stage is components/home/Process.tsx
+ *  and owns its own ScrollTrigger cleanup)
  *
  * Lenis lives once for the whole session; the per-page GSAP context is
  * rebuilt on every client-side navigation. ScrollTrigger positions are
