@@ -62,17 +62,17 @@ type Tour = { path: Path; stops: number[]; offset: number };
 type Run = { path: Path; offset: number; speed: number };
 type Camera = { x: number; y: number; s: number };
 
-/** Timeline of the zoom loop, in seconds: Franken -> Bayern -> Deutschland -> back. */
-const CYCLE = 30;
+/** Timeline of the zoom loop, in seconds: a short look at our region, then a quick pull back to Bayern and Deutschland. */
+const CYCLE = 17;
 const KEYS: { at: number; view: keyof typeof views }[] = [
   { at: 0, view: "franken" },
-  { at: 10, view: "franken" },
-  { at: 12.6, view: "bayern" },
-  { at: 17, view: "bayern" },
-  { at: 19.6, view: "deutschland" },
-  { at: 25, view: "deutschland" },
-  { at: 28.6, view: "franken" },
-  { at: 30, view: "franken" },
+  { at: 4, view: "franken" },
+  { at: 5.4, view: "bayern" },
+  { at: 8.4, view: "bayern" },
+  { at: 9.8, view: "deutschland" },
+  { at: 14.6, view: "deutschland" },
+  { at: 16.6, view: "franken" },
+  { at: 17, view: "franken" },
 ];
 
 /**
@@ -393,7 +393,7 @@ export default function HeroMap({ label }: { label: string }) {
       draw,
       dispose: () => window.removeEventListener("pointermove", onMove),
     };
-  });
+  }, { stillTime: 2 });
 
   return <canvas ref={ref} role="img" aria-label={label} className="absolute inset-0 h-full w-full" />;
 }
