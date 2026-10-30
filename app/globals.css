@@ -93,6 +93,15 @@ html.bg-scroll [data-bg].on-light [class*="border-white/"] {
   border-color: #e4e4e7;
 }
 
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(520%);
+  }
+}
+
 ::selection {
   background: var(--accent);
   color: #fff;

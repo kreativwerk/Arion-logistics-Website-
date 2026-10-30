@@ -89,6 +89,8 @@ export default function Process({ dict }: { dict: Dict }) {
         el.dataset.active = String(Number(el.dataset.step) === idx);
       });
       captions.current?.style.setProperty("--p", String(p));
+      // The scroll cue leaves as soon as the story starts moving.
+      track.current?.toggleAttribute("data-scrolled", p > 0.03);
     }
   }, []);
 
@@ -284,7 +286,7 @@ export default function Process({ dict }: { dict: Dict }) {
       id="process"
       data-bg="#ffffff #fff3df #fafaf9"
       data-bg-at="0 0.36 0.7"
-      className="relative h-[380vh] bg-surface">
+      className="group/process relative h-[380vh] bg-surface">
       <div className="sticky top-0 flex h-[100dvh] flex-col overflow-hidden md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center">
         <div
           ref={captions}
@@ -309,10 +311,17 @@ export default function Process({ dict }: { dict: Dict }) {
               </li>
             ))}
           </ol>
-          {/* Progress rail with a tick per step */}
+          {/* Progress rail */}
           <div aria-hidden="true" className="relative mt-8 h-[3px] max-w-[340px] overflow-hidden rounded-full bg-line md:mt-12">
             <div className="absolute inset-y-0 left-0 w-full origin-left scale-x-[var(--p,0)] bg-accent" />
           </div>
+        </div>
+        {/* Minimal scroll cue: a dot travelling down a hairline */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-6 top-28 z-10 h-10 w-px overflow-hidden bg-foreground/15 transition-opacity duration-500 group-data-[scrolled]/process:opacity-0 md:bottom-10 md:left-1/2 md:right-auto md:top-auto md:h-12"
+        >
+          <span className="absolute left-1/2 top-0 h-2.5 w-[3px] -translate-x-1/2 rounded-full bg-accent motion-safe:animate-[scroll-cue_1.8s_cubic-bezier(.45,0,.55,1)_infinite]" />
         </div>
         <div className="relative order-1 min-h-0 flex-1 md:order-2 md:h-full">
           <canvas
