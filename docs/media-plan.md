@@ -7,8 +7,8 @@ Canvas-Animationen im Code (`components/home/*`, Laufzeit in
 
 | Abschnitt | Visual | Komponente |
 | --- | --- | --- |
-| Hero | Live-Karte Frankens: echte Orte und Straßen, Touren aus Pommersfelden und Kitzingen | `HeroMap.tsx` |
-| Leistungen | Paketstapel wird verladen / Direktfahrt A→B mit Zeitring | `ServiceArt.tsx` |
+| Hero | Live-Karte: Touren in Franken/Mittelfranken, Zoom auf Express-Linien in Bayern und Fernlinien in Deutschland | `HeroMap.tsx` |
+| Leistungen | Paketstapel im Lager / Direktfahrt A→B mit Zeitring | `ServiceArt.tsx` |
 | Digital | Tourenoptimierung: Wirrwarr → geplante Route | `RouteOptimizer.tsx` |
 | So arbeiten wir | Scroll-Story: Planung → Zustellung → Reporting | `Process.tsx` |
 | Region | Höhenlinien-Landschaft mit Landstraße | `RegionContours.tsx` |

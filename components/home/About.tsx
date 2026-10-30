@@ -2,7 +2,7 @@ import type { Dict } from "@/lib/i18n/types";
 
 export default function About({ dict }: { dict: Dict }) {
   return (
-    <section className="mx-auto max-w-[1320px] px-6 py-20 md:px-12 md:py-32">
+    <section data-bg="#fafaf9" className="mx-auto max-w-[1320px] px-6 py-20 md:px-12 md:py-32">
       <div className="mx-auto max-w-[760px] text-center">
         <h2
           data-reveal

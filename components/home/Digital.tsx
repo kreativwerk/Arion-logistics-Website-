@@ -8,7 +8,7 @@ import RouteOptimizer from "@/components/home/RouteOptimizer";
  */
 export default function Digital({ dict }: { dict: Dict }) {
   return (
-    <section className="bg-[#0c0c0f] text-white">
+    <section data-bg="#0c0c0f" className="bg-[#0c0c0f] text-white">
       <div className="mx-auto grid max-w-[1320px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:gap-16 md:px-12 md:py-32">
         <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] md:order-1">
           <RouteOptimizer label={dict.digital.title} />

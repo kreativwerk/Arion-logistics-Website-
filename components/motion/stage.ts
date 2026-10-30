@@ -225,3 +225,40 @@ export function useStage(create: () => Scene, options: StageOptions = {}) {
 
   return ref;
 }
+
+/**
+ * The round Arion mark (public/icon.svg): orange disc, white diagonal and
+ * white bar. Geometry copied from the SVG's 460 x 460 viewBox.
+ */
+export function drawLogo(ctx: CanvasRenderingContext2D, x: number, y: number, r: number, ring = true) {
+  const s = r / 215;
+  const p = (px: number, py: number) => [x + (px - 230) * s, y + (py - 230) * s] as const;
+  ctx.save();
+  ctx.shadowColor = "rgba(19,19,22,0.22)";
+  ctx.shadowBlur = r * 0.5;
+  ctx.shadowOffsetY = r * 0.15;
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.fillStyle = "#f19104";
+  ctx.fill();
+  ctx.shadowColor = "transparent";
+  ctx.clip();
+  ctx.fillStyle = "#ffffff";
+  for (const poly of [
+    [[-100, 391], [560, -53], [560, 38], [-100, 489]],
+    [[242, 255], [500, 255], [500, 318], [150, 318]],
+  ]) {
+    ctx.beginPath();
+    poly.forEach(([px, py], i) => (i ? ctx.lineTo(...p(px, py)) : ctx.moveTo(...p(px, py))));
+    ctx.closePath();
+    ctx.fill();
+  }
+  ctx.restore();
+  if (ring) {
+    ctx.beginPath();
+    ctx.arc(x, y, r + Math.max(1.5, r * 0.12), 0, Math.PI * 2);
+    ctx.strokeStyle = "rgba(255,255,255,0.9)";
+    ctx.lineWidth = Math.max(1.5, r * 0.12);
+    ctx.stroke();
+  }
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { Path, drawVan, easeOut, seg, useStage, type Pt } from "@/components/motion/stage";
+import { Path, drawLogo, drawVan, easeOut, seg, useStage, type Pt } from "@/components/motion/stage";
 
 const ORANGE = "#f19104";
 
@@ -53,6 +53,40 @@ function kepScene() {
     draw(ctx: CanvasRenderingContext2D, w: number, h: number, t: number) {
       const cycle = 7.5;
       const c = (t % cycle) / cycle;
+      // Background: a faint isometric warehouse floor and a shelf rack behind.
+      ctx.strokeStyle = "rgba(19,19,22,0.06)";
+      ctx.lineWidth = 1;
+      for (let i = -6; i <= 8; i++) {
+        const a1 = P(i, -6, 0);
+        const a2 = P(i, 8, 0);
+        const b1 = P(-6, i, 0);
+        const b2 = P(8, i, 0);
+        ctx.beginPath();
+        ctx.moveTo(a1.x, a1.y);
+        ctx.lineTo(a2.x, a2.y);
+        ctx.moveTo(b1.x, b1.y);
+        ctx.lineTo(b2.x, b2.y);
+        ctx.stroke();
+      }
+      ctx.strokeStyle = "rgba(19,19,22,0.1)";
+      ctx.lineWidth = 1.5;
+      for (const x of [-2.5, -0.5, 1.5, 3.5, 5.5]) {
+        const top = P(x, -2.6, 4.2);
+        const bot = P(x, -2.6, 0);
+        ctx.beginPath();
+        ctx.moveTo(bot.x, bot.y);
+        ctx.lineTo(top.x, top.y);
+        ctx.stroke();
+      }
+      for (const z of [0.6, 1.8, 3.0, 4.2]) {
+        const l = P(-2.5, -2.6, z);
+        const r = P(5.5, -2.6, z);
+        ctx.beginPath();
+        ctx.moveTo(l.x, l.y);
+        ctx.lineTo(r.x, r.y);
+        ctx.stroke();
+      }
+
       // Pallet
       const pallet = [P(-0.1, -0.1, 0), P(3.0, -0.1, 0), P(3.0, 2.0, 0), P(-0.1, 2.0, 0)];
       ctx.beginPath();
@@ -74,12 +108,6 @@ function kepScene() {
         parcel(ctx, P, x + 0.05 + off, y + 0.05, z * 0.95 + drop);
       });
       ctx.globalAlpha = 1;
-
-      // The van backs in, waits, and drives off with the load.
-      const vanIn = easeOut(seg(c, 0.66, 0.8));
-      const vanOut = seg(c, 0.86, 1);
-      const vp = P(4.3 + (1 - vanIn) * 3 + vanOut * 5, 1.2, 0);
-      if (vanIn > 0 && vanOut < 1) drawVan(ctx, vp.x, vp.y, Math.atan2(0.5, 0.866), Math.min(w, h) / 125);
     },
   };
 }
@@ -110,6 +138,24 @@ function expressScene() {
       const c = (t % cycle) / cycle;
       const run = easeOut(seg(c, 0.08, 0.72));
 
+      // Background: a quiet street map, dot grid and two side roads.
+      ctx.fillStyle = "rgba(19,19,22,0.07)";
+      const step = 22 * unit;
+      for (let x = step / 2; x < w; x += step) {
+        for (let y = step / 2; y < h; y += step) {
+          ctx.fillRect(x - 0.75, y - 0.75, 1.5, 1.5);
+        }
+      }
+      ctx.strokeStyle = "rgba(19,19,22,0.06)";
+      ctx.lineWidth = 4 * unit;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(w * 0.05, h * 0.18);
+      ctx.bezierCurveTo(w * 0.35, h * 0.3, w * 0.55, h * 0.05, w * 0.95, h * 0.12);
+      ctx.moveTo(w * 0.3, h * 0.95);
+      ctx.bezierCurveTo(w * 0.45, h * 0.6, w * 0.7, h * 0.85, w * 0.98, h * 0.62);
+      ctx.stroke();
+
       ctx.beginPath();
       path.trace(ctx, 0, path.length);
       ctx.strokeStyle = "#e4e3de";
@@ -136,15 +182,14 @@ function expressScene() {
       }
 
       // A and B markers
-      for (const [p, filled] of [[A, true], [B, run >= 0.99]] as const) {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 9 * unit, 0, Math.PI * 2);
-        ctx.fillStyle = filled ? ORANGE : "#ffffff";
-        ctx.fill();
-        ctx.lineWidth = 2.4 * unit;
-        ctx.strokeStyle = ORANGE;
-        ctx.stroke();
-      }
+      ctx.beginPath();
+      ctx.arc(B.x, B.y, 9 * unit, 0, Math.PI * 2);
+      ctx.fillStyle = run >= 0.99 ? ORANGE : "#ffffff";
+      ctx.fill();
+      ctx.lineWidth = 2.4 * unit;
+      ctx.strokeStyle = ORANGE;
+      ctx.stroke();
+      drawLogo(ctx, A.x, A.y, 14 * unit);
       if (run >= 0.99) {
         const age = seg(c, 0.72, 0.95);
         ctx.beginPath();

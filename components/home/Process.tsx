@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Dict } from "@/lib/i18n/types";
-import { Path, clamp, drawVan, easeOut, fontFamily, isStillMode, lerp, rng, seg, useStage, type Pt } from "@/components/motion/stage";
+import { Path, clamp, drawLogo, drawVan, easeOut, fontFamily, isStillMode, lerp, rng, seg, useStage, type Pt } from "@/components/motion/stage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,6 +121,16 @@ export default function Process({ dict }: { dict: Dict }) {
         ctx.scale(lerp(1, 0.62, back), lerp(1, 0.62, back));
         ctx.globalAlpha = lerp(1, 0.55, back);
 
+        // City blocks between the streets, barely there.
+        ctx.fillStyle = "rgba(19,19,22,0.028)";
+        for (let i = 0; i < d.xs.length - 1; i++) {
+          for (let j = 0; j < d.ys.length - 1; j++) {
+            ctx.beginPath();
+            ctx.roundRect(d.xs[i] + 12, d.ys[j] + 12, d.xs[i + 1] - d.xs[i] - 24, d.ys[j + 1] - d.ys[j] - 24, 8);
+            ctx.fill();
+          }
+        }
+
         // Streets
         const streets = 0.4 + 0.6 * seg(p, 0, 0.1);
         ctx.strokeStyle = "#e4e3de";
@@ -204,13 +214,8 @@ export default function Process({ dict }: { dict: Dict }) {
           }
         });
 
-        // Depot
-        ctx.fillStyle = ORANGE;
-        ctx.beginPath();
-        ctx.roundRect(d.depot.x - 17, d.depot.y - 17, 34, 34, 7);
-        ctx.fill();
-        ctx.fillStyle = "#fff";
-        ctx.fillRect(d.depot.x - 5, d.depot.y - 5, 10, 10);
+        // Depot: the round Arion mark
+        drawLogo(ctx, d.depot.x, d.depot.y, 22);
 
         // Van
         if (p > 0.3) {
@@ -242,9 +247,11 @@ export default function Process({ dict }: { dict: Dict }) {
           const gy = cy + ch - pad;
           const gw = cw - pad * 2;
           const gh = ch - pad * 2.6;
+          const lr = cw * 0.03;
+          drawLogo(ctx, gx + lr, cy + pad * 1.1 - lr * 0.7, lr, false);
           ctx.fillStyle = "#55555e";
           ctx.font = `500 ${Math.round(cw * 0.032)}px ${sans}`;
-          ctx.fillText(dict.process.items[2].title, gx, cy + pad * 1.1);
+          ctx.fillText(dict.process.items[2].title, gx + lr * 2.8, cy + pad * 1.1);
           ctx.strokeStyle = "#e4e4e7";
           ctx.lineWidth = 1;
           ctx.setLineDash([4, 5]);
@@ -272,7 +279,12 @@ export default function Process({ dict }: { dict: Dict }) {
   );
 
   return (
-    <section ref={track} id="process" className="relative h-[380vh] bg-surface">
+    <section
+      ref={track}
+      id="process"
+      data-bg="#ffffff #fff3df #fafaf9"
+      data-bg-at="0 0.36 0.7"
+      className="relative h-[380vh] bg-surface">
       <div className="sticky top-0 flex h-[100dvh] flex-col overflow-hidden md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center">
         <div
           ref={captions}

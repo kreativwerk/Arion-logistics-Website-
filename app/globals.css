@@ -57,6 +57,42 @@ body {
   overflow-x: clip;
 }
 
+/* Set by AnimationProvider when scroll-blended page colour is active: the
+   body carries the colour, sections only declare it (data-bg). */
+html.bg-scroll [data-bg] {
+  background-color: transparent !important;
+  transition: color 0.35s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/* Light section while the page is dark or orange: white type. Cards inside
+   keep their own light surface and ink type. */
+html.bg-scroll [data-bg].on-dark {
+  --foreground: #ffffff;
+  --muted: rgba(255, 255, 255, 0.78);
+  --line: rgba(255, 255, 255, 0.25);
+  color: var(--foreground);
+}
+html.bg-scroll [data-bg].on-dark :is(.bg-surface, .bg-surface2) {
+  --foreground: #131316;
+  --muted: #55555e;
+  --line: #e4e4e7;
+  color: var(--foreground);
+}
+
+/* Dark or orange section while the page is light: ink type. */
+html.bg-scroll [data-bg].on-light {
+  color: #131316;
+}
+html.bg-scroll [data-bg].on-light .text-white {
+  color: #131316;
+}
+html.bg-scroll [data-bg].on-light [class*="text-white/"] {
+  color: #55555e;
+}
+html.bg-scroll [data-bg].on-light [class*="border-white/"] {
+  border-color: #e4e4e7;
+}
+
 ::selection {
   background: var(--accent);
   color: #fff;
