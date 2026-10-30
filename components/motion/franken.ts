@@ -32,6 +32,54 @@ export const towns: Town[] = [
   { name: "Wiesentheid", lat: 49.7946, lon: 10.3427, kind: "town" },
   { name: "Schlüsselfeld", lat: 49.7562, lon: 10.6197, kind: "town" },
   { name: "Baiersdorf", lat: 49.6608, lon: 11.0333, kind: "town" },
+  // Mittelfranken
+  { name: "Ansbach", lat: 49.3007, lon: 10.5719, kind: "city" },
+  { name: "Schwabach", lat: 49.3292, lon: 11.0215, kind: "town" },
+  { name: "Roth", lat: 49.2459, lon: 11.0911, kind: "town" },
+  { name: "Weißenburg", lat: 49.0306, lon: 10.9717, kind: "town" },
+  { name: "Gunzenhausen", lat: 49.1146, lon: 10.7543, kind: "town" },
+  { name: "Dinkelsbühl", lat: 49.0697, lon: 10.3196, kind: "town" },
+  { name: "Feuchtwangen", lat: 49.1676, lon: 10.3281, kind: "town" },
+  { name: "Rothenburg", lat: 49.3772, lon: 10.1867, kind: "town" },
+  { name: "Bad Windsheim", lat: 49.5021, lon: 10.4135, kind: "town" },
+  { name: "Heilsbronn", lat: 49.3383, lon: 10.7903, kind: "town" },
+  { name: "Lauf", lat: 49.5103, lon: 11.2772, kind: "town" },
+  { name: "Hersbruck", lat: 49.5081, lon: 11.4307, kind: "town" },
+  { name: "Neumarkt", lat: 49.2803, lon: 11.4597, kind: "town" },
+];
+
+/** Bavaria beyond Franconia: express destinations. */
+export const bavaria: { name: string; lat: number; lon: number }[] = [
+  { name: "München", lat: 48.1374, lon: 11.5755 },
+  { name: "Augsburg", lat: 48.3705, lon: 10.8978 },
+  { name: "Regensburg", lat: 49.0134, lon: 12.1016 },
+  { name: "Ingolstadt", lat: 48.7665, lon: 11.4258 },
+  { name: "Passau", lat: 48.5667, lon: 13.4319 },
+  { name: "Landshut", lat: 48.5372, lon: 12.1521 },
+  { name: "Rosenheim", lat: 47.8561, lon: 12.1289 },
+  { name: "Kempten", lat: 47.7267, lon: 10.3139 },
+  { name: "Hof", lat: 50.3135, lon: 11.9128 },
+  { name: "Bayreuth", lat: 49.9456, lon: 11.5713 },
+  { name: "Aschaffenburg", lat: 49.9737, lon: 9.1491 },
+  { name: "Weiden", lat: 49.6768, lon: 12.1561 },
+];
+
+/** Germany: long-distance destinations. */
+export const germanyCities: { name: string; lat: number; lon: number }[] = [
+  { name: "Berlin", lat: 52.52, lon: 13.405 },
+  { name: "Hamburg", lat: 53.5511, lon: 9.9937 },
+  { name: "Köln", lat: 50.9375, lon: 6.9603 },
+  { name: "Frankfurt", lat: 50.1109, lon: 8.6821 },
+  { name: "Stuttgart", lat: 48.7758, lon: 9.1829 },
+  { name: "Leipzig", lat: 51.3397, lon: 12.3731 },
+  { name: "Dresden", lat: 51.0504, lon: 13.7373 },
+  { name: "Hannover", lat: 52.3759, lon: 9.732 },
+  { name: "Bremen", lat: 53.0793, lon: 8.8017 },
+  { name: "Dortmund", lat: 51.5136, lon: 7.4653 },
+  { name: "Erfurt", lat: 50.9848, lon: 11.0299 },
+  { name: "Rostock", lat: 54.0924, lon: 12.0991 },
+  { name: "Mannheim", lat: 49.4875, lon: 8.466 },
+  { name: "Kassel", lat: 51.3127, lon: 9.4797 },
 ];
 
 /** Road network (schematic): A3, A7, A70, A73 and the main federal roads. */
@@ -78,6 +126,24 @@ export const roads: { from: string; to: string; major?: boolean }[] = [
   { from: "Höchstadt", to: "Herzogenaurach" },
   { from: "Höchstadt", to: "Neustadt" },
   { from: "Herzogenaurach", to: "Erlangen" },
+  // Mittelfranken: A6, A7, A9 and the federal roads
+  { from: "Ansbach", to: "Heilsbronn", major: true },
+  { from: "Heilsbronn", to: "Schwabach", major: true },
+  { from: "Schwabach", to: "Nürnberg", major: true },
+  { from: "Nürnberg", to: "Neumarkt", major: true },
+  { from: "Nürnberg", to: "Lauf", major: true },
+  { from: "Lauf", to: "Hersbruck" },
+  { from: "Ochsenfurt", to: "Rothenburg", major: true },
+  { from: "Rothenburg", to: "Feuchtwangen", major: true },
+  { from: "Feuchtwangen", to: "Dinkelsbühl", major: true },
+  { from: "Feuchtwangen", to: "Ansbach" },
+  { from: "Rothenburg", to: "Bad Windsheim" },
+  { from: "Bad Windsheim", to: "Ansbach" },
+  { from: "Bad Windsheim", to: "Neustadt" },
+  { from: "Ansbach", to: "Gunzenhausen" },
+  { from: "Gunzenhausen", to: "Weißenburg" },
+  { from: "Weißenburg", to: "Roth" },
+  { from: "Roth", to: "Schwabach" },
 ];
 
 /** Rivers as town-anchored polylines: the Main and the Regnitz. */
@@ -103,23 +169,43 @@ export const tours: string[][] = [
   ["Kitzingen", "Dettelbach", "Volkach", "Gerolzhofen", "Wiesentheid"],
   ["Kitzingen", "Iphofen", "Scheinfeld", "Iphofen"],
   ["Kitzingen", "Ochsenfurt", "Würzburg", "Dettelbach"],
+  ["Pommersfelden", "Höchstadt", "Herzogenaurach", "Fürth", "Nürnberg", "Fürth", "Erlangen", "Herzogenaurach", "Höchstadt"],
+  ["Pommersfelden", "Höchstadt", "Neustadt", "Bad Windsheim", "Ansbach", "Heilsbronn", "Schwabach", "Roth", "Schwabach", "Nürnberg", "Fürth", "Herzogenaurach", "Höchstadt"],
+  ["Kitzingen", "Ochsenfurt", "Rothenburg", "Bad Windsheim", "Neustadt", "Scheinfeld", "Iphofen"],
 ];
 
+/** Express runs across Bavaria and long-distance runs across Germany. */
+export const expressRuns: { from: string; to: string }[] = [
+  { from: "Pommersfelden", to: "München" },
+  { from: "Pommersfelden", to: "Regensburg" },
+  { from: "Pommersfelden", to: "Passau" },
+  { from: "Pommersfelden", to: "Hof" },
+  { from: "Pommersfelden", to: "Ingolstadt" },
+  { from: "Kitzingen", to: "Augsburg" },
+  { from: "Kitzingen", to: "Kempten" },
+  { from: "Kitzingen", to: "Aschaffenburg" },
+  { from: "Pommersfelden", to: "Rosenheim" },
+];
+export const longRuns: { from: string; to: string }[] = [
+  { from: "Pommersfelden", to: "Berlin" },
+  { from: "Pommersfelden", to: "Hamburg" },
+  { from: "Pommersfelden", to: "Leipzig" },
+  { from: "Pommersfelden", to: "Dresden" },
+  { from: "Pommersfelden", to: "Rostock" },
+  { from: "Pommersfelden", to: "Hannover" },
+  { from: "Kitzingen", to: "Köln" },
+  { from: "Kitzingen", to: "Frankfurt" },
+  { from: "Kitzingen", to: "Stuttgart" },
+  { from: "Kitzingen", to: "Dortmund" },
+  { from: "Kitzingen", to: "Bremen" },
+  { from: "Pommersfelden", to: "Erfurt" },
+];
+
+/** Camera framings the hero map zooms between. */
+export const views = {
+  franken: { lonMin: 9.85, lonMax: 11.65, latMin: 48.95, latMax: 50.15 },
+  bayern: { lonMin: 8.9, lonMax: 13.9, latMin: 47.2, latMax: 50.65 },
+  deutschland: { lonMin: 5.7, lonMax: 15.1, latMin: 47.2, latMax: 55.1 },
+};
+
 export const townByName = new Map(towns.map((t) => [t.name, t]));
-
-/** Bounding box of the drawn area, slightly larger than the town spread. */
-export const bounds = { lonMin: 9.85, lonMax: 11.2, latMin: 49.4, latMax: 50.1 };
-
-/** Equirectangular projection fitted into a w x h box (contain x zoom), centred at (cx, cy). */
-export function projector(w: number, h: number, pad: number, cx = 0.5, cy = 0.5, zoom = 1) {
-  const k = Math.cos(((bounds.latMin + bounds.latMax) / 2) * (Math.PI / 180));
-  const bw = (bounds.lonMax - bounds.lonMin) * k;
-  const bh = bounds.latMax - bounds.latMin;
-  const scale = Math.min((w - pad * 2) / bw, (h - pad * 2) / bh) * zoom;
-  const ox = w * cx - (bw * scale) / 2;
-  const oy = h * cy - (bh * scale) / 2;
-  return (lat: number, lon: number) => ({
-    x: ox + (lon - bounds.lonMin) * k * scale,
-    y: oy + (bounds.latMax - lat) * scale,
-  });
-}

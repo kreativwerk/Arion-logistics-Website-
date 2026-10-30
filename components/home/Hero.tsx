@@ -25,7 +25,7 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
   const title2Rest = words.join(" ");
 
   return (
-    <section className="relative overflow-hidden md:min-h-[100dvh]">
+    <section data-bg="#fafaf9" className="relative overflow-hidden md:min-h-[100dvh]">
       <div className="grid md:min-h-[100dvh] md:grid-cols-[1.1fr_1fr]">
         {/* Copy */}
         <div className="flex flex-col items-center justify-center px-6 pb-14 pt-32 text-center md:items-start md:py-40 md:pl-[max(3rem,calc((100vw-1320px)/2))] md:pr-14 md:text-left">

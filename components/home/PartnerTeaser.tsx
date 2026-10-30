@@ -5,7 +5,7 @@ import MagneticButton from "@/components/MagneticButton";
 /** The orange brand block: white type on brand orange, inverse CTA. */
 export default function PartnerTeaser({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
-    <section className="bg-accent text-white">
+    <section data-bg="#f19104" className="bg-accent text-white">
       <div className="mx-auto max-w-[1320px] px-6 py-20 md:px-12 md:py-32">
         <div className="max-w-[62ch]">
           <h2 data-reveal className="text-4xl font-semibold leading-[1.05] tracking-tighter md:text-6xl">

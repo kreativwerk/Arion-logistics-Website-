@@ -3,7 +3,7 @@ import ServiceArt from "@/components/home/ServiceArt";
 
 export default function Services({ dict }: { dict: Dict }) {
   return (
-    <section id="services" className="scroll-mt-24 bg-surface2">
+    <section id="services" data-bg="#f0f0ee" className="scroll-mt-24 bg-surface2">
       <div className="mx-auto max-w-[1320px] px-6 py-20 md:px-12 md:py-32">
       <p
         data-reveal

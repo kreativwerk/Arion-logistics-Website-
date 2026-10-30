@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Dict } from "@/lib/i18n/types";
-import { Path, clamp, drawVan, easeOut, fontFamily, isStillMode, lerp, rng, seg, useStage, type Pt } from "@/components/motion/stage";
+import { Path, clamp, drawLogo, drawVan, easeOut, fontFamily, isStillMode, lerp, rng, seg, useStage, type Pt } from "@/components/motion/stage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,6 +89,8 @@ export default function Process({ dict }: { dict: Dict }) {
         el.dataset.active = String(Number(el.dataset.step) === idx);
       });
       captions.current?.style.setProperty("--p", String(p));
+      // The scroll cue leaves as soon as the story starts moving.
+      track.current?.toggleAttribute("data-scrolled", p > 0.03);
     }
   }, []);
 
@@ -120,6 +122,16 @@ export default function Process({ dict }: { dict: Dict }) {
         ctx.translate(lerp(0, -150, back), lerp(0, -60, back));
         ctx.scale(lerp(1, 0.62, back), lerp(1, 0.62, back));
         ctx.globalAlpha = lerp(1, 0.55, back);
+
+        // City blocks between the streets, barely there.
+        ctx.fillStyle = "rgba(19,19,22,0.028)";
+        for (let i = 0; i < d.xs.length - 1; i++) {
+          for (let j = 0; j < d.ys.length - 1; j++) {
+            ctx.beginPath();
+            ctx.roundRect(d.xs[i] + 12, d.ys[j] + 12, d.xs[i + 1] - d.xs[i] - 24, d.ys[j + 1] - d.ys[j] - 24, 8);
+            ctx.fill();
+          }
+        }
 
         // Streets
         const streets = 0.4 + 0.6 * seg(p, 0, 0.1);
@@ -204,13 +216,8 @@ export default function Process({ dict }: { dict: Dict }) {
           }
         });
 
-        // Depot
-        ctx.fillStyle = ORANGE;
-        ctx.beginPath();
-        ctx.roundRect(d.depot.x - 17, d.depot.y - 17, 34, 34, 7);
-        ctx.fill();
-        ctx.fillStyle = "#fff";
-        ctx.fillRect(d.depot.x - 5, d.depot.y - 5, 10, 10);
+        // Depot: the round Arion mark
+        drawLogo(ctx, d.depot.x, d.depot.y, 22);
 
         // Van
         if (p > 0.3) {
@@ -242,9 +249,11 @@ export default function Process({ dict }: { dict: Dict }) {
           const gy = cy + ch - pad;
           const gw = cw - pad * 2;
           const gh = ch - pad * 2.6;
+          const lr = cw * 0.03;
+          drawLogo(ctx, gx + lr, cy + pad * 1.1 - lr * 0.7, lr, false);
           ctx.fillStyle = "#55555e";
           ctx.font = `500 ${Math.round(cw * 0.032)}px ${sans}`;
-          ctx.fillText(dict.process.items[2].title, gx, cy + pad * 1.1);
+          ctx.fillText(dict.process.items[2].title, gx + lr * 2.8, cy + pad * 1.1);
           ctx.strokeStyle = "#e4e4e7";
           ctx.lineWidth = 1;
           ctx.setLineDash([4, 5]);
@@ -272,7 +281,12 @@ export default function Process({ dict }: { dict: Dict }) {
   );
 
   return (
-    <section ref={track} id="process" className="relative h-[380vh] bg-surface">
+    <section
+      ref={track}
+      id="process"
+      data-bg="#ffffff #fff3df #fafaf9"
+      data-bg-at="0 0.36 0.7"
+      className="group/process relative h-[380vh] bg-surface">
       <div className="sticky top-0 flex h-[100dvh] flex-col overflow-hidden md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center">
         <div
           ref={captions}
@@ -297,10 +311,17 @@ export default function Process({ dict }: { dict: Dict }) {
               </li>
             ))}
           </ol>
-          {/* Progress rail with a tick per step */}
+          {/* Progress rail */}
           <div aria-hidden="true" className="relative mt-8 h-[3px] max-w-[340px] overflow-hidden rounded-full bg-line md:mt-12">
             <div className="absolute inset-y-0 left-0 w-full origin-left scale-x-[var(--p,0)] bg-accent" />
           </div>
+        </div>
+        {/* Minimal scroll cue: a dot travelling down a hairline */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-6 top-28 z-10 h-10 w-px overflow-hidden bg-foreground/15 transition-opacity duration-500 group-data-[scrolled]/process:opacity-0 md:bottom-10 md:left-1/2 md:right-auto md:top-auto md:h-12"
+        >
+          <span className="absolute left-1/2 top-0 h-2.5 w-[3px] -translate-x-1/2 rounded-full bg-accent motion-safe:animate-[scroll-cue_1.8s_cubic-bezier(.45,0,.55,1)_infinite]" />
         </div>
         <div className="relative order-1 min-h-0 flex-1 md:order-2 md:h-full">
           <canvas

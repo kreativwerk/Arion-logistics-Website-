@@ -5,7 +5,7 @@ const icons = [Package, UsersThree, Van, MapPin];
 
 export default function Stats({ dict }: { dict: Dict }) {
   return (
-    <section className="bg-surface2">
+    <section data-bg="#f0f0ee" className="bg-surface2">
       <div className="mx-auto max-w-[1320px] px-6 py-14 md:px-12 md:py-20">
         <dl className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
           {dict.stats.items.map((item, i) => {

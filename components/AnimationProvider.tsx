@@ -18,6 +18,10 @@ gsap.registerPlugin(ScrollTrigger);
  *  data-hero-line         hero headline line (staggered clip reveal)
  *  data-hero-fade         hero secondary elements (fade up after headline)
  *  data-hero-img          hero visual (scale settle)
+ *  data-bg="#fff"         page colour once this section reaches the lower
+ *                         third of the viewport (also exposed as --page-bg); the body colour blends between sections on
+ *                         scroll. Several colours + data-bg-at="0 .4 .7"
+ *                         split a tall section by its own scroll progress.
  *  (canvas motion lives in client components on components/motion/stage.ts;
  *  the scroll-scrubbed "So arbeiten wir" stage is components/home/Process.tsx
  *  and owns its own ScrollTrigger cleanup)
@@ -27,6 +31,12 @@ gsap.registerPlugin(ScrollTrigger);
  * re-measured again after fonts and images settle, so soft navigations
  * never leave content stuck in its hidden pre-animation state.
  */
+/** Dark or brand orange (luminance below ~0.66) carries white text. */
+function isDark(color: string) {
+  const [r, g, b] = gsap.utils.splitColor(color) as number[];
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 < 0.66;
+}
+
 export default function AnimationProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const reduce = useRef(false);
@@ -140,6 +150,61 @@ export default function AnimationProvider({ children }: { children: React.ReactN
             );
           });
 
+          // Scroll-driven page colour: sections go transparent and the body
+          // blends from one section colour to the next around mid-viewport.
+          const bgEls = gsap.utils.toArray<HTMLElement>("[data-bg]");
+          if (bgEls.length) {
+            document.documentElement.classList.add("bg-scroll");
+            let stops: { y: number; color: string }[] = [];
+            const measure = () => {
+              const vh = window.innerHeight;
+              stops = [];
+              bgEls.forEach((el) => {
+                const top = el.getBoundingClientRect().top + window.scrollY;
+                const colors = (el.dataset.bg ?? "").split(/\s+/).filter(Boolean);
+                const at = (el.dataset.bgAt ?? "").split(/\s+/).map(Number);
+                colors.forEach((color, i) => {
+                  const k = i === 0 ? 0 : at[i] ?? i / colors.length;
+                  stops.push({ y: i === 0 ? top : top + k * (el.offsetHeight - vh) + vh / 2, color });
+                });
+              });
+              stops.sort((a, b) => a.y - b.y);
+            };
+            const paint = () => {
+              if (!stops.length) return;
+              // Switch low in the viewport and quickly, so a section's own text
+              // colour meets its own background for as long as possible.
+              const line = window.scrollY + window.innerHeight * 0.68;
+              let i = 0;
+              while (i < stops.length - 1 && stops[i + 1].y <= line) i++;
+              let color = stops[i].color;
+              if (i > 0 || line >= stops[0].y) {
+                const prev = stops[Math.max(0, i - 1)].color;
+                const k = Math.min(1, Math.max(0, (line - stops[i].y) / (window.innerHeight * 0.14)));
+                color = gsap.utils.interpolate(prev, stops[i].color, k) as string;
+              }
+              document.body.style.backgroundColor = color;
+              // Text follows the page: light sections turn white on dark or
+              // orange, dark sections turn ink on light (brand rule: white on orange).
+              const pageDark = isDark(color);
+              bgEls.forEach((el) => {
+                const own = isDark((el.dataset.bg ?? "#fff").split(/\s+/)[0]);
+                el.classList.toggle("on-dark", pageDark && !own);
+                el.classList.toggle("on-light", !pageDark && own);
+              });
+              document.documentElement.style.setProperty("--page-bg", color);
+            };
+            ScrollTrigger.create({
+              start: 0,
+              end: "max",
+              onUpdate: paint,
+              onRefresh: () => {
+                measure();
+                paint();
+              },
+            });
+          }
+
           // Counters
           gsap.utils.toArray<HTMLElement>("[data-counter-value]").forEach((el) => {
             const target = parseFloat(el.dataset.counterValue ?? "0");
@@ -175,6 +240,10 @@ export default function AnimationProvider({ children }: { children: React.ReactN
       timeouts.forEach(clearTimeout);
       window.removeEventListener("load", refresh);
       ctx?.revert();
+      document.documentElement.classList.remove("bg-scroll");
+      document.querySelectorAll(".on-dark, .on-light").forEach((el) => el.classList.remove("on-dark", "on-light"));
+      document.body.style.backgroundColor = "";
+      document.documentElement.style.removeProperty("--page-bg");
     };
   }, [pathname]);
 

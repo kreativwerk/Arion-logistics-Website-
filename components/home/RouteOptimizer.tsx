@@ -1,6 +1,6 @@
 "use client";
 
-import { Path, drawVan, rng, seg, smooth, useStage, type Pt } from "@/components/motion/stage";
+import { Path, drawLogo, drawVan, rng, seg, smooth, useStage, type Pt } from "@/components/motion/stage";
 
 const ORANGE = "#f19104";
 
@@ -117,12 +117,7 @@ export default function RouteOptimizer({ label }: { label: string }) {
             ctx.fill();
           }
 
-          ctx.fillStyle = ORANGE;
-          ctx.beginPath();
-          ctx.roundRect(round.depot.x - 10 * unit, round.depot.y - 10 * unit, 20 * unit, 20 * unit, 4 * unit);
-          ctx.fill();
-          ctx.fillStyle = "#0c0c0f";
-          ctx.fillRect(round.depot.x - 3 * unit, round.depot.y - 3 * unit, 6 * unit, 6 * unit);
+          drawLogo(ctx, round.depot.x, round.depot.y, 13 * unit);
 
           if (drive > 0) {
             const v = round.route.at(round.route.length * drive);
